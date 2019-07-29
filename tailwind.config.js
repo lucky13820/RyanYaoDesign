@@ -67,10 +67,10 @@ module.exports = {
     },
     screens: {
       'dark-mode': {'raw': '(prefers-color-scheme: dark)'},
-      'sm': {'min': '320px', 'max': '639px'},
-      'md': {'min': '640px', 'max': '767px'},
-      'lg': {'min': '768px', 'max': '1024px'},
-      'xl': {'min': '1024px'},
+        'sm': '320px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
     },
   }
 }
