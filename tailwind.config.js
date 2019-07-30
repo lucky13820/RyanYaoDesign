@@ -30,7 +30,7 @@ module.exports = {
         500: '#929BA6',
       },
       white: '#fafafa',
-      black: '#171B1C',
+      black: '#161819',
     },
     fontFamily: {
       'display': ['VisbyCF-Bold', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto,tahoma', 'Verdana,arial', "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", 'STXihei', "华文细黑", "Microsoft Yahei", "微软雅黑", 'sans-serif'],
