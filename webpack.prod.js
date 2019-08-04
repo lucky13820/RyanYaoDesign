@@ -4,6 +4,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin') // installed via 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CompressionPlugin = require('compression-webpack-plugin')
 
 const buildPath = path.resolve(__dirname, 'dist')
 
@@ -40,6 +42,7 @@ module.exports = {
         test: /\.css$/,
         use: [
           'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader'
         ]
@@ -83,6 +86,16 @@ module.exports = {
       chunks: ['main', 'index'],
       filename: 'index.html'
     }),
+    new CompressionPlugin({
+      filename: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.js$|\.css$|\.html$|\.svg$/,
+      threshold: 10240,
+      minRatio: 0.7
+      }),
+      new MiniCssExtractPlugin({
+        filename: `styles/[name].css`
+      }),
   ],
 
   // https://webpack.js.org/configuration/optimization/
