@@ -10,14 +10,16 @@ body {
   transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+
 @screen dark-mode {
   body {
     @apply text-white;
   }
 }
-span.colorText {
+
+span.colorText-red {
   background: -webkit-linear-gradient(
-    90deg,
+    0deg,
     rgba(253, 184, 109, 1) 0%,
     rgba(251, 129, 128, 1) 100%
   );
@@ -26,77 +28,83 @@ span.colorText {
   -webkit-text-fill-color: transparent;
 }
 
-.theme-switch-wrapper {
-  display: flex;
-  align-items: center;
 
-  em {
-    margin-left: 10px;
-    font-size: 1rem;
-  }
+span.colorText-blue {
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(156, 252, 248, 1) 0%,
+    rgba(113, 132, 252, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.theme-switch {
-  display: inline-block;
-  height: 34px;
-  position: relative;
-  width: 60px;
+
+span.colorText-green {
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(179, 243, 146, 1) 0%,
+    rgba(63, 149, 148, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.theme-switch-wrapper {
+  position: fixed;
+  right: 60px;
+  top: 10px;
 }
 
 .theme-switch input {
   display: none;
+  width: 40px;
+  height: 40px;
 }
 
-.slider {
-  background-color: #ccc;
+.switcher {
+  background-image: url(./assets/image/Sun.svg);
   bottom: 0;
   cursor: pointer;
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
-  transition: 0.4s;
+  width: 42px;
+  height: 44px;
+  opacity: 1;
+  z-index: 10;
 }
 
-.slider:before {
-  background-color: #fff;
-  bottom: 4px;
-  content: "";
-  height: 26px;
-  left: 4px;
+.switcher:before {
+  background-image: url(./assets/image/Moon.svg);
+  content: '';
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
   position: absolute;
-  transition: 0.4s;
-  width: 26px;
+  transition: all 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: 0;
 }
 
-input:checked + .slider {
-  background-color: #66bb6a;
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
+input:checked + .switcher:before {
+  opacity: 1;
 }
 
 .icon {
   display: inline-block;
   width: 32px;
   height: 32px;
-  @apply bg-black;
   mask-size: auto;
   mask-position: left;
   mask-repeat: no-repeat;
   position: relative;
   background-image: linear-gradient(
     to right,
-    hsl(194, 6%, 9%),
-    hsl(194, 6%, 9%)
+    #828282,
+    #828282
   );
   z-index: 1;
 }
@@ -138,4 +146,54 @@ opacity: 1;
 }
 .icon-instagram {
   mask: url(./assets/image/Instagram.svg);
+}
+
+.phone-1{
+  opacity: 0.2;
+}
+.phone-2{
+  opacity: 0.3;
+}
+.phone-3{
+  opacity: 0.4;
+}
+
+.bike-1{
+  opacity: 0.2;
+}
+.bike-2{
+  opacity: 0.3;
+}
+.bike-3{
+  opacity: 0.4;
+}
+
+#phone-1{
+  top: 20px;
+  right: 50px;
+}
+
+#phone-2{
+  top: 200px;
+  left: 250px;
+}
+
+#phone-3{
+  top: 30px;
+  right: 450px;
+}
+
+#bike-1{
+  top: 20px;
+  right: 50px;
+}
+
+#bike-2{
+  top: 200px;
+  left: 250px;
+}
+
+#bike-3{
+  top: 30px;
+  right: 450px;
 }

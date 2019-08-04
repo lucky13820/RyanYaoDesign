@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Contacts</title>
+    <title>Ryan Yao Design</title>
     <meta charset="UTF-8" />
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="pragma" content="no-cache" />
@@ -30,17 +30,25 @@
       }
     </style>
   </head>
-  <body class="bg-white dark-mode:bg-black">
+  <body class="bg-black">
         <div class="theme-switch-wrapper">
                 <label class="theme-switch" for="checkbox">
                     <input type="checkbox" id="checkbox" />
-                    <div class="slider round"></div>
+                    <div class="switcher"></div>
+                    <div class="light-sun"></div>
               </label>
-              <em>Enable Dark Mode!</em>
             </div>
     <div class="container mx-auto">
-      <h2 class="font-display text-xl font-thin mb-20 mt-32">RY design</h2>
-      <h1 class="font-display md:text-4xl sm:text-3xl">
+      <div class="float-image">
+          <img src="${require(`./assets/image/iPhone.svg`)}" class="fixed opacity-0" id="phone-1">
+          <img src="${require(`./assets/image/iPhone.svg`)}" class="fixed opacity-0" id="phone-2">
+          <img src="${require(`./assets/image/iPhone.svg`)}" class="fixed opacity-0" id="phone-3">
+          <img src="${require(`./assets/image/bike.svg`)}" class="fixed opacity-0" id="bike-1">
+          <img src="${require(`./assets/image/bike.svg`)}" class="fixed opacity-0" id="bike-2">
+          <img src="${require(`./assets/image/bike.svg`)}" class="fixed opacity-0" id="bike-3">
+      </div>
+      <h4 class="font-display text-xl font-thin mb-20 mt-32">RY design</h4>
+      <h1 class="font-display md:text-5xl sm:text-4xl leading-tight">
         Hi, there. I am Ryan Yao<br />
         <span id="typeText"></span>
       </h1>
@@ -58,6 +66,9 @@
           <a href='https://www.instagram.com/ryanqyao/'><span class="icon icon-instagram"></span></a>
         </li>
       </ul>
+      <div class="work-list">
+        <h2 class="font-display text-2xl font-thin mb-20 mt-48">Here are my works</h2>
+      </div>
     </div>
   </body>
 </html>
