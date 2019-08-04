@@ -47,7 +47,7 @@
       }
     </style>
   </head>
-  <body class="bg-black">
+  <body class="bg-black text-white">
     <div class="theme-switch-wrapper">
       <label class="theme-switch" for="checkbox">
         <input type="checkbox" id="checkbox" />
@@ -159,5 +159,16 @@
       </div>
     </div>
     <footer><p class="text-xs text-gray-500 text-center w-full p-12">Deisgned and Developed by Ryan Yao</p></footer>
+    <script>
+    if( "fonts" in document ) {
+    var regular = new FontFace("VisbyCF-Bold", "url(${require(`./assets/fonts/visby-cf-bold-hint-all.woff2`)}) format('woff2'), url(${require(`./assets/fonts/visby-cf-bold-hint-all.woff`)}) format('woff')");
+    var bold = new FontFace("VisbyCF", "url(${require(`./assets/fonts/visby-cf-hint-all.woff2`)}) format('woff2'), url(${require(`./assets/fonts/visby-cf-hint-all.woff`)}) format('woff')");
+    Promise.all([ bold.load(), regular.load() ]).then(function(fonts) {
+        fonts.forEach(function(font) {
+            document.fonts.add(font);
+        });
+    });
+}
+    </script>
   </body>
 </html>
