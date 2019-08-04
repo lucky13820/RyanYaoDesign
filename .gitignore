@@ -7,3 +7,4 @@ node_modules/
 *.log
 .project
 .elasticbeanstalk/
+v8-compile-cache-0

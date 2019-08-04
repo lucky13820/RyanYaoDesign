@@ -1,8 +1,8 @@
-@import "tailwindcss/base";
+@tailwind base;
 
-@import "tailwindcss/utilities";
+@tailwind components;
 
-@import "tailwindcss/components";
+@tailwind utilities;
 
 html,
 body {
@@ -64,7 +64,7 @@ span.colorText-green {
 }
 
 .switcher {
-  background-image: url(./assets/image/Sun.svg);
+  background-image: url(../image/Sun.svg);
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -78,7 +78,7 @@ span.colorText-green {
 }
 
 .switcher:before {
-  background-image: url(./assets/image/Moon.svg);
+  background-image: url(../image/Moon.svg);
   content: '';
   bottom: 0;
   left: 0;
@@ -117,12 +117,12 @@ input:checked + .switcher:before {
     bottom: 0;
     left: 0;
     background-image: linear-gradient(
-        90deg,
+        0deg,
         rgba(253, 184, 109, 1) 0%,
         rgba(251, 129, 128, 1) 100%
       );
       background-image: -webkit-linear-gradient(
-    90deg,
+    0deg,
     rgba(253, 184, 109, 1) 0%,
     rgba(251, 129, 128, 1) 100%
   );
@@ -136,50 +136,41 @@ opacity: 1;
 }
 
 .icon-email {
-  mask: url(./assets/image/Email.svg);
+  mask: url(../image/Email.svg);
 }
 .icon-telegram {
-  mask: url(./assets/image/Telegram.svg);
+  mask: url(../image/Telegram.svg);
 }
 .icon-twitter {
-  mask: url(./assets/image/Twitter.svg);
+  mask: url(../image/Twitter.svg);
 }
 .icon-instagram {
-  mask: url(./assets/image/Instagram.svg);
+  mask: url(../image/Instagram.svg);
 }
 
-.phone-1{
-  opacity: 0.2;
+.phone-1, .bike-1, .map-1{
+  opacity: 0.05;
 }
-.phone-2{
-  opacity: 0.3;
+.phone-2, .bike-2, .map-2{
+  opacity: 0.06;
 }
-.phone-3{
-  opacity: 0.4;
+.phone-3, .bike-3, .map-3{
+  opacity: 0.08;
 }
 
-.bike-1{
-  opacity: 0.2;
-}
-.bike-2{
-  opacity: 0.3;
-}
-.bike-3{
-  opacity: 0.4;
-}
 
 #phone-1{
-  top: 20px;
-  right: 50px;
+  top: 480px;
+  right: 140px;
 }
 
 #phone-2{
-  top: 200px;
-  left: 250px;
+  top: 250px;
+  left: 360px;
 }
 
 #phone-3{
-  top: 30px;
+  top: 120px;
   right: 450px;
 }
 
@@ -196,4 +187,45 @@ opacity: 1;
 #bike-3{
   top: 30px;
   right: 450px;
+}
+#map-1{
+  top: 340px;
+  left: 482px;
+}
+
+#map-2{
+  top: 100px;
+  right: 250px;
+}
+
+#map-3{
+  top: 230px;
+  right: 450px;
+}
+
+.image-list{
+  position: relative;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-clip: padding-box; /* !importanté */
+}
+
+.image-list:before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -1;
+  margin: -8px; /* !importanté */
+  transition: all 0.6s ease-in-out;
+  background: linear-gradient(
+    90deg,
+    rgba(253, 184, 109, 1) 0%,
+    rgba(251, 129, 128, 1) 100%
+  );
+  opacity: 0;
+}
+
+.image-list:hover::before{
+  opacity: 1;
 }

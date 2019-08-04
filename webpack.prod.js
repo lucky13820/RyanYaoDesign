@@ -2,7 +2,6 @@ const path = require('path')
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin') // installed via npm
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
@@ -17,13 +16,6 @@ module.exports = {
   // https://webpack.js.org/concepts/entry-points/#multi-page-application
   entry: {
     main: './src/main.js',
-    index: './src/page-index/main.js',
-    about: './src/page-about/main.js',
-    contacts: './src/page-contacts/main.js',
-    index_zh: './src/zh/page-index/main.js',
-    administration: './src/page-admin/main.js',
-    financial: './src/page-financial/main.js',
-    recruiting: './src/page-recruiting/main.js'
   },
 
   // how to write the compiled files to disk
@@ -48,7 +40,6 @@ module.exports = {
         test: /\.css$/,
         use: [
           'style-loader',
-          MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader'
         ]
@@ -60,7 +51,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               publicPath: '/',
-              name: '[path][name].[ext]?hash=[hash:20]',
+              name: '[path][name].[ext]',
               context: 'src'
             }
           }
@@ -73,7 +64,7 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 10000,
-              name: './fonts/[hash].[ext]',
+              name: '[path][name].[ext]',
               mimetype: 'application/font-woff'
             }
           }
@@ -87,50 +78,11 @@ module.exports = {
 
     new CleanWebpackPlugin(), // cleans output.path by default
     new HtmlWebpackPlugin({
-      template: './src/page-index/index.html',
-      inject: 'body',
+      template: './src/index.html',
+      inject: true,
       chunks: ['main', 'index'],
       filename: 'index.html'
     }),
-    new HtmlWebpackPlugin({
-      template: './src/page-about/index.html',
-      inject: 'body',
-      chunks: ['main', 'about'],
-      filename: 'about.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/page-contacts/index.html',
-      inject: 'body',
-      chunks: ['main', 'contacts'],
-      filename: 'contacts.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/page-admin/index.html',
-      inject: true,
-      chunks: ['main', 'administration'],
-      filename: 'administration.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/page-financial/index.html',
-      inject: true,
-      chunks: ['main', 'financial'],
-      filename: 'financial.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/page-recruiting/index.html',
-      inject: true,
-      chunks: ['main', 'recruiting'],
-      filename: 'recruiting.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/zh/page-index/index.html',
-      inject: true,
-      chunks: ['main', 'index_zh'],
-      filename: './zh/index.html'
-    }),
-    new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].css'
-    })
   ],
 
   // https://webpack.js.org/configuration/optimization/
