@@ -1,7 +1,6 @@
 import "./assets/css/main.css";
 import TypeIt from "typeit";
 import $ from "jquery";
-import expressStaticGzip from "express-static-gzip";
 
 $(document).ready(function() {
   new TypeIt("#typeText", {

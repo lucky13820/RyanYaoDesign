@@ -9,3 +9,4 @@ node_modules/
 .elasticbeanstalk/
 v8-compile-cache-0
 dist
+dist/index.html
