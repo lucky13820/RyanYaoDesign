@@ -8,3 +8,4 @@ node_modules/
 .project
 .elasticbeanstalk/
 v8-compile-cache-0
+dist

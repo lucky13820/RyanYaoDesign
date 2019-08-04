@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CompressionPlugin = require('compression-webpack-plugin')
+const BrotliGzipPlugin = require('brotli-gzip-webpack-plugin');
 
 const buildPath = path.resolve(__dirname, 'dist')
 
@@ -86,13 +86,20 @@ module.exports = {
       chunks: ['main', 'index'],
       filename: 'index.html'
     }),
-    new CompressionPlugin({
-      filename: '[path].gz[query]',
-      algorithm: 'gzip',
-      test: /\.js$|\.css$|\.html$|\.svg$/,
+    new BrotliGzipPlugin({
+      asset: '[path].br[query]',
+      algorithm: 'brotli',
+      test: /\.(js|css|html|svg)$/,
       threshold: 10240,
-      minRatio: 0.7
-      }),
+      minRatio: 0.8
+  }),
+  new BrotliGzipPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.(js|css|html|svg)$/,
+      threshold: 10240,
+      minRatio: 0.8
+  }),
       new MiniCssExtractPlugin({
         filename: `styles/[name].css`
       }),
