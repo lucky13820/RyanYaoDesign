@@ -1,4 +1,5 @@
 import "./assets/css/main.css";
+import "./assets/css/normalize.css";
 import TypeIt from "typeit";
 import $ from "jquery";
 
@@ -9,6 +10,7 @@ $(document).ready(function() {
     waitUntilVisible: true,
     deleteSpeed: 35,
     cursor: false,
+    lifeLike: true
   })
     .type("<span class='colorText-red'>I design for digital screens.</span>")
     .pause(5000)
