@@ -86,6 +86,12 @@ module.exports = {
       chunks: ['main', 'index'],
       filename: 'index.html'
     }),
+    new HtmlWebpackPlugin({
+      template: './src/air-weather-app.html',
+      inject: true,
+      chunks: ['main', 'air-weather-app'],
+      filename: 'air-weather-app.html'
+    }),
     new BrotliGzipPlugin({
       asset: '[path].br[query]',
       algorithm: 'brotli',

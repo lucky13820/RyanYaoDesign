@@ -10,7 +10,7 @@ $(document).ready(function() {
     waitUntilVisible: true,
     deleteSpeed: 35,
     cursor: false,
-    lifeLike: true
+    lifeLike: true,
   })
     .type("<span class='colorText-red'>I design for digital screens.</span>")
     .pause(5000)
@@ -80,6 +80,14 @@ $( "span.ti-container" ).mouseenter(
       $( "#map-2" ).removeClass("map-2");
       $( "#map-3" ).removeClass("map-3");
 });;
+
+$(window).scroll(function() {
+  if($(window).scrollTop() + $(window).height() == $(document).height()) {
+    $( "#bottomR, #bottomY" ).addClass("bottomLetter");
+}else{
+  $( "#bottomR, #bottomY" ).removeClass("bottomLetter");
+}
+});
 
 toggleSwitch.addEventListener('change', switchTheme, false);
 });

@@ -10,11 +10,25 @@ body {
   transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-
 @screen dark-mode {
   body {
     @apply text-white;
   }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-display;
+}
+
+p {
+  @apply font-body;
+  @apply leading-loose;
+  @apply text-lg;
+  @apply max-w-2xl;
+  @apply m-auto;
 }
 
 span.colorText-red {
@@ -28,7 +42,6 @@ span.colorText-red {
   display: inline-block;
   -webkit-text-fill-color: transparent;
 }
-
 
 span.colorText-blue {
   background: -webkit-linear-gradient(
@@ -87,7 +100,7 @@ span.colorText-green {
   background-image: url(../image/Moon.svg);
   background-position: center;
   background-repeat: no-repeat;
-  content: '';
+  content: "";
   bottom: 0;
   left: 0;
   top: 0;
@@ -109,38 +122,34 @@ input:checked + .switcher:before {
   mask-position: left;
   mask-repeat: no-repeat;
   position: relative;
-  background-image: linear-gradient(
-    to right,
-    #828282,
-    #828282
-  );
+  background-image: linear-gradient(to right, #828282, #828282);
   z-index: 1;
 }
 
 .icon::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(
-        0deg,
-        rgba(253, 184, 109, 1) 0%,
-        rgba(251, 129, 128, 1) 100%
-      );
-      background-image: -webkit-linear-gradient(
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
     0deg,
     rgba(253, 184, 109, 1) 0%,
     rgba(251, 129, 128, 1) 100%
   );
-    z-index: -1;
-    transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    opacity: 0;
-  }
+  background-image: -webkit-linear-gradient(
+    0deg,
+    rgba(253, 184, 109, 1) 0%,
+    rgba(251, 129, 128, 1) 100%
+  );
+  z-index: -1;
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: 0;
+}
 .icon:hover::before,
 .icon:focus::before {
-opacity: 1;
+  opacity: 1;
 }
 
 .icon-email {
@@ -156,67 +165,81 @@ opacity: 1;
   mask: url(../image/Instagram.svg);
 }
 
-.phone-1, .bike-1, .map-1{
-  opacity: 0.08;
-}
-.phone-2, .bike-2, .map-2{
+.phone-1,
+.bike-1,
+.map-1 {
   opacity: 0.1;
 }
-.phone-3, .bike-3, .map-3{
+.phone-2,
+.bike-2,
+.map-2 {
   opacity: 0.13;
+}
+.phone-3,
+.bike-3,
+.map-3 {
+  opacity: 0.15;
+}
+
+.fixed.opacity-0 {
+  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.title-big {
+  @apply font-display;
+  @apply leading-tight;
 }
 
 #typeText {
   overflow-wrap: normal;
-  clear: left
+  clear: left;
 }
 
-
-#phone-1{
+#phone-1 {
   top: 480px;
   right: 140px;
 }
 
-#phone-2{
+#phone-2 {
   top: 250px;
   left: 360px;
 }
 
-#phone-3{
+#phone-3 {
   top: 120px;
   right: 450px;
 }
 
-#bike-1{
+#bike-1 {
   top: 20px;
   right: 50px;
 }
 
-#bike-2{
+#bike-2 {
   top: 200px;
   left: 250px;
 }
 
-#bike-3{
+#bike-3 {
   top: 30px;
   right: 450px;
 }
-#map-1{
+#map-1 {
   top: 340px;
   left: 482px;
 }
 
-#map-2{
+#map-2 {
   top: 100px;
   right: 250px;
 }
 
-#map-3{
+#map-3 {
   top: 230px;
   right: 450px;
 }
 
-.image-list{
+.image-list {
   position: relative;
   width: 100%;
   background-position: center;
@@ -225,9 +248,12 @@ opacity: 1;
 }
 
 .image-list:before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: -1;
   margin: -8px; /* !importanté */
   transition: all 0.6s ease-in-out;
@@ -239,6 +265,50 @@ opacity: 1;
   opacity: 0;
 }
 
-.image-list:hover::before{
+.image-list:hover::before {
   opacity: 1;
+}
+
+#bottomR,
+#bottomY {
+  @apply font-display;
+  @apply text-white;
+  @apply opacity-0;
+  font-size: 600px;
+  @apply fixed;
+  line-height: 0.8;
+  bottom: -60px;
+  z-index: -1;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#bottomY {
+  left: 360px;
+  line-height: 0.6;
+}
+
+.bottomLetter {
+  opacity: 0.08 !important;
+  bottom: 0px !important;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.container.mx-auto {
+  animation-duration: 1.2s;
+  transition-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+body.is-exiting .container.mx-auto{
+  animation-direction: alternate-reverse;
 }

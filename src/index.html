@@ -47,7 +47,7 @@
       }
     </style>
   </head>
-  <body class="bg-black text-white">
+  <body class="bg-black text-white" id='#main'>
     <div class="theme-switch-wrapper">
       <label class="theme-switch" for="checkbox">
         <input type="checkbox" id="checkbox" />
@@ -104,7 +104,7 @@
         />
       </div>
       <h4 class="font-body text-xl font-thin mb-20 mt-32">RY design</h4>
-      <h1 class="font-display md:text-5xl sm:text-4xl leading-tight">
+      <h1 class="md:text-5xl sm:text-4xl">
         Hi, there. I am Ryan Yao.<br />
         <span id="typeText"></span>
       </h1>
@@ -131,19 +131,19 @@
         </li>
       </ul>
       <div class="work-list">
-        <h2 class="font-display text-2xl font-thin mb-20 mt-48">
+        <h2 class="text-2xl mb-20 mt-48">
           Here are my works
         </h2>
         <ul class="flex flex-row flex-wrap">
           <li class="md:w-2/4 p-4 mb-6 sm:w-full">
-            <a href=""
+            <a href="air-weather-app.html"
               ><div style="background-image: url(${require(`./assets/image/air.jpg`)})" class="image-list sm:h-64 md:h-xl"></div>
             <h3 class="font-display text-xl mt-2">Air</h3><p class="font-body text-base text-gray-500">A minimal weaether app</p></a>
           </li>
           <li class="md:w-2/4 p-4 mb-6 sm:w-full">
             <a href=""
               ><div style="background-image: url(${require(`./assets/image/colomajic.jpg`)})" class="image-list sm:h-64 md:h-xl"></div>
-            <h3 class="font-display text-xl mt-2">Colo Majic</h3><p class="font-body text-base text-gray-500">A website redesign</p></a>
+            <h3 class="text-xl mt-2">Colo Majic</h3><p class="font-body text-base text-gray-500">A website redesign</p></a>
           </li>
           <li class="md:w-2/4 p-4 mb-6 sm:w-full">
             <a href=""
@@ -159,16 +159,6 @@
       </div>
     </div>
     <footer><p class="text-xs text-gray-500 text-center w-full p-12">Deisgned and Developed by Ryan Yao</p></footer>
-    <script>
-    if( "fonts" in document ) {
-    var regular = new FontFace("VisbyCF-Bold", "url(${require(`./assets/fonts/visby-cf-bold-hint-all.woff2`)}) format('woff2'), url(${require(`./assets/fonts/visby-cf-bold-hint-all.woff`)}) format('woff')");
-    var bold = new FontFace("VisbyCF", "url(${require(`./assets/fonts/visby-cf-hint-all.woff2`)}) format('woff2'), url(${require(`./assets/fonts/visby-cf-hint-all.woff`)}) format('woff')");
-    Promise.all([ bold.load(), regular.load() ]).then(function(fonts) {
-        fonts.forEach(function(font) {
-            document.fonts.add(font);
-        });
-    });
-}
-    </script>
+    <span id="bottomR">R</span><span id="bottomY">Y</span>
   </body>
 </html>
