@@ -112,26 +112,46 @@ $(window).scroll(function() {
 
 // })
 
-(function ($) {
-  'use strict';
-  var $body    = $('html, body'),
-   content  = $('#main').smoothState({
-        // onStart runs as soon as link has been activated
-        onStart : {
+// (function ($) {
+//   'use strict';
+  
+//   var $body    = $('html, body'),
+//    content  = $('#main').smoothState({
+//         // onStart runs as soon as link has been activated
+//         onStart : {
           
-          // Set the duration of our animation
-          duration: 2500,
+//           // Set the duration of our animation
+//           duration: 2500,
           
-          // Alterations to the page
-          render: function () {
+//           // Alterations to the page
+//           render: function () {
 
-            // Quickly toggles a class and restarts css animations
-            content.toggleAnimationClass('is-exiting');
-            $body.animate({ 'scrollTop': 0 });
-          }
-        }
-      }).data('smoothState'); // makes public methods available
-})($);
+//             // Quickly toggles a class and restarts css animations
+//             content.toggleAnimationClass('is-exiting');
+//             $body.animate({ 'scrollTop': 0 });
+//           }
+//         }
+//       }).data('smoothState'); // makes public methods available
+// })($);
+
+$(function(){
+  'use strict';
+  var options = {
+    prefetch: true,
+    cacheLength: 2,
+    onStart: {
+      duration: 4000, // Duration of our animation
+      render: function ($container) {
+        // Add your CSS animation reversing class
+        $container.addClass('is-exiting');
+
+        // Restart your animation
+        smoothState.restartCSSAnimations();
+      }
+    },
+  },
+  smoothState = $('#main').smoothState(options).data('smoothState');
+});
 
 toggleSwitch.addEventListener('change', switchTheme, false);
 
