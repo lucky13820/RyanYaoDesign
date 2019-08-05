@@ -10,3 +10,5 @@ node_modules/
 v8-compile-cache-0
 dist
 dist/index.html
+dist/styles
+dist/assets/image
