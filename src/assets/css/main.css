@@ -302,13 +302,13 @@ input:checked + .switcher:before {
   }
 }
 
-.container.mx-auto {
+.animsition {
   animation-duration: 1.2s;
   transition-timing-function: ease-in-out;
   animation-fill-mode: both;
   animation-name: fadeIn;
 }
 
-body.is-exiting .container.mx-auto{
+#main.is-exiting > .animsition{
   animation-direction: alternate-reverse;
 }
