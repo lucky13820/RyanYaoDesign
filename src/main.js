@@ -97,8 +97,9 @@ $(".animsition").animsition({
   inDuration: 2000,
   outDuration: 1000,
   linkElement: 'a',
-  onLoadEvent: true,
-  overlay : false,
+  loading: false,
+  overlay: false,
+  timeout: false,
   browser: [ 'animation-duration', '-webkit-animation-duration'],
   // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
   // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
