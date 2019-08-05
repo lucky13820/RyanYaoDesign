@@ -1,7 +1,9 @@
 import "./assets/css/main.css";
+import "./assets/css/animsition.css";
 import "./assets/css/normalize.css";
 import TypeIt from "typeit";
 import $ from "jquery";
+import "./assets/vendor/animsition";
 
 $(document).ready(function() {
   new TypeIt("#typeText", {
@@ -87,6 +89,20 @@ $(window).scroll(function() {
 }else{
   $( "#bottomR, #bottomY" ).removeClass("bottomLetter");
 }
+});
+
+$(".animsition").animsition({
+  inClass: 'fade-in',
+  outClass: 'fade-out',
+  inDuration: 2000,
+  outDuration: 1000,
+  linkElement: 'a',
+  onLoadEvent: true,
+  overlay : false,
+  browser: [ 'animation-duration', '-webkit-animation-duration'],
+  // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+  // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+  transition: function(url){ window.location.href = url; }
 });
 
 toggleSwitch.addEventListener('change', switchTheme, false);
