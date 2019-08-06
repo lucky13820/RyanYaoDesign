@@ -1,7 +1,6 @@
 import "./assets/css/main.css";
 import TypeIt from "typeit";
 import $ from "jquery";
-import "./assets/vendor/jquery.smoothState";
 
 $(document).ready(function() {
   new TypeIt("#typeText", {
@@ -96,25 +95,31 @@ $(document).ready(function() {
   animateDiv("#map-2");
   animateDiv("#map-3");
 
-  // $("li a").on("click", function (event){
-  //   event.preventDefault()
+  $("a").on("click", function (event){
+    event.preventDefault()
 
-  //   const href = $(this).attr("href")
+    const href = $(this).attr("href")
 
-  //   window.history.pushState(null, null, href)
+    window.history.pushState('', '', href)
 
-  //   $.ajax({
-  //     url: href,
-  //     success: function (data){
-  //       $("section.container.home").fadeOut(1000, function() {
-  //         const newPage = $(data).filter("section.container.post").html()
-  //         $("section.home").html(newPage)
-  //         $("section.home").fadeIn(1000)
-  //       })
-  //     }
-  //   })
+    $.ajax({
+      url: href,
+      success: function (data){
+        $("section.container").fadeOut(600, function() {
+          const newPage = $(data).filter("section.container").html()
+          $("section.container").html(newPage)
+          $("section.container").fadeIn(600)
+        })
+      }
+    })
 
-  // })
+  })
+
+ $(window).on('popstate', function() {
+  location.reload(true);
+});
+
+
 
   // (function ($) {
   //   'use strict';
@@ -139,7 +144,10 @@ $(document).ready(function() {
   // })($);
 
   toggleSwitch.addEventListener("change", switchTheme, false);
+
 });
+
+
 
 function makeNewPosition(){
     
@@ -162,23 +170,25 @@ function animateDiv(myclass){
   
 };
 
-$(function() {
-  "use strict";
-  var options = {
-      prefetch: true,
-      cacheLength: 2,
-      onStart: {
-        duration: 250, // Duration of our animation
-        render: function($container) {
-          // Add your CSS animation reversing class
-          $container.addClass("is-exiting");
+// $(function() {
+//   "use strict";
+//   var options = {
+//       prefetch: true,
+//       cacheLength: 2,
+//       onStart: {
+//         duration: 250, // Duration of our animation
+//         render: function($container) {
+//           // Add your CSS animation reversing class
+//           $container.addClass("is-exiting");
 
-          // Restart your animation
-          smoothState.restartCSSAnimations();
-        }
-      }
-    },
-    smoothState = $("#main")
-      .smoothState(options)
-      .data("smoothState");
-});
+//           // Restart your animation
+//           smoothState.restartCSSAnimations();
+//         }
+//       }
+//     },
+//     smoothState = $("#main")
+//       .smoothState(options)
+//       .data("smoothState");
+// });
+
+
