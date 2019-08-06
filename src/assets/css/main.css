@@ -289,7 +289,7 @@ input:checked + .switcher:before {
 }
 
 #bottomY {
-  left: 360px;
+  left: 380px;
   line-height: 0.6;
 }
 

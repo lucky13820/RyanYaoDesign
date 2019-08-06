@@ -28,11 +28,11 @@ $(document).ready(function() {
 
   function switchTheme(e) {
     if (e.target.checked) {
-      $("body").addClass("bg-white text-black");
-      $("body").removeClass("bg-black text-white");
+      $("body").addClass("bg-white text-black border-black");
+      $("body").removeClass("bg-black text-white border-white");
     } else {
-      $("body").removeClass("bg-white text-black");
-      $("body").addClass("bg-black text-white");
+      $("body").removeClass("bg-white text-black border-black");
+      $("body").addClass("bg-black text-white border-white");
     }
   }
 
