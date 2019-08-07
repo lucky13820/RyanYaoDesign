@@ -71,13 +71,13 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      inject: true,
+      inject: 'body',
       chunks: ['main', 'index'],
       filename: 'index.html'
     }),
     new HtmlWebpackPlugin({
       template: './src/air-weather-app.html',
-      inject: true,
+      inject: 'body',
       chunks: ['main', 'air-weather-app'],
       filename: 'air-weather-app.html'
     }),

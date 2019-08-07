@@ -47,7 +47,7 @@
       }
     </style>
   </head>
-  <body class="bg-black text-white border-4 border-solid border-white">
+  <body class="bg-black text-white border-8 border-solid border-white" id="barba-wrapper">
     <div class="theme-switch-wrapper">
       <label class="theme-switch" for="checkbox">
         <input type="checkbox" id="checkbox" />
@@ -55,9 +55,9 @@
         <div class="light-sun"></div>
       </label>
     </div>
-    <section class="container mx-auto">
+    <main class="container mx-auto" >
       <a href="/" class="animsition-link"><h4 class="font-body text-xl font-thin mb-20 mt-32">RY design</h4></a>
-    <section id="#main">
+    <section id="#main" class="barba-container container mx-auto">
       <div class="animsition">
         <section class="post-content">
           <h1 class="md:text-5xl sm:text-4xl mt-4 mb-12">
@@ -78,14 +78,17 @@
           </p>
         </section>
       </div>
+      <footer>
+        <p class="text-xs text-gray-500 text-left w-full p-12 m-0">
+          ©2019 Deisgned and Developed by Ryan Yao
+        </p>
+      </footer>
+
+      <span id="bottomR">R</span><span id="bottomY">Y</span>
+      <script type="text/javascript" src="bundle.js"></script>
     </section>
-    <footer>
-      <p class="text-xs text-gray-500 text-left w-full p-12 m-0">
-        ©2019 Deisgned and Developed by Ryan Yao
-      </p>
-    </footer>
-    <span id="bottomR">R</span><span id="bottomY">Y</span>
-    </section>
+
+    </main>
     <script>
       if ("fonts" in document) {
         var regular = new FontFace(
