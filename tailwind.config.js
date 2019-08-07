@@ -29,7 +29,7 @@ module.exports = {
         300: '#E1E4E9',
         500: '#828282',
       },
-      white: '#ffffff',
+      white: '#fcfcfc',
       black: '#161819',
     },
     fontFamily: {
