@@ -8,7 +8,7 @@ $(document).ready(function() {
   typeit();
   gaTracker("UA-145302459-1");
   ga("send", "pageview");
-
+  
   function initilizePlugins() {
     const toggleSwitch = document.querySelector(
       '.theme-switch input[type="checkbox"]'
