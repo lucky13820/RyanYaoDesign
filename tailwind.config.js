@@ -1,18 +1,5 @@
 module.exports = {
   theme: {
-    // screens: {
-    //   'sm': {'max': '639px'},
-    //   // => @media (max-width: 639px) { ... }
-
-    //   'md': {'max': '767px'},
-    //   // => @media (max-width: 767px) { ... }
-
-    //   'lg': {'max': '1023px'},
-    //   // => @media (max-width: 1023px) { ... }
-
-    //   'xl': {'max': '1279px'},
-    //   // => @media (max-width: 1279px) { ... }
-    // },
     colors: {
       orange: {
         100: '#FDF0EA',
@@ -51,26 +38,43 @@ module.exports = {
       'default': '0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06)',
       'md': ' 0px 1px 3px rgba(9, 41, 120, 0.13), 0px 4px 8px rgba(0, 0, 0, 0.13)',
       'lg': ' 0px 3px 6px rgba(9, 41, 120, 0.13), 0px 8px 16px rgba(0, 0, 0, 0.13)',
-      'xl': ' 0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .04)',
-      '2xl': '0 25px 50px -12px rgba(0, 0, 0, .25)',
-      'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.02)',
-      'outline': '0 0 0 3px rgba(66,153,225,0.5)',
-      'none': 'none'
+      'xl': ' 0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .04)'
     },
     letterSpacing: {
       wide: '.015em',
       wider: '.025em'
     },
     screens: {
-      'dark-mode': {'raw': '(prefers-color-scheme: dark)'},
-        'sm': '320px',
-        'md': '768px',
-        'lg': '1024px',
-        'xl': '1280px',
+      'sm': '320px',
+      'md': '780px',
+      'lg': '1024px',
+      'xl': '1200px',
+    },
+    fluidContainer: {
+      'default': {
+        maxWidth: '1200px',   // defaults to null (no maximum width)
+        padding: '48px',      // defaults to '15px'
+        responsivePadding: {  // defaults to {}
+          'sm': '30px',       // at screen 'sm', the padding will change to 30px
+        },
+      },
     },
     height: {
       "xl": '380px',
       "64": "320px",
     },
-  }
+  },
+
+  variants: { // for the utilities
+    fluidContainer: ['responsive'], // defaults to ['responsive']
+  },
+  plugins: [
+    require('tailwindcss-fluid-container')({
+      componentPrefix: 'c-',  // defaults to 'c-'
+      widthUtilities: true,   // defaults to true
+      paddingUtilities: true, // defaults to true
+      marginUtilities: true,  // defaults to true
+      negativeMarginUtilities: true,  // defaults to true
+    }),
+  ],
 }

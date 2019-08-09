@@ -14,7 +14,8 @@
     "url": "git+https://github.com/lucky13820/RyanYaoDesign.git"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "tailwindcss-fluid-container": "^2.0.0"
   },
   "keywords": [
     "webpack",
