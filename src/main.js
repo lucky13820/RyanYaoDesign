@@ -66,21 +66,13 @@ $(document).ready(function() {
   });
 
   Barba.Dispatcher.on("initStateChange", function() {
-    gaTracker("UA-145302459-1");
-    ga("send", "pageview");
+    clickTracker();
   });
 });
 
-function gaTracker(id) {
-  $.getScript("//www.google-analytics.com/analytics.js"); // jQuery shortcut
-  window.ga =
-    window.ga ||
-    function() {
-      (ga.q = ga.q || []).push(arguments);
-    };
-  ga.l = +new Date();
-  ga("create", id, "auto");
-  ga("send", "pageview");
+function clickTracker() {
+  $.getScript("//static.getclicky.com/js"); // jQuery shortcut
+  var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101201629);
 }
 
 function makeNewPosition() {
