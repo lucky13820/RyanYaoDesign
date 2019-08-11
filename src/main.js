@@ -103,13 +103,13 @@ function typeit() {
     lifeLike: true
   })
     .type("<span class='colorText-red'>I design for digital screens.</span>")
-    .pause(5000)
+    .pause(8000)
     .delete()
     .type("<span class='colorText-blue'>I ride fixie.</span>")
-    .pause(5000)
+    .pause(8000)
     .delete()
     .type("<span class='colorText-green'>I live in Vancouver.</span>")
-    .pause(5000)
+    .pause(8000)
     .go();
 
   $("span.ti-container")
