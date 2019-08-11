@@ -45,7 +45,7 @@ p {
 }
 
 span.colorText-red {
-  background: linear-gradient(30deg, #F64D4B, #FFC683);
+  background: linear-gradient(30deg, #FB6D6C, #FFC683);
   background-size: 400% 400%;
   -webkit-animation: flow 8s ease-in-out infinite;
   -moz-animation: flow 8s ease-in-out infinite;
@@ -59,7 +59,7 @@ span.colorText-red {
 }
 
 span.colorText-blue {
-  background: linear-gradient(30deg, #B3F393, #72BE93, #378F93);
+  background: linear-gradient(30deg, #88FDF6, #6FB3F8, #5D5AF9); 
   background-size: 400% 400%;
   -webkit-animation: flow 8s ease-in-out infinite;
   -moz-animation: flow 8s ease-in-out infinite;
@@ -73,7 +73,7 @@ span.colorText-blue {
 }
 
 span.colorText-green {
-  background: linear-gradient(30deg, #9CFCF8, #86BFF9, #7080FA);
+  background: linear-gradient(30deg, #BBF69D, #378F93);
   background-size: 400% 400%;
   -webkit-animation: flow 8s ease-in-out infinite;
   -moz-animation: flow 8s ease-in-out infinite;
@@ -88,46 +88,46 @@ span.colorText-green {
 
 @-webkit-keyframes flow {
   0% {
-    background-position: 9% 0%;
+    background-position: 0% 50%;
   }
   50% {
-    background-position: 92% 100%;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 9% 0%;
+    background-position: 0% 50%;
   }
 }
 @-moz-keyframes flow {
   0% {
-    background-position: 9% 0%;
+    background-position: 0% 50%;
   }
   50% {
-    background-position: 92% 100%;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 9% 0%;
+    background-position: 0% 50%;
   }
 }
 @-o-keyframes flow {
   0% {
-    background-position: 9% 0%;
+    background-position: 0% 50%;
   }
   50% {
-    background-position: 92% 100%;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 9% 0%;
+    background-position: 0% 50%;
   }
 }
 @keyframes flow {
   0% {
-    background-position: 9% 0%;
+    background-position: 0% 50%;
   }
   50% {
-    background-position: 92% 100%;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 9% 0%;
+    background-position: 0% 50%;
   }
 }
 
@@ -207,6 +207,12 @@ input:checked + .switcher:before {
     rgba(251, 129, 128, 1) 100%
   );
   z-index: -1;
+  background: linear-gradient(30deg, #FB6D6C, #FFC683);
+  background-size: 400% 400%;
+  -webkit-animation: flow 8s ease-in-out infinite;
+  -moz-animation: flow 8s ease-in-out infinite;
+  -o-animation: flow 8s ease-in-out infinite;
+  animation: flow 8s ease-in-out infinite;
   transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   opacity: 0;
 }
@@ -226,6 +232,9 @@ input:checked + .switcher:before {
 }
 .icon-instagram {
   mask: url(../image/Instagram.svg);
+}
+.icon-linkedin {
+  mask: url(../image/Linkedin.svg);
 }
 
 .phone-1,
