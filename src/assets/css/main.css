@@ -33,12 +33,13 @@ body::after {
   bottom: 0;
   top: 0;
   z-index: 999;
-  border: white solid 7px;
+  border: white solid 8px;
   border-bottom-width: 0;
 }
 
 body.bg-white::after {
   border: #161819 solid 8px;
+  border-bottom-width: 0;
 }
 
 a{
@@ -434,6 +435,10 @@ input:checked + .switcher:before {
 
 @media (min-width: 48rem) {
   body::after {
-    border-bottom-width: 7px;
+    border-bottom-width: 8px;
+  }
+
+  body.bg-white::after {
+    border-bottom-width: 8px;
   }
 }
