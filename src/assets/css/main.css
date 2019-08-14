@@ -386,7 +386,7 @@ input:checked + .switcher:before {
   @apply fixed;
   line-height: 0.8;
   bottom: -60px;
-  z-index: 1;
+  z-index: -1;
   pointer-events: none;
   transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
