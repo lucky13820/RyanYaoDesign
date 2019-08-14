@@ -6,8 +6,7 @@ import Barba from "barba.js";
 $(document).ready(function() {
   initilizePlugins();
   typeit();
-  gaTracker("UA-145302459-1");
-  ga("send", "pageview");
+  clickTracker();
   
   function initilizePlugins() {
     const toggleSwitch = document.querySelector(
