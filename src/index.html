@@ -50,7 +50,7 @@
   <body class="bg-black text-white" id="barba-wrapper">
     <div class="theme-switch-wrapper">
       <label class="theme-switch" for="checkbox">
-        <input type="checkbox" id="checkbox" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')" title="Dark/light"/>
+        <input type="checkbox" id="checkbox" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark');"  title="Dark/light" />
         <div class="switcher"></div>
         <div class="light-sun"></div>
       </label>
