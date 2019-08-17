@@ -21,7 +21,7 @@ $(document).ready(function() {
     });
 
     function initTheme() {
-      var darkThemeSelected = (localStorage.getItem('mode') !== null && localStorage.getItem('mode') === 'dark');
+      var darkThemeSelected = (localStorage.getItem('mode') !== null && localStorage.getItem('mode') !== 'dark');
       // update checkbox
       themeSwitch.checked = darkThemeSelected;
       // update body data-theme attribute
