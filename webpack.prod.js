@@ -52,24 +52,11 @@ module.exports = {
         use: [
           'file-loader',
           {
-            loader: 'image-webpack-loader',
+            loader: 'file-loader',
             options: {
-              mozjpeg: {
-                progressive: true,
-                quality: 85
-              },
-              // optipng.enabled: false will disable optipng
-              optipng: {
-                enabled: false,
-              },
-              pngquant: {
-                quality: '85',
-                speed: 4
-              },
-              gifsicle: {
-                interlaced: false,
-              },
-       // webpack@2.x and newer
+              publicPath: '/',
+              name: '[name].[ext]',
+              context: 'src'
             },
           },
         ],
