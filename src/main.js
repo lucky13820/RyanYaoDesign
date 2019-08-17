@@ -6,23 +6,40 @@ import Barba from "barba.js";
 $(document).ready(function() {
   initilizePlugins();
   typeit();
-  clickTracker();
-  clicky_site_ids.push(101201629)
+  gaTracker("UA-145302459-1");
+  ga("send", "pageview");
+
+  var themeSwitch = document.querySelector(
+    '.theme-switch input[type="checkbox"]'
+  );
+
+  if(themeSwitch) {
+
+    initTheme();
+    themeSwitch.addEventListener('change', function(event){
+      resetTheme(); // update color theme
+    });
+
+    function initTheme() {
+      var darkThemeSelected = (localStorage.getItem('mode') !== null && localStorage.getItem('mode') === 'dark');
+      // update checkbox
+      themeSwitch.checked = darkThemeSelected;
+      // update body data-theme attribute
+      darkThemeSelected ? $("body").removeClass("bg-white text-black border-black").addClass("bg-black text-white border-white") : $("body").addClass("bg-white text-black border-black").removeClass("bg-black text-white border-white");
+    };
+  
+    function resetTheme() {
+      if(themeSwitch.checked) { // dark theme has been selected
+        $("body").removeClass("bg-white text-black border-black").addClass("bg-black text-white border-white");
+        localStorage.setItem('mode', 'dark');
+      } else {
+        $("body").addClass("bg-white text-black border-black").removeClass("bg-black text-white border-white");
+        localStorage.setItem('mode', 'light');
+      } 
+    };
+  }
   
   function initilizePlugins() {
-    const toggleSwitch = document.querySelector(
-      '.theme-switch input[type="checkbox"]'
-    );
-
-    function switchTheme(e) {
-      if (e.target.checked) {
-        $("body").addClass("bg-white text-black border-black");
-        $("body").removeClass("bg-black text-white border-white");
-      } else {
-        $("body").removeClass("bg-white text-black border-black");
-        $("body").addClass("bg-black text-white border-white");
-      }
-    }
 
     $(window).scroll(function() {
       if ($(window).scrollTop() + $(window).height() == $(document).height()) {
@@ -31,8 +48,7 @@ $(document).ready(function() {
         $("#bottomR, #bottomY").removeClass("bottomLetter");
       }
     });
-
-    toggleSwitch.addEventListener("change", switchTheme, false);
+    
   }
 
   var transEffect = Barba.BaseTransition.extend({
@@ -66,14 +82,21 @@ $(document).ready(function() {
   });
 
   Barba.Dispatcher.on("initStateChange", function() {
-    clicky_site_ids.push(101201629)
+    gaTracker("UA-145302459-1");
+    ga("send", "pageview");
   });
 });
 
-function clickTracker() {
-  $.getScript("//static.getclicky.com/js"); // jQuery shortcut
-  var clicky_site_ids = clicky_site_ids || []; 
-  clicky_site_ids.push(101201629);
+function gaTracker(id) {
+  $.getScript("//www.google-analytics.com/analytics.js"); // jQuery shortcut
+  window.ga =
+    window.ga ||
+    function() {
+      (ga.q = ga.q || []).push(arguments);
+    };
+  ga.l = +new Date();
+  ga("create", id, "auto");
+  ga("send", "pageview");
 }
 
 function makeNewPosition() {

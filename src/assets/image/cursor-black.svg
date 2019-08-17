@@ -1,14 +1,14 @@
-<svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d)">
-<path d="M15.8779 28.7539C16.396 28.9412 17.7444 29.1866 19.1198 27.4437L22.819 22.7626L28.7849 22.9139C30.8308 22.9651 31.5628 21.9736 31.8183 21.3773C32.0737 20.781 32.2841 19.566 30.8347 18.1225L16.9592 4.29412C15.7004 3.04397 14.3025 2.82056 13.3212 3.57919C12.8062 3.97541 12.2253 4.79253 12.3731 6.44407L14.1271 25.955C14.301 27.9015 15.3012 28.5453 15.8779 28.7539V28.7539ZM28.07 19.7744L21.3385 19.6018L17.163 24.884L15.5865 7.3324L28.07 19.7744V19.7744Z" fill="#161819"/>
+<path d="M14.8779 28.7539C15.396 28.9412 16.7444 29.1866 18.1198 27.4437L21.819 22.7626L27.7849 22.9139C29.8308 22.9651 30.5628 21.9736 30.8183 21.3773C31.0737 20.781 31.2841 19.566 29.8347 18.1225L15.9592 4.29412C14.7004 3.04397 13.3025 2.82056 12.3212 3.57918C11.8062 3.97541 11.2253 4.79253 11.3731 6.44407L13.1271 25.955C13.301 27.9015 14.3012 28.5453 14.8779 28.7539ZM27.07 19.7744L20.3385 19.6018L16.163 24.884L14.5865 7.3324L27.07 19.7744Z" fill="#161819"/>
 </g>
 <defs>
-<filter id="filter0_d" x="0.231222" y="0.526253" width="40.4804" height="40.4737" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d" x="0.231222" y="0.526253" width="38.4804" height="38.4737" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-<feOffset dy="3"/>
-<feGaussianBlur stdDeviation="2.5"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
 </filter>

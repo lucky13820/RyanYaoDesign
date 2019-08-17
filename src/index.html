@@ -50,16 +50,13 @@
   <body class="bg-black text-white" id="barba-wrapper">
     <div class="theme-switch-wrapper">
       <label class="theme-switch" for="checkbox">
-        <input type="checkbox" id="checkbox" />
+        <input type="checkbox" id="checkbox" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')" title="Dark/light"/>
         <div class="switcher"></div>
         <div class="light-sun"></div>
       </label>
     </div>
-    <main class="c-container">
-      <a href="/" class="animsition-link"
-        ><h4 class="font-body text-xl font-thin mb-20 mt-32">RY design</h4></a
-      >
-      <section id="#main" class="barba-container mx-auto">
+    <div class="c-container"><a href="/"><h4 class="font-body text-xl font-thin mb-20 mt-32">RY design</h4></a></div>
+    <main id="#main" class="barba-container c-container">
         <div class="titleAnimation">
           <div class="float-image">
             <img
@@ -201,8 +198,6 @@
           </p>
         </footer>
         <span id="bottomR">RY</span>
-      </section>
-      
-    </main>
+      </main>
   </body>
 </html>
