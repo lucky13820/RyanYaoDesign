@@ -48,18 +48,17 @@ module.exports = {
         ]
       },
       {
-        test: /\.(gif|png|jpe?g|svg)$/i,
+        test: /\.(png|jpg|gif|svg)$/,
         use: [
-          'file-loader',
           {
             loader: 'file-loader',
             options: {
               publicPath: '/',
-              name: '[name].[ext]',
+              name: '[path][name].[ext]',
               context: 'src'
-            },
-          },
-        ],
+            }
+          }
+        ]
       },
       {
         test: /\.woff(2)?$/,
@@ -110,8 +109,6 @@ module.exports = {
       new MiniCssExtractPlugin({
         filename: `styles/[name].css`
       }),
-
-      
   ],
 
   // https://webpack.js.org/configuration/optimization/
