@@ -10,14 +10,9 @@ $(document).ready(function() {
   ga("send", "pageview");
 
   var themeSwitch = document.getElementById('themeSwitch');
-
-  if(themeSwitch) {
-
     initTheme();
-    themeSwitch.addEventListener('change', function(event){
-      resetTheme(); // update color theme
+    themeSwitch.addEventListener('change', resetTheme, function(){
     });
-  }
 
 
   function initTheme() {
@@ -26,15 +21,18 @@ $(document).ready(function() {
     themeSwitch.checked = darkThemeSelected;
     // update body data-theme attribute
     darkThemeSelected ? $("body").addClass("bg-white text-black border-black").removeClass("bg-black text-white border-white") : $("body").removeClass("bg-white text-black border-black").addClass("bg-black text-white border-white");
+    darkThemeSelected ? $("#themeSwitch").prop("checked", false) : $("#themeSwitch").prop("checked", true);
   };
 
-  function resetTheme() {
-    if(themeSwitch.checked) { // dark theme has been selected
+  function resetTheme(e) {
+    if(e.target.checked) { // dark theme has been selected
       $("body").removeClass("bg-white text-black border-black").addClass("bg-black text-white border-white");
       localStorage.setItem('mode', 'dark');
+      $("#themeSwitch").prop("checked", true);
     } else {
       $("body").addClass("bg-white text-black border-black").removeClass("bg-black text-white border-white");
       localStorage.setItem('mode', 'light');
+      $("#themeSwitch").prop("checked", false);
     } 
   };
   
