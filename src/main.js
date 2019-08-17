@@ -9,9 +9,7 @@ $(document).ready(function() {
   gaTracker("UA-145302459-1");
   ga("send", "pageview");
 
-  var themeSwitch = document.querySelector(
-    '.theme-switch input[type="checkbox"]'
-  );
+  var themeSwitch = document.getElementById('themeSwitch');
 
   if(themeSwitch) {
 
@@ -19,25 +17,26 @@ $(document).ready(function() {
     themeSwitch.addEventListener('change', function(event){
       resetTheme(); // update color theme
     });
-
-    function initTheme() {
-      var darkThemeSelected = (localStorage.getItem('mode') !== null && localStorage.getItem('mode') !== 'dark');
-      // update checkbox
-      themeSwitch.checked = darkThemeSelected;
-      // update body data-theme attribute
-      darkThemeSelected ? $("body").addClass("bg-white text-black border-black").removeClass("bg-black text-white border-white") : $("body").removeClass("bg-white text-black border-black").addClass("bg-black text-white border-white");
-    };
-  
-    function resetTheme() {
-      if(themeSwitch.checked) { // dark theme has been selected
-        $("body").removeClass("bg-white text-black border-black").addClass("bg-black text-white border-white");
-        localStorage.setItem('mode', 'dark');
-      } else {
-        $("body").addClass("bg-white text-black border-black").removeClass("bg-black text-white border-white");
-        localStorage.setItem('mode', 'light');
-      } 
-    };
   }
+
+
+  function initTheme() {
+    var darkThemeSelected = (localStorage.getItem('mode') !== null && localStorage.getItem('mode') !== 'dark');
+    // update checkbox
+    themeSwitch.checked = darkThemeSelected;
+    // update body data-theme attribute
+    darkThemeSelected ? $("body").addClass("bg-white text-black border-black").removeClass("bg-black text-white border-white") : $("body").removeClass("bg-white text-black border-black").addClass("bg-black text-white border-white");
+  };
+
+  function resetTheme() {
+    if(themeSwitch.checked) { // dark theme has been selected
+      $("body").removeClass("bg-white text-black border-black").addClass("bg-black text-white border-white");
+      localStorage.setItem('mode', 'dark');
+    } else {
+      $("body").addClass("bg-white text-black border-black").removeClass("bg-black text-white border-white");
+      localStorage.setItem('mode', 'light');
+    } 
+  };
   
   function initilizePlugins() {
 
