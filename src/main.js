@@ -7,6 +7,7 @@ $(document).ready(function() {
   initilizePlugins();
   typeit();
   clickTracker();
+  clicky_site_ids.push(101201629)
   
   function initilizePlugins() {
     const toggleSwitch = document.querySelector(
@@ -65,13 +66,14 @@ $(document).ready(function() {
   });
 
   Barba.Dispatcher.on("initStateChange", function() {
-    clickTracker();
+    clicky_site_ids.push(101201629)
   });
 });
 
 function clickTracker() {
   $.getScript("//static.getclicky.com/js"); // jQuery shortcut
-  var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101201629);
+  var clicky_site_ids = clicky_site_ids || []; 
+  clicky_site_ids.push(101201629);
 }
 
 function makeNewPosition() {
