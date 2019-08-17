@@ -77,13 +77,14 @@ $(document).ready(function() {
   };
   Barba.Pjax.start();
 
-  Barba.Dispatcher.on("transitionCompleted", function() {
+  Barba.Dispatcher.on("transitionCompleted", function() { 
     typeit();
   });
 
   Barba.Dispatcher.on("initStateChange", function() {
     gaTracker("UA-145302459-1");
     ga("send", "pageview");
+    $("html, body").animate({ scrollTop: 0 }, 800);
   });
 });
 
