@@ -164,6 +164,7 @@ span.colorText-green {
 }
 
 .theme-switch input {
+  display: none;
   z-index: 1000;
   position: absolute;
   width: 56px;
