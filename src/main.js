@@ -25,7 +25,7 @@ $(document).ready(function() {
       // update checkbox
       themeSwitch.checked = darkThemeSelected;
       // update body data-theme attribute
-      darkThemeSelected ? $("body").removeClass("bg-white text-black border-black").addClass("bg-black text-white border-white") : $("body").addClass("bg-white text-black border-black").removeClass("bg-black text-white border-white");
+      darkThemeSelected ? $("body").addClass("bg-white text-black border-black").removeClass("bg-black text-white border-white") : $("body").removeClass("bg-white text-black border-black").addClass("bg-black text-white border-white");
     };
   
     function resetTheme() {
