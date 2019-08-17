@@ -48,17 +48,31 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
+          'file-loader',
           {
-            loader: 'file-loader',
+            loader: 'image-webpack-loader',
             options: {
-              publicPath: '/',
-              name: '[path][name].[ext]',
-              context: 'src'
-            }
-          }
-        ]
+              mozjpeg: {
+                progressive: true,
+                quality: 85
+              },
+              // optipng.enabled: false will disable optipng
+              optipng: {
+                enabled: false,
+              },
+              pngquant: {
+                quality: '85',
+                speed: 4
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+       // webpack@2.x and newer
+            },
+          },
+        ],
       },
       {
         test: /\.woff(2)?$/,
@@ -109,6 +123,8 @@ module.exports = {
       new MiniCssExtractPlugin({
         filename: `styles/[name].css`
       }),
+
+      
   ],
 
   // https://webpack.js.org/configuration/optimization/
