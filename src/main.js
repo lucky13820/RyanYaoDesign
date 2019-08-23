@@ -124,13 +124,13 @@ function typeit() {
     cursor: false,
     lifeLike: true
   })
-    .type("<span class='colorText-red'>I design for digital screens.</span>")
+    .type("<span class='colorText-red'>I design experience for digital screens.</span>")
     .pause(8000)
     .delete()
-    .type("<span class='colorText-blue'>I ride fixie.</span>")
+    .type("<span class='colorText-blue'>I ride fixie to meditate myself.</span>")
     .pause(8000)
     .delete()
-    .type("<span class='colorText-green'>I live in Vancouver.</span>")
+    .type("<span class='colorText-green'>I take photo to find the beauty in life.</span>")
     .pause(8000)
     .go();
 
