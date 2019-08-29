@@ -457,7 +457,7 @@ body.bg-black .switcher:before {
     max-width: 42rem;
 }
 
-.post-content a {
+.under-line {
     text-decoration: none!important;
     border-bottom: solid 3px rgb(253, 184, 109)!important;
 }
@@ -466,7 +466,7 @@ body.bg-black .switcher:before {
     list-style: circle;
 }
 
-.post-content a:hover {
+.under-line:hover {
     background-color: rgb(253, 184, 109)!important;
     border-bottom: solid 3px rgb(253, 184, 109)!important;
     transition: all .4s ease!important;
