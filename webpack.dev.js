@@ -13,7 +13,7 @@ module.exports = {
 
   // https://webpack.js.org/configuration/dev-server/
   devServer: {
-    port: 8088,
+    port: 7077,
     writeToDisk: false // https://webpack.js.org/configuration/dev-server/#devserverwritetodisk-
   },
 
@@ -78,10 +78,16 @@ module.exports = {
       filename: 'index.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/air-weather-app.html',
+      template: './src/classtopbase.html',
       inject: 'body',
-      chunks: ['main', 'air-weather-app'],
-      filename: 'air-weather-app.html'
+      chunks: ['main', 'classtopbase'],
+      filename: 'classtopbase.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/classtopbase-website.html',
+      inject: 'body',
+      chunks: ['main', 'classtopbase-website'],
+      filename: 'classtopbase-website.html'
     }),
   ]
 }

@@ -87,10 +87,16 @@ module.exports = {
       filename: 'index.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/air-weather-app.html',
-      inject: true,
-      chunks: ['main', 'air-weather-app'],
-      filename: 'air-weather-app.html'
+      template: './src/classtopbase.html',
+      inject: 'body',
+      chunks: ['main', 'classtopbase'],
+      filename: 'classtopbase.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/classtopbase-website.html',
+      inject: 'body',
+      chunks: ['main', 'classtopbase-website'],
+      filename: 'classtopbase-website.html'
     }),
     new BrotliGzipPlugin({
       asset: '[path].br[query]',
