@@ -9,7 +9,7 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
     <link rel="preload" href="${require(`./assets/fonts/visby-cf-bold-kern-latin.woff2`)}" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="${require(`./assets/fonts/visby-cf-kern-latin.woff2`)}" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="${require(`./assets/fonts/rubik-regular-kern-latin.woff2`)}" as="font" type="font/woff2" crossorigin />
     <style type="text/css">
         @font-face {
             font-family: "VisbyCF-Bold";
@@ -21,9 +21,9 @@
         }
         
         @font-face {
-            font-family: "VisbyCF-Light";
-            src: url("${require(`./assets/fonts/visby-cf-light-kern-latin.woff2`)}") format("woff2"),
-            url("${require(`./assets/fonts/visby-cf-light-kern-latin.woff`)}") format("woff");
+            font-family: "Rubik-Regular";
+            src: url("${require(`./assets/fonts/rubik-regular-kern-latin.woff2`)}") format("woff2"),
+            url("${require(`./assets/fonts/rubik-regular-kern-latin.woff`)}") format("woff");
             font-weight: normal;
             font-style: normal;
             font-display: swap;
@@ -72,7 +72,7 @@
             more consistent experience.
           </p>
           <div id="dashboard" class="mt-16">
-            <h2 class="text-2xl font-thin mb-6 mt-16">
+            <h2 class="text-2xl mb-6 mt-16">
               Dashboard Design
             </h2>
             <p>
@@ -278,8 +278,24 @@
         </footer>
 
         <span id="bottomR">RY</span>
-        <script type="text/javascript" src="bundle.js"></script>
     </main>
+    <!-- Hotjar Tracking Code for ryanyao.design -->
+    <script>
+        (function(h, o, t, j, a, r) {
+            h.hj = h.hj || function() {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {
+                hjid: 1469352,
+                hjsv: 6
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
 </body>
 
 </html>

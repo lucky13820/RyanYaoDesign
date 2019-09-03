@@ -60,7 +60,7 @@ h4 {
 p,
 a {
     @apply font-body;
-    @apply leading-loose;
+    @apply leading-relaxed;
     @apply text-lg;
     @apply max-w-2xl;
     @apply m-auto;
