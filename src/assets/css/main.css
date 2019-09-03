@@ -266,6 +266,10 @@ body.bg-black .switcher:before {
     mask: url(../image/Linkedin.svg);
 }
 
+.icon-resume {
+    mask: url(../image/resume.svg);
+}
+
 .phone-1,
 .bike-1,
 .map-1 {
