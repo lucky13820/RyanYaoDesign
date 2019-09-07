@@ -497,6 +497,39 @@ div:focus {
     outline: none;
 }
 
+progress {
+    /* Positioning */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 8px;
+    /* Dimensions */
+    width: 100%;
+    height: 6px;
+    /* Reset the appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Get rid of the default border in Firefox/Opera. */
+    border: none;
+    /* Progress bar container for Firefox/IE10+ */
+    background-color: transparent;
+    /* Progress bar value for IE10+ */
+    color: red;
+}
+
+progress::-webkit-progress-bar {
+    background-color: transparent;
+}
+
+progress::-webkit-progress-value {
+    background-image: -webkit-linear-gradient( 0deg, rgba(253, 184, 109, 1) 0%, rgba(251, 129, 128, 1) 100%);
+}
+
+progress::-moz-progress-bar {
+    background-image: -moz-linear-gradient( 0deg, rgba(253, 184, 109, 1) 0%, rgba(251, 129, 128, 1) 100%);
+}
+
 @media (min-width: 48rem) {
     body::after {
         border-bottom-width: 8px;
