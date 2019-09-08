@@ -17,12 +17,12 @@ module.exports = {
                 500: '#828282',
                 700: '#1D1E1F',
             },
-            white: '#f1f1f1',
-            black: '#161819',
+            white: '#dcdddd',
+            black: '#1e2022',
         },
         fontFamily: {
             'display': ['VisbyCF-Bold', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto,tahoma', 'Verdana,arial', "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", 'STXihei', "华文细黑", "Microsoft Yahei", "微软雅黑", 'sans-serif'],
-            'body': ['Rubik-Regular', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto,tahoma', 'Verdana,arial', "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", 'STXihei', "华文细黑", "Microsoft Yahei", "微软雅黑", 'sans-serif'],
+            'body': ['Rubik-Light', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto,tahoma', 'Verdana,arial', "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", 'STXihei', "华文细黑", "Microsoft Yahei", "微软雅黑", 'sans-serif'],
         },
         fontSize: {
             'xs': '.75rem',
