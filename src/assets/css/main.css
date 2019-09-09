@@ -586,3 +586,12 @@
                     border-bottom-width: 8px;
                 }
             }
+            
+            @media (max-width: 768px) {
+                .titleAnimation h1 {
+                    height: 250px;
+                }
+                .titleAnimation ul {
+                    margin-top: 3.2rem;
+                }
+            }
