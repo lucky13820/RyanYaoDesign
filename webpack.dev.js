@@ -36,9 +36,9 @@ module.exports = {
           'postcss-loader'
           // Please note we are not running postcss here
         ]
-      },
+      },      
       {
-        test: /\.(gif|png|jpe?g|svg)$/i,
+        test: /\.(gif|png|jpe?g|svg|ico)$/i,
         use: [
           'file-loader',
           {
@@ -65,7 +65,9 @@ module.exports = {
             }
           }
         ]
-      }
+      },
+      { test: /\.xml$/, loader: 'xml-loader' },
+
     ]
   },
 

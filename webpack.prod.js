@@ -48,7 +48,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|gif|svg|ico)$/,
         use: [
           {
             loader: 'file-loader',
@@ -60,6 +60,7 @@ module.exports = {
           }
         ]
       },
+      { test: /\.xml$/, loader: 'xml-loader' },
       {
         test: /\.woff(2)?$/,
         use: [
