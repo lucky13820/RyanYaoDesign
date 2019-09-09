@@ -55,6 +55,7 @@ h2,
 h3,
 h4 {
     @apply font-display;
+    letter-spacing: 0.8px;
 }
 
 p,
@@ -62,8 +63,9 @@ a {
     @apply font-body;
     @apply leading-relaxed;
     @apply text-lg;
-    @apply max-w-2xl;
+    max-width: 38rem;
     @apply m-auto;
+    letter-spacing: 0.1px;
 }
 
 span.colorText-red {
@@ -458,7 +460,7 @@ body.bg-black .switcher:before {
 .post-content a {
     margin-left: auto;
     margin-right: auto;
-    max-width: 42rem;
+    max-width: 38rem;
 }
 
 .under-line {
