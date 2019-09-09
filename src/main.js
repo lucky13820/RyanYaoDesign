@@ -35,17 +35,17 @@ $(document).ready(function() {
         // update checkbox
         themeSwitch.checked = darkThemeSelected;
         // update body data-theme attribute
-        darkThemeSelected ? $("body").addClass("bg-white text-black border-black").removeClass("bg-black text-white border-white") : $("body").removeClass("bg-white text-black border-black").addClass("bg-black text-white border-white");
+        darkThemeSelected ? $("body").addClass("bg-white text-black border-black").removeClass("bg-black text-gray-300 border-white") : $("body").removeClass("bg-white text-black border-black").addClass("bg-black text-gray-300 border-white");
         darkThemeSelected ? $("#themeSwitch").prop("checked", false) : $("#themeSwitch").prop("checked", true);
     };
 
     function resetTheme(e) {
         if (e.target.checked) { // dark theme has been selected
-            $("body").removeClass("bg-white text-black border-black").addClass("bg-black text-white border-white");
+            $("body").removeClass("bg-white text-black border-black").addClass("bg-black text-gray-300 border-white");
             localStorage.setItem('mode', 'dark');
             $("#themeSwitch").prop("checked", true);
         } else {
-            $("body").addClass("bg-white text-black border-black").removeClass("bg-black text-white border-white");
+            $("body").addClass("bg-white text-black border-black").removeClass("bg-black text-gray-300 border-white");
             localStorage.setItem('mode', 'light');
             $("#themeSwitch").prop("checked", false);
         }

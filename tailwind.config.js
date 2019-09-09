@@ -13,11 +13,12 @@ module.exports = {
             },
             gray: {
                 100: '#F6F6F7',
+                200: '#dcdddd',
                 300: '#E1E4E9',
                 500: '#828282',
                 700: '#1D1E1F',
             },
-            white: '#dcdddd',
+            white: '#fcfcfc',
             black: '#1e2022',
         },
         fontFamily: {
