@@ -34,6 +34,7 @@
             body.bg-white::after {
                 border: #161819 solid 8px;
                 border-bottom-width: 0;
+                transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
             }
             
             a {
@@ -52,6 +53,7 @@
             body.bg-white .switcher,
             body.bg-white .switcher::before {
                 cursor: url('../image/hand-black.svg'), pointer;
+                transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
             }
             
             h1,
@@ -166,11 +168,12 @@
                 position: fixed;
                 right: 60px;
                 top: 10px;
+                z-index: 9999;
             }
             
             .theme-switch input {
                 display: none;
-                z-index: 99999;
+                z-index: 9999;
                 position: absolute;
                 width: 56px;
                 height: 56px;
@@ -512,6 +515,7 @@
                 padding: 40px 0px;
                 margin-bottom: 24px;
                 background: #292B2C;
+                transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
             }
             
             .image-container img {
