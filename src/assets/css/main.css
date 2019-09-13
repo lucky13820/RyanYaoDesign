@@ -546,6 +546,11 @@
                 @apply shadow-md;
                 border-radius: 3px;
                 margin: auto;
+                cursor: url('../image/expand-white.svg'), zoom-in;
+            }
+            
+            body.bg-white .image-container img {
+                cursor: url('../image/expand-black.svg'), zoom-in;
             }
             
             .no-shadow {
