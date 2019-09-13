@@ -60,6 +60,11 @@
                 fill: #1e2022;
             }
             
+            body.bg-white figcaption,
+            body.bg-white .text-gray-300 {
+                @apply text-gray-500;
+            }
+            
             h1,
             h2,
             h3,
