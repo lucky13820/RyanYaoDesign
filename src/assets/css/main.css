@@ -540,6 +540,11 @@
             .image-container img {
                 @apply shadow-md;
                 border-radius: 3px;
+                margin: auto;
+            }
+            
+            .no-shadow {
+                box-shadow: none !important;
             }
             
             .full-image {
