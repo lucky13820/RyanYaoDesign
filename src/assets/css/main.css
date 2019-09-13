@@ -55,8 +55,8 @@
                 cursor: url('../image/hand-black.svg'), pointer;
                 transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
             }
-
-            body.bg-white .logo{
+            
+            body.bg-white .logo {
                 fill: #1e2022;
             }
             
@@ -196,7 +196,7 @@
                 z-index: 1000;
                 opacity: 1;
             }
-
+            
             .switcher:after {
                 background-image: url(../image/Moon.svg);
                 background-position: center;
@@ -232,7 +232,7 @@
             body.bg-black .switcher:before {
                 opacity: 1
             }
-
+            
             body.bg-white .switcher:after {
                 opacity: 1
             }
@@ -515,10 +515,6 @@
                 transform-origin: bottom center;
                 transform: scaleY(0.1);
                 transition: all 0.1s ease-in-out;
-            }
-            
-            .post-content ul {
-                list-style: circle;
             }
             
             .under-line:hover::before {
