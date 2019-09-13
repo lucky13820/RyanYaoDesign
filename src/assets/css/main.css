@@ -517,10 +517,6 @@
                 transition: all 0.1s ease-in-out;
             }
             
-            .post-content ul {
-                list-style: circle;
-            }
-            
             .under-line:hover::before {
                 transform: scaleY(1);
                 background-image: -webkit-linear-gradient( 0deg, rgba(253, 184, 109, 1) 0%, rgba(251, 129, 128, 1) 100%);
