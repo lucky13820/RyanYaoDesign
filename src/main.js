@@ -177,10 +177,10 @@ function typeit() {
         .type("<span class='colorText-red'>I design experience for digital screens.</span>")
         .pause(5000)
         .delete()
-        .type("<span class='colorText-blue'>I ride fixie to meditate myself.</span>")
+        .type("<span class='colorText-blue'>I ride fixie.</span>")
         .pause(5000)
         .delete()
-        .type("<span class='colorText-green'>I take photo to find the beauty in life.</span>")
+        .type("<span class='colorText-green'>I take photos.</span>")
         .pause(5000)
         .go();
 
