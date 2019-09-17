@@ -13,10 +13,6 @@
                 scroll-behavior: smooth;
             }
             
-            body.bg-white {
-                cursor: url('../image/cursor-black.svg'), auto;
-            }
-            
             body::after {
                 content: "";
                 position: fixed;
@@ -41,10 +37,6 @@
                 cursor: url('../image/hand-white.svg'), pointer;
             }
             
-            body.bg-white a {
-                cursor: url('../image/hand-black.svg'), pointer;
-            }
-            
             body.bg-white .image-container {
                 @apply bg-gray-100;
             }
@@ -52,7 +44,6 @@
             body.bg-white .theme-switch input,
             body.bg-white .switcher,
             body.bg-white .switcher::before {
-                cursor: url('../image/hand-black.svg'), pointer;
                 transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
             }
             
@@ -547,10 +538,6 @@
                 border-radius: 5px;
                 margin: auto;
                 cursor: url('../image/expand-white.svg'), zoom-in;
-            }
-            
-            body.bg-white .image-container img {
-                cursor: url('../image/expand-black.svg'), zoom-in;
             }
             
             .no-shadow {
