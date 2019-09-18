@@ -600,6 +600,11 @@
                 border: 0;
             }
             
+            hr {
+                border: 1px solid #3D3D3D;
+                width: 60%;
+            }
+            
             @media (min-width: 48rem) {
                 body::after {
                     border-bottom-width: 8px;
@@ -615,5 +620,9 @@
                 }
                 .titleAnimation ul {
                     margin-top: 3.6rem;
+                }
+                hr {
+                    border: 1px solid #3D3D3D;
+                    width: 100%;
                 }
             }
