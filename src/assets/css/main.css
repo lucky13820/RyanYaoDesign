@@ -306,6 +306,14 @@ body.bg-black .switcher:after {
 	mask: url(../image/resume.svg);
 }
 
+.icon-dribbble {
+	mask: url(../image/dribbble.svg);
+}
+
+.icon-unsplash {
+	mask: url(../image/unsplash.svg);
+}
+
 .phone-1,
 .bike-1,
 .map-1 {
