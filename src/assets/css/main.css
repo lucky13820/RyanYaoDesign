@@ -286,15 +286,15 @@ body.bg-black .switcher:after {
 	mask: url(../image/Email.svg);
 }
 
-.icon-telegram {
+.icon-tele {
 	mask: url(../image/Telegram.svg);
 }
 
-.icon-twitter {
+.icon-twit {
 	mask: url(../image/Twitter.svg);
 }
 
-.icon-instagram {
+.icon-insta {
 	mask: url(../image/Instagram.svg);
 }
 
