@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*! purgecss start ignore */
 body {
 	@apply text-black;
 	min-height: 100%;
@@ -677,3 +679,6 @@ color: #161819;
 		width: 100%;
 	}
 }
+
+/*! purgecss end ignore */
+

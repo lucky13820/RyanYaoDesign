@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --mode development",
-    "build": "webpack --config webpack.prod.js --mode production",
+    "build": "webpack --config webpack.prod.js --mode production && postcss src/assets/css/main.css -o dist/styles/main.css",
     "preview": "npm run build && http-server dist",
-    "test": "standard"
+    "test": "standard",
+    "build:css": "postcss src/assets/css/main.css -o dist/styles/main.css"
   },
   "repository": {
     "type": "git",
