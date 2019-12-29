@@ -74,8 +74,8 @@ p,
 a,
 blockquote {
 	@apply font-body;
-	@apply leading-relaxed;
-	@apply text-lg;
+	line-height: 2.1rem;
+	font-size: 1.2rem;
 	max-width: 38rem;
 	@apply m-auto;
 	letter-spacing: 0.1px;
@@ -586,14 +586,14 @@ blockquote:after {
 
 blockquote:before {
 	content: '“';
-	left: -3rem;
-	top: -3.5rem;
+	left: -2.8rem;
+	top: 0rem;
 }
 
 blockquote:after {
 	content: '”';
 	right: -2rem;
-	bottom: 0.5rem;
+	bottom: -5rem;
 }
 
 
