@@ -510,7 +510,6 @@ body.bg-black .switcher:after {
 	content: "";
 	position: absolute;
 	z-index: -1;
-	top: 0;
 	bottom: 0;
 	left: -0.05em;
 	right: -0.05em;
@@ -518,14 +517,13 @@ body.bg-black .switcher:after {
 		0deg,
 		rgba(253, 184, 109, 1) 0%,
 		rgba(251, 129, 128, 1) 100%
-	);
-	transform-origin: bottom center;
-	transform: scaleY(0.1);
+  );
+  height: 3px;
 	transition: all 0.1s ease-in-out;
 }
 
 .under-line:hover::before {
-	transform: scaleY(1);
+  height: 100%;
 	background-image: -webkit-linear-gradient(
 		0deg,
 		rgba(253, 184, 109, 1) 0%,
