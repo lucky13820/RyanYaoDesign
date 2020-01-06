@@ -451,25 +451,6 @@ body.bg-black .switcher:after {
 	opacity: 1;
 }
 
-#bottomR,
-#bottomY {
-	@apply font-display;
-	@apply text-white;
-	@apply opacity-0;
-	font-size: 600px;
-	@apply fixed;
-	line-height: 0.8;
-	bottom: -60px;
-	z-index: -1;
-	pointer-events: none;
-	transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-#bottomY {
-	left: 380px;
-	line-height: 0.6;
-}
-
 .bottomLetter {
 	opacity: 0.08 !important;
 	bottom: 0px !important;
