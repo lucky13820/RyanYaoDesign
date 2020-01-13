@@ -548,6 +548,14 @@ body.bg-black .switcher:after {
 	justify-content: space-evenly;
 }
 
+.image-container.pb-16 {
+  padding-bottom: 72px;
+}
+
+.image-container.pb-16 figcaption {
+  bottom: 24px;
+}
+
 .quote-container blockquote{
   font-size: 1.5rem;
   color: #c2c2c2;
