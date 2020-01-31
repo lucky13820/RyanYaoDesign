@@ -8,8 +8,8 @@ import Barba from "barba.js";
 $(document).ready(function() {
     initilizePlugins();
     typeit();
-    gaTracker("UA-145302459-1");
-    ga("send", "pageview");
+    // gaTracker("UA-145302459-1");
+    // ga("send", "pageview");
 
     var winHeight = $(window).height(),
         docHeight = $(document).height(),
@@ -94,8 +94,8 @@ $(document).ready(function() {
     });
 
     Barba.Dispatcher.on("initStateChange", function() {
-        gaTracker("UA-145302459-1");
-        ga("send", "pageview");
+        // gaTracker("UA-145302459-1");
+        // ga("send", "pageview");
         $("html, body").animate({ scrollTop: 0 }, 800);
     });
 
@@ -135,17 +135,17 @@ $(document).ready(function() {
         });
 });
 
-function gaTracker(id) {
-    $.getScript("//www.google-analytics.com/analytics.js"); // jQuery shortcut
-    window.ga =
-        window.ga ||
-        function() {
-            (ga.q = ga.q || []).push(arguments);
-        };
-    ga.l = +new Date();
-    ga("create", id, "auto");
-    ga("send", "pageview");
-}
+// function gaTracker(id) {
+//     $.getScript("//www.google-analytics.com/analytics.js"); // jQuery shortcut
+//     window.ga =
+//         window.ga ||
+//         function() {
+//             (ga.q = ga.q || []).push(arguments);
+//         };
+//     ga.l = +new Date();
+//     ga("create", id, "auto");
+//     ga("send", "pageview");
+// }
 
 function makeNewPosition() {
     // Get viewport dimensions (remove the dimension of the div)
