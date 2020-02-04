@@ -50,11 +50,11 @@ module.exports = {
             'sm': '320px',
             'md': '780px',
             'lg': '1024px',
-            'xl': '1200px',
+            'xl': '1440px',
         },
         fluidContainer: {
             'default': {
-                maxWidth: '1200px', // defaults to null (no maximum width)
+                maxWidth: '1240px', // defaults to null (no maximum width)
                 padding: '48px', // defaults to '15px'
                 responsivePadding: { // defaults to {}
                     'sm': '30px', // at screen 'sm', the padding will change to 30px

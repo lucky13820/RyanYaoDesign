@@ -308,7 +308,7 @@ body.bg-black .switcher:after {
 	mask: url(../image/Twitter.svg);
 }
 
-.icon-insta {
+.icon-inst {
 	mask: url(../image/Instagram.svg);
 }
 
@@ -414,18 +414,25 @@ body.bg-black .switcher:after {
 	right: 450px;
 }
 
-.image-list {
-	position: relative;
-	width: 100%;
-	background-position: center;
-	background-size: cover;
-	background-clip: padding-box;
-	/* !importanté */
-	top: 0;
-	transition: top 0.3s ease-in-out;
+.work-list li:nth-of-type(3) .image-list{
+  box-shadow: none;
 }
 
-.image-list:before {
+.image-list {
+	position: relative;
+  width: 100%;
+  max-width: 514px;
+	background-position: center;
+	background-size: cover;
+  background-clip: padding-box;
+  border-radius: 4px;
+	/* !importanté */
+	top: 0;
+  transition: top 0.3s ease-in-out;
+  box-shadow: 0px 3.29748px 5.06734px rgba(6, 7, 30, 0.0369931), 0px 7.20082px 10.0938px rgba(6, 7, 30, 0.0550396), 0px 12.1636px 15.6342px rgba(6, 7, 30, 0.0677028), 0px 19.1843px 22.9277px rgba(6, 7, 30, 0.0792411), 0px 30.9764px 35.4386px rgba(6, 7, 30, 0.0937812), 0px 57px 72px rgba(6, 7, 30, 0.13);
+}
+
+/* .image-list:before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -434,7 +441,6 @@ body.bg-black .switcher:after {
 	left: 0;
 	z-index: -1;
 	margin: -8px;
-	/* !importanté */
 	transition: all 0.2s ease-in-out;
 	background: linear-gradient(
 		90deg,
@@ -442,13 +448,14 @@ body.bg-black .switcher:after {
 		rgba(251, 129, 128, 1) 100%
 	);
 	opacity: 0;
-}
+} 
+*/
 
-.image-list::after {
+/* .image-list::after {
 	content: "";
 	display: block;
 	padding-bottom: 100%;
-}
+} */
 
 .animsition-link:hover .image-list {
 	top: -5px;
@@ -456,6 +463,22 @@ body.bg-black .switcher:after {
 
 .animsition-link:hover .image-list:before {
 	opacity: 1;
+}
+
+.work-list li:first-of-type a{
+  background: linear-gradient(112.12deg, #255FEE 0%, #1041BA 100%);
+}
+
+.work-list li:nth-of-type(2) a{
+  background: linear-gradient(112.12deg, #F25C7C 0%, #E53157 100%);
+}
+
+.work-list li:nth-of-type(3) a{
+  background: linear-gradient(112.12deg, #505050 0%, #303030 100%);
+}
+
+.animsition-link ul li{
+  background: rgba(50, 50, 50, 0.2);
 }
 
 .bottomLetter {
