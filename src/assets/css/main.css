@@ -458,7 +458,7 @@ body.bg-black .switcher:after {
 } */
 
 .animsition-link:hover .image-list {
-	top: -5px;
+	top: -6px;
 }
 
 .animsition-link:hover .image-list:before {
