@@ -39,7 +39,6 @@ module.exports = {
       {
         test: /\.(gif|png|jpe?g|svg|ico)$/,
         use: [
-          "file-loader",
           {
             loader: "file-loader",
             options: {
@@ -93,6 +92,12 @@ module.exports = {
       inject: "body",
       chunks: ["main", "air-app"],
       filename: "air-app.html"
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/about.html",
+      inject: "body",
+      chunks: ["main", "about"],
+      filename: "about.html"
     })
   ]
 };
