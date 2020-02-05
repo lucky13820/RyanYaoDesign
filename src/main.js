@@ -76,27 +76,8 @@ $(document).ready(function() {
       isDarkMode = false
     };
 
-    console.log(isDarkMode)
-
     if (isDarkMode == true) activateDarkMode();
     if (isDarkMode == false) activateLightMode();
-
-    // var darkThemeSelected =
-    //   localStorage.getItem("mode") !== null &&
-    //   localStorage.getItem("mode") !== "dark";
-    // // update checkbox
-    // themeSwitch.checked = darkThemeSelected;
-    // // update body data-theme attribute
-    // darkThemeSelected
-    //   ? $("body")
-    //       .addClass("bg-white text-black border-black")
-    //       .removeClass("bg-black text-gray-300 border-white")
-    //   : $("body")
-    //       .removeClass("bg-white text-black border-black")
-    //       .addClass("bg-black text-gray-300 border-white");
-    // darkThemeSelected
-    //   ? $("#themeSwitch").prop("checked", false)
-    //   : $("#themeSwitch").prop("checked", true);
   }
 
   function resetTheme(e) {

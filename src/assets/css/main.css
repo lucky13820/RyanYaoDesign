@@ -2,23 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Noto Sans Light";
-  src: url("${require(`./assets/fonts/notosans-light-kern-latin.woff2`)}") format("woff2"),
-  url("${require(`./assets/fonts/notosans-light-kern-latin.woff`)}") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Texta Heavy";
-  src: url("${require(`./assets/fonts/texta-heavy-kern-latin.woff2`)}") format("woff2"),
-  url("${require(`./assets/fonts/texta-heavy-kern-latin.woff`)}") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 
 /*! purgecss start ignore */
 body {
