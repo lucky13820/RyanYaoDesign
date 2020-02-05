@@ -269,11 +269,11 @@ body.bg-black .switcher:after {
 }
 
 .icon-inst {
-	mask: url(../image/Instagram.svg);
+	mask: url(../image/ins.svg);
 }
 
 .icon-linked {
-	mask: url(../image/Linkedin.svg);
+	mask: url(../image/link.svg);
 }
 
 .icon-resume {
