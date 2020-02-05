@@ -18,12 +18,12 @@ module.exports = {
                 500: '#828282',
                 700: '#1D1E1F',
             },
-            white: '#fcfcfc',
+            white: '#f1f1f1',
             black: '#1e2022',
         },
         fontFamily: {
-            'display': ['VisbyCF-Bold', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto,tahoma', 'Verdana,arial', "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", 'STXihei', "华文细黑", "Microsoft Yahei", "微软雅黑", 'sans-serif'],
-            'body': ['Rubik-Light', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto,tahoma', 'Verdana,arial', "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", 'STXihei', "华文细黑", "Microsoft Yahei", "微软雅黑", 'sans-serif'],
+            'display': ['Texta Heavy', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto,tahoma', 'Verdana,arial', "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", 'STXihei', "华文细黑", "Microsoft Yahei", "微软雅黑", 'sans-serif'],
+            'body': ['Rubik Light', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto,tahoma', 'Verdana,arial', "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", 'STXihei', "华文细黑", "Microsoft Yahei", "微软雅黑", 'sans-serif'],
         },
         fontSize: {
             'xs': '.75rem',
@@ -50,11 +50,11 @@ module.exports = {
             'sm': '320px',
             'md': '780px',
             'lg': '1024px',
-            'xl': '1200px',
+            'xl': '1440px',
         },
         fluidContainer: {
             'default': {
-                maxWidth: '1200px', // defaults to null (no maximum width)
+                maxWidth: '1240px', // defaults to null (no maximum width)
                 padding: '48px', // defaults to '15px'
                 responsivePadding: { // defaults to {}
                     'sm': '30px', // at screen 'sm', the padding will change to 30px
