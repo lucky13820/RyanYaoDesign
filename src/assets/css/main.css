@@ -85,7 +85,7 @@ blockquote {
 
 .post-content p{
   max-width: 38rem;
-	@apply m-auto;
+	@apply mx-auto;
 }
 
 
@@ -479,6 +479,8 @@ body.bg-black .switcher:after {
   font-size: 1.5rem;
   color: #c2c2c2;
   position: relative;
+  max-width: 38rem;
+	@apply mx-auto;
 }
 
 blockquote:before,
