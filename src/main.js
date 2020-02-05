@@ -7,7 +7,6 @@ import Barba from "barba.js";
 
 $(document).ready(function() {
   initilizePlugins();
-  // typeit();
   // gaTracker("UA-145302459-1");
   // ga("send", "pageview");
 
@@ -128,10 +127,6 @@ $(document).ready(function() {
     return transEffect;
   };
   Barba.Pjax.start();
-
-  Barba.Dispatcher.on("transitionCompleted", function() {
-    typeit();
-  });
 
   Barba.Dispatcher.on("initStateChange", function() {
     // gaTracker("UA-145302459-1");
