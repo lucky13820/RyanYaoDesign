@@ -92,15 +92,15 @@ $(document).ready(function() {
     }
   }
 
-  function initilizePlugins() {
-    $(window).scroll(function() {
-      if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-        $("#bottomR, #bottomY").addClass("bottomLetter");
-      } else {
-        $("#bottomR, #bottomY").removeClass("bottomLetter");
-      }
-    });
-  }
+  // function initilizePlugins() {
+  //   $(window).scroll(function() {
+  //     if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+  //       $("#bottomR, #bottomY").addClass("bottomLetter");
+  //     } else {
+  //       $("#bottomR, #bottomY").removeClass("bottomLetter");
+  //     }
+  //   });
+  // }
 
   var transEffect = Barba.BaseTransition.extend({
     start: function() {
