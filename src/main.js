@@ -6,7 +6,6 @@ import jQuery from "jquery";
 import Barba from "barba.js";
 
 $(document).ready(function() {
-  initilizePlugins();
   // gaTracker("UA-145302459-1");
   // ga("send", "pageview");
 
