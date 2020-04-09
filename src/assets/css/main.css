@@ -297,7 +297,7 @@ body.bg-black .switcher:after {
 	@apply leading-tight;
 }
 
-.work-list li:nth-of-type(3) .image-list{
+.work-list li:nth-of-type(4) .image-list{
   box-shadow: none;
 }
 
@@ -360,6 +360,10 @@ body.bg-black .switcher:after {
 }
 
 .work-list li:nth-of-type(3) a{
+  background: linear-gradient(112.12deg, #768CA8 0%, #54657D 100%);
+}
+
+.work-list li:nth-of-type(4) a{
   background: linear-gradient(112.12deg, #505050 0%, #303030 100%);
 }
 
