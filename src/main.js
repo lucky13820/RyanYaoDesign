@@ -1,93 +1,93 @@
-import "./assets/css/main.css";
-import "./assets/css/lightbox.css";
-import "./assets/vendor/lightbox.js";
-import $ from "jquery";
-import jQuery from "jquery";
-import Barba from "barba.js";
+import './assets/css/main.css'
+import './assets/css/lightbox.css'
+import './assets/vendor/lightbox.js'
+import $ from 'jquery'
+import jQuery from 'jquery'
+import Barba from 'barba.js'
 
-$(document).ready(function() {
-  // gaTracker("UA-145302459-1");
-  // ga("send", "pageview");
+$(document).ready(function () {
+  gaTracker('UA-145302459-1')
+  ga('send', 'pageview')
 
-  $('h1').widowFix();
-  $('p').widowFix();
+  $('h1').widowFix()
+  $('p').widowFix()
 
-  var winHeight = $(window).height(),
-    docHeight = $(document).height(),
-    progressBar = $("progress"),
-    max,
-    value;
+  var winHeight = $(window).height()
+    var docHeight = $(document).height()
+    var progressBar = $('progress')
+    var max
+    var value
 
   /* Set the max scrollable area */
-  max = docHeight - winHeight;
-  progressBar.attr("max", max);
+  max = docHeight - winHeight
+  progressBar.attr('max', max)
 
-  $(document).on("scroll", function() {
-    value = $(window).scrollTop();
-    progressBar.attr("value", value);
-  });
+  $(document).on('scroll', function () {
+    value = $(window).scrollTop()
+    progressBar.attr('value', value)
+  })
 
-  var themeSwitch = document.getElementById("themeSwitch");
-  initTheme();
-  themeSwitch.addEventListener("change", resetTheme, function() {});
+  var themeSwitch = document.getElementById('themeSwitch')
+  initTheme()
+  themeSwitch.addEventListener('change', resetTheme, function () {})
 
-  function activateDarkMode() {
-    $("body")
-      .removeClass("bg-white text-black border-black")
-      .addClass("bg-black text-gray-300 border-white");
-    localStorage.setItem("mode", "dark");
-    $("#themeSwitch").prop("checked", true);
+  function activateDarkMode () {
+    $('body')
+      .removeClass('bg-white text-black border-black')
+      .addClass('bg-black text-gray-300 border-white')
+    localStorage.setItem('mode', 'dark')
+    $('#themeSwitch').prop('checked', true)
   }
 
-  function activateLightMode() {
-    $("body")
-      .addClass("bg-white text-black border-black")
-      .removeClass("bg-black text-gray-300 border-white");
-    localStorage.setItem("mode", "light");
-    $("#themeSwitch").prop("checked", false);
+  function activateLightMode () {
+    $('body')
+      .addClass('bg-white text-black border-black')
+      .removeClass('bg-black text-gray-300 border-white')
+    localStorage.setItem('mode', 'light')
+    $('#themeSwitch').prop('checked', false)
   }
 
-  function initTheme() {
-    var isDarkMode = '';
-    var isLightMode = '';
+  function initTheme () {
+    var isDarkMode = ''
+    var isLightMode = ''
     const isNotSpecified = window.matchMedia(
-      "(prefers-color-scheme: no-preference)"
-    ).matches;
-    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified;
+      '(prefers-color-scheme: no-preference)'
+    ).matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
 
     window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addListener(e => e.matches && activateDarkMode());
+      .matchMedia('(prefers-color-scheme: dark)')
+      .addListener(e => e.matches && activateDarkMode())
     window
-      .matchMedia("(prefers-color-scheme: light)")
-      .addListener(e => e.matches && activateLightMode());
+      .matchMedia('(prefers-color-scheme: light)')
+      .addListener(e => e.matches && activateLightMode())
 
-      if (window.matchMedia("(prefers-color-scheme: dark)")
+    if (window.matchMedia('(prefers-color-scheme: dark)')
       .matches) {
-        isDarkMode = true
-      }
-      if (window.matchMedia("(prefers-color-scheme: light)")
+      isDarkMode = true
+    }
+    if (window.matchMedia('(prefers-color-scheme: light)')
       .matches) {
-        isDarkMode = false
-      }
-    if (localStorage.getItem("mode") === "dark") {
+      isDarkMode = false
+    }
+    if (localStorage.getItem('mode') === 'dark') {
       isDarkMode = true
     };
 
-    if (localStorage.getItem("mode") === "light") {
+    if (localStorage.getItem('mode') === 'light') {
       isDarkMode = false
     };
 
-    if (isDarkMode == true) activateDarkMode();
-    if (isDarkMode == false) activateLightMode();
+    if (isDarkMode == true) activateDarkMode()
+    if (isDarkMode == false) activateLightMode()
   }
 
-  function resetTheme(e) {
+  function resetTheme (e) {
     if (e.target.checked) {
       // dark theme has been selected
-      activateDarkMode();
+      activateDarkMode()
     } else {
-      activateLightMode();
+      activateLightMode()
     }
   }
 
@@ -102,233 +102,217 @@ $(document).ready(function() {
   // }
 
   var transEffect = Barba.BaseTransition.extend({
-    start: function() {
+    start: function () {
       this.newContainerLoading.then(val =>
         this.fadeInNewcontent($(this.newContainer))
-      );
+      )
     },
-    fadeInNewcontent: function(nc) {
-      nc.hide();
-      var _this = this;
+    fadeInNewcontent: function (nc) {
+      nc.hide()
+      var _this = this
       $(this.oldContainer)
         .fadeOut(800)
         .promise()
         .done(() => {
-          nc.css("visibility", "visible");
-          nc.fadeIn(800, function() {
-            _this.done();
-          });
-        });
+          nc.css('visibility', 'visible')
+          nc.fadeIn(800, function () {
+            _this.done()
+          })
+        })
     }
-  });
+  })
 
-  Barba.Pjax.getTransition = function() {
-    return transEffect;
-  };
-  Barba.Pjax.start();
+  Barba.Pjax.getTransition = function () {
+    return transEffect
+  }
+  Barba.Pjax.start()
 
-  Barba.Dispatcher.on("initStateChange", function() {
-    // gaTracker("UA-145302459-1");
-    // ga("send", "pageview");
-    $("html, body").animate({ scrollTop: 0 }, 800);
-  });
+  Barba.Dispatcher.on('initStateChange', function () {
+    gaTracker('UA-145302459-1')
+    ga('send', 'pageview')
+    $('html, body').animate({ scrollTop: 0 }, 800)
+  })
 
   $('p a[href*="#"]')
     // Remove links that don't actually link to anything
     .not('[href="#"]')
     .not('[href="#0"]')
-    .click(function(event) {
+    .click(function (event) {
       // On-page links
       if (
-        location.pathname.replace(/^\//, "") ==
-          this.pathname.replace(/^\//, "") &&
+        location.pathname.replace(/^\//, '') ==
+          this.pathname.replace(/^\//, '') &&
         location.hostname == this.hostname
       ) {
         // Figure out element to scroll to
-        var target = $(this.hash);
+        var target = $(this.hash)
         target = target.length
           ? target
-          : $("[name=" + this.hash.slice(1) + "]");
+          : $('[name=' + this.hash.slice(1) + ']')
         // Does a scroll target exist?
         if (target.length) {
           // Only prevent default if animation is actually gonna happen
-          event.preventDefault();
-          $("html, body").animate(
+          event.preventDefault()
+          $('html, body').animate(
             {
               scrollTop: target.offset().top
             },
             800,
-            function() {
+            function () {
               // Callback after animation
               // Must change focus!
-              var $target = $(target);
-              $target.focus();
-              if ($target.is(":focus")) {
+              var $target = $(target)
+              $target.focus()
+              if ($target.is(':focus')) {
                 // Checking if the target was focused
-                return false;
+                return false
               } else {
-                $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
-                $target.focus(); // Set focus again
+                $target.attr('tabindex', '-1') // Adding tabindex for elements not focusable
+                $target.focus() // Set focus again
               }
             }
-          );
+          )
         }
       }
-    });
-});
+    })
+})
 
-// function gaTracker(id) {
-//     $.getScript("//www.google-analytics.com/analytics.js"); // jQuery shortcut
-//     window.ga =
-//         window.ga ||
-//         function() {
-//             (ga.q = ga.q || []).push(arguments);
-//         };
-//     ga.l = +new Date();
-//     ga("create", id, "auto");
-//     ga("send", "pageview");
-// }
+function gaTracker (id) {
+  $.getScript('//www.google-analytics.com/analytics.js') // jQuery shortcut
+  window.ga =
+        window.ga ||
+        function () {
+          (ga.q = ga.q || []).push(arguments)
+        }
+  ga.l = +new Date()
+  ga('create', id, 'auto')
+  ga('send', 'pageview')
+}
 
-function makeNewPosition() {
+function makeNewPosition () {
   // Get viewport dimensions (remove the dimension of the div)
-  var h = $(window).height() - 80;
-  var w = $(window).width() - 80;
+  var h = $(window).height() - 80
+  var w = $(window).width() - 80
 
-  var nh = Math.floor(Math.random() * h);
-  var nw = Math.floor(Math.random() * w);
+  var nh = Math.floor(Math.random() * h)
+  var nw = Math.floor(Math.random() * w)
 
-  return [nh, nw];
+  return [nh, nw]
 }
 
-function animateDiv(myclass) {
-  var newq = makeNewPosition();
-  $(myclass).animate({ top: newq[0], left: newq[1] }, 20000, function() {
-    animateDiv(myclass);
-  });
+function animateDiv (myclass) {
+  var newq = makeNewPosition()
+  $(myclass).animate({ top: newq[0], left: newq[1] }, 20000, function () {
+    animateDiv(myclass)
+  })
 }
 
-(function( $ ){
+(function ($) {
+  jQuery.fn.widowFix = function (userOptions) {
+    var defaults = {
+      letterLimit: null,
+      prevLimit: null,
+      linkFix: false,
+      dashes: false
+    }
 
-	jQuery.fn.widowFix = function(userOptions) {
+    var wfOptions = $.extend(defaults, userOptions)
 
-		var defaults = {
-			letterLimit: null,
-			prevLimit: null,
-			linkFix: false,
-			dashes: false
-		};
+    if (this.length) {
+      return this.each(function () {
+        var $this = $(this)
+        var linkFixLastWord
 
-		var wfOptions = $.extend(defaults, userOptions);
+        if (wfOptions.linkFix) {
+          var $linkHolder = $this.find('a:last')
+          // find the anchors and wrap them up with a <var> tag to find it later
+          $linkHolder.wrap('<var>')
+          // store the anchor inside
+          var $lastLink = $('var').html()
+          // get the real length of the last word
+          linkFixLastWord = $linkHolder.contents()[0]
+          // remove the anchor
+          $linkHolder.contents().unwrap()
+        }
 
-		if (this.length) {
+        var contentArray = $(this).html().split(' ')
+					var lastWord = contentArray.pop()
 
-			return this.each(function(){
+        if (contentArray.length <= 1) {
+          // it's a one word element, abort!
+          return
+        }
 
-				var $this = $(this);
-				var linkFixLastWord;
-				
-				if ( wfOptions.linkFix ) {
-					var $linkHolder = $this.find('a:last');
-					//find the anchors and wrap them up with a <var> tag to find it later
-					$linkHolder.wrap('<var>');
-					//store the anchor inside
-					var $lastLink = $('var').html();
-					//get the real length of the last word
-					linkFixLastWord = $linkHolder.contents()[0];
-					//remove the anchor
-					$linkHolder.contents().unwrap();
-				}
+        function checkSpace () {
+          if (lastWord === '') {
+            // trailing space found, pop it off and check again
+            lastWord = contentArray.pop()
+            checkSpace()
+          }
+        }
+        checkSpace()
 
-				var contentArray = $(this).html().split(' '),
-					lastWord = contentArray.pop();
+        // if contains a dash, use white-space nowrap to stop breaking
+        if (wfOptions.dashes) {
+          // all 3 dash types: regular, en, em
+          var dashes = ['-', '–', '—']
 
-				if (contentArray.length <= 1) {
-					// it's a one word element, abort!
-					return;
-				}
+          $.each(dashes, function (index, dash) {
+            if (lastWord.indexOf(dash) > 0) {
+              lastWord = '<span style="white-space:nowrap;">' + lastWord + '</span>'
+              return false // break out early
+            }
+          })
+        }
 
-				function checkSpace(){
-					if (lastWord === ''){
-						// trailing space found, pop it off and check again
-						lastWord = contentArray.pop();
-						checkSpace();
-					}
-				}
-				checkSpace();
-				
-				// if contains a dash, use white-space nowrap to stop breaking
-				if (wfOptions.dashes) {
-					
-					// all 3 dash types: regular, en, em
-					var dashes = ['-','–','—'];
-				
-					$.each(dashes, function(index, dash) {
+        var prevWord = contentArray[contentArray.length - 1]
 
-						if ( lastWord.indexOf(dash) > 0 ) {
-							lastWord = '<span style="white-space:nowrap;">' + lastWord + '</span>';
-							return false; // break out early
-						}
-						
-					});
-				
-				}
-				
-				var prevWord = contentArray[contentArray.length-1];
-
-				//if linkFix is on, check for the letter limit
-				if (wfOptions.linkFix) {
-					//if the last word is longer than the limit, stop the script
-					if (wfOptions.letterLimit !== null &&
+        // if linkFix is on, check for the letter limit
+        if (wfOptions.linkFix) {
+          // if the last word is longer than the limit, stop the script
+          if (wfOptions.letterLimit !== null &&
 						linkFixLastWord.length >= wfOptions.letterLimit
-						) {
+          ) {
+            $this.find('var').each(function () {
+              $(this).contents().replaceWith($lastLink)
+              $(this).contents().unwrap()
+            })
+            return
 
-							$this.find('var').each(function(){
-								$(this).contents().replaceWith($lastLink);
-								$(this).contents().unwrap();
-							});
-							return;
-
-					//or if the prev word is longer than the limit
-					} else if (wfOptions.prevLimit !== null &&
+            // or if the prev word is longer than the limit
+          } else if (wfOptions.prevLimit !== null &&
 							   prevWord.length >= wfOptions.prevLimit
 							   ) {
-									$this.find('var').each(function(){
-										$(this).contents().replaceWith($lastLink);
-										$(this).contents().unwrap();
-									});
-									return;
-					}
-
-
-				} else {
-					//if the last word is longer than the limit, stop the script
-					if (wfOptions.letterLimit !== null &&
+            $this.find('var').each(function () {
+              $(this).contents().replaceWith($lastLink)
+              $(this).contents().unwrap()
+            })
+            return
+          }
+        } else {
+          // if the last word is longer than the limit, stop the script
+          if (wfOptions.letterLimit !== null &&
 						lastWord.length >= wfOptions.letterLimit
-						) {
-							return;
-					} else if (wfOptions.prevLimit !== null &&
+          ) {
+            return
+          } else if (wfOptions.prevLimit !== null &&
 						prevWord.length >= wfOptions.prevLimit
-						) {
-							return;
-					}
-				}
+          ) {
+            return
+          }
+        }
 
-				var content = contentArray.join(' ') + '&nbsp;' + lastWord;
-				$this.html(content);
+        var content = contentArray.join(' ') + '&nbsp;' + lastWord
+        $this.html(content)
 
-				if (wfOptions.linkFix) {
-
-					//find the var and put the anchor back in, then unwrap the <var>
-					$this.find('var').each(function(){
-						$(this).contents().replaceWith($lastLink);
-						$(this).contents().unwrap();
-					});
-				}
-
-			});
-
-		}
-
-	};
-
-})( jQuery );
+        if (wfOptions.linkFix) {
+          // find the var and put the anchor back in, then unwrap the <var>
+          $this.find('var').each(function () {
+            $(this).contents().replaceWith($lastLink)
+            $(this).contents().unwrap()
+          })
+        }
+      })
+    }
+  }
+})(jQuery)
