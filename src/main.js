@@ -4,6 +4,8 @@ import './assets/vendor/lightbox.js'
 import $ from 'jquery'
 import jQuery from 'jquery'
 import Barba from 'barba.js'
+import Gumshoe from 'gumshoejs'
+import SmoothScroll from 'smooth-scroll'
 
 $(document).ready(function () {
   gaTracker('UA-145302459-1')
@@ -12,20 +14,26 @@ $(document).ready(function () {
   $('h1').widowFix()
   $('p').widowFix()
 
-  var winHeight = $(window).height()
+  initProgress()
+
+  function initProgress () {
+    var winHeight = $(window).height()
     var docHeight = $(document).height()
     var progressBar = $('progress')
     var max
     var value
 
-  /* Set the max scrollable area */
-  max = docHeight - winHeight
-  progressBar.attr('max', max)
+    console.log(docHeight)
 
-  $(document).on('scroll', function () {
-    value = $(window).scrollTop()
-    progressBar.attr('value', value)
-  })
+    /* Set the max scrollable area */
+    max = docHeight - winHeight
+    progressBar.attr('max', max)
+
+    $(document).on('scroll', function () {
+      value = $(window).scrollTop()
+      progressBar.attr('value', value)
+    })
+  }
 
   var themeSwitch = document.getElementById('themeSwitch')
   initTheme()
@@ -133,6 +141,10 @@ $(document).ready(function () {
     $('html, body').animate({ scrollTop: 0 }, 800)
   })
 
+  Barba.Dispatcher.on('transitionCompleted', function () {
+    initProgress()
+  })
+
   $('p a[href*="#"]')
     // Remove links that don't actually link to anything
     .not('[href="#"]')
@@ -176,6 +188,44 @@ $(document).ready(function () {
       }
     })
 })
+
+var spy = new Gumshoe('#content-nav a', {
+  reflow: true,
+  nested: true,
+  nestedClass: 'active-parent'
+})
+
+var scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 500,
+  speedAsDuration: true,
+  easing: 'easeInCubic',
+  offset: 32
+})
+
+function collision ($div1, $div2) {
+  var x1 = $div1.offset().left
+  var y1 = $div1.offset().top
+  var h1 = $div1.outerHeight(true)
+  var w1 = $div1.outerWidth(true)
+  var b1 = y1 + h1
+  var r1 = x1 + w1
+  var x2 = $div2.offset().left
+  var y2 = $div2.offset().top
+  var h2 = $div2.outerHeight(true)
+  var w2 = $div2.outerWidth(true)
+  var b2 = y2 + h2
+  var r2 = x2 + w2
+
+  if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) {
+    $div1.addClass('show')
+  } else {
+    $div1.removeClass('show')
+  }
+}
+
+window.setInterval(function () {
+  collision($('#content-nav'), $('.image-container'))
+}, 100)
 
 function gaTracker (id) {
   $.getScript('//www.google-analytics.com/analytics.js') // jQuery shortcut
@@ -236,7 +286,7 @@ function animateDiv (myclass) {
         }
 
         var contentArray = $(this).html().split(' ')
-					var lastWord = contentArray.pop()
+        var lastWord = contentArray.pop()
 
         if (contentArray.length <= 1) {
           // it's a one word element, abort!

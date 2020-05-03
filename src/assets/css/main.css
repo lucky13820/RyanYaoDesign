@@ -608,6 +608,17 @@ font-size: 14px;
 color: #161819;
 }
 
+#content-nav {
+  top: 56px;
+  float: left;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+#content-nav.show {
+  opacity: 1;
+}
+
 @media (min-width: 48rem) {
 	body::after {
 		border-bottom-width: 8px;
