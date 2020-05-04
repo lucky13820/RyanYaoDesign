@@ -10,6 +10,7 @@ import SmoothScroll from 'smooth-scroll'
 $(document).ready(function () {
   gaTracker('UA-145302459-1')
   ga('send', 'pageview')
+  ga('set', 'anonymizeIp', true)
 
   $('h1').widowFix()
   $('p').widowFix()
@@ -138,6 +139,7 @@ $(document).ready(function () {
   Barba.Dispatcher.on('initStateChange', function () {
     gaTracker('UA-145302459-1')
     ga('send', 'pageview')
+    ga('set', 'anonymizeIp', true)
     $('html, body').animate({ scrollTop: 0 }, 800)
   })
 
@@ -237,6 +239,7 @@ function gaTracker (id) {
   ga.l = +new Date()
   ga('create', id, 'auto')
   ga('send', 'pageview')
+  ga('set', 'anonymizeIp', true)
 }
 
 function makeNewPosition () {

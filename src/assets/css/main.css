@@ -613,6 +613,7 @@ color: #161819;
   float: left;
   opacity: 0;
   transition: opacity 0.2s ease;
+
 }
 
 #content-nav.show {
