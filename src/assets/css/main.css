@@ -297,10 +297,6 @@ body.bg-black .switcher:after {
 	@apply leading-tight;
 }
 
-.work-list li:nth-of-type(4) .image-list{
-  box-shadow: none;
-}
-
 .image-list {
 	position: relative;
   width: 100%;
@@ -349,6 +345,10 @@ body.bg-black .switcher:after {
 
 .animsition-link:hover .image-list:before {
 	opacity: 1;
+}
+
+.animsition-link:hover h3 {
+	text-decoration: underline;
 }
 
 .work-list li:first-of-type a{
