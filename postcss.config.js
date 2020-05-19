@@ -7,9 +7,9 @@ module.exports = {
     require('autoprefixer'),
     cssnano({
       preset: 'default'
-    })
+    }),
     purgecss({
-      content: ["./src/*.html"],
+      content: ['./src/*.html'],
       defaultExtractor: content => content.match(/[\w-/:]*[\w-/:]/g) || []
     })
   ]
