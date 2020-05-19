@@ -8,9 +8,9 @@ import Gumshoe from 'gumshoejs'
 import SmoothScroll from 'smooth-scroll'
 
 $(document).ready(function () {
-  gaTracker('UA-145302459-1')
-  ga('send', 'pageview')
-  ga('set', 'anonymizeIp', true)
+  // gaTracker('UA-145302459-1')
+  // ga('send', 'pageview')
+  // ga('set', 'anonymizeIp', true)
 
   $('h1').widowFix()
   $('p').widowFix()
@@ -137,9 +137,9 @@ $(document).ready(function () {
   Barba.Pjax.start()
 
   Barba.Dispatcher.on('initStateChange', function () {
-    gaTracker('UA-145302459-1')
-    ga('send', 'pageview')
-    ga('set', 'anonymizeIp', true)
+    // gaTracker('UA-145302459-1')
+    // ga('send', 'pageview')
+    // ga('set', 'anonymizeIp', true)
     $('html, body').animate({ scrollTop: 0 }, 800)
   })
 
@@ -229,18 +229,18 @@ window.setInterval(function () {
   collision($('#content-nav'), $('.image-container'))
 }, 100)
 
-function gaTracker (id) {
-  $.getScript('//www.google-analytics.com/analytics.js') // jQuery shortcut
-  window.ga =
-        window.ga ||
-        function () {
-          (ga.q = ga.q || []).push(arguments)
-        }
-  ga.l = +new Date()
-  ga('create', id, 'auto')
-  ga('send', 'pageview')
-  ga('set', 'anonymizeIp', true)
-}
+// function gaTracker (id) {
+//   $.getScript('//www.google-analytics.com/analytics.js') // jQuery shortcut
+//   window.ga =
+//         window.ga ||
+//         function () {
+//           (ga.q = ga.q || []).push(arguments)
+//         }
+//   ga.l = +new Date()
+//   ga('create', id, 'auto')
+//   ga('send', 'pageview')
+//   ga('set', 'anonymizeIp', true)
+// }
 
 function makeNewPosition () {
   // Get viewport dimensions (remove the dimension of the div)
