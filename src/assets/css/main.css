@@ -300,17 +300,17 @@ body.bg-black .switcher:after {
   border-radius: 4px;
   /* !importanté */
   top: 0;
-  transition: top 0.3s ease-in-out;
+  transition: top 0.4s ease-in-out;
 }
 
 .home .image-list {
   max-width: 514px;
-  box-shadow: 0px 3.29748px 5.06734px rgba(6, 7, 30, 0.0369931),
-    0px 7.20082px 10.0938px rgba(6, 7, 30, 0.0550396),
-    0px 12.1636px 15.6342px rgba(6, 7, 30, 0.0677028),
-    0px 19.1843px 22.9277px rgba(6, 7, 30, 0.0792411),
-    0px 30.9764px 35.4386px rgba(6, 7, 30, 0.0937812),
-    0px 57px 72px rgba(6, 7, 30, 0.13);
+  box-shadow: 0px 3px 4px rgba(6, 7, 30, 0.04),
+    0px 7px 9px rgba(6, 7, 30, 0.06),
+    0px 12px 14px rgba(6, 7, 30, 0.07),
+    0px 19px 21px rgba(6, 7, 30, 0.08),
+    0px 30px 34px rgba(6, 7, 30, 0.09),
+    0px 57px 72px rgba(6, 7, 30, 0.10);
 }
 
 .post-content .image-list:before {
@@ -345,7 +345,16 @@ body.bg-black .switcher:after {
 }
 
 .animsition-link:hover .image-list {
-  top: -6px;
+  top: -10px;
+}
+
+.home .animsition-link:hover .image-list{
+  box-shadow: 0px 6px 10px rgba(6, 7, 30, 0.03),
+    0px 8px 14px rgba(6, 7, 30, 0.045),
+    0px 14px 20px rgba(6, 7, 30, 0.055),
+    0px 22px 30px rgba(6, 7, 30, 0.065),
+    0px 32px 42px rgba(6, 7, 30, 0.075),
+    0px 57px 76px rgba(6, 7, 30, 0.1);
 }
 
 .animsition-link:hover .image-list:before {
