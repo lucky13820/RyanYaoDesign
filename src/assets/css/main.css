@@ -85,7 +85,7 @@ blockquote {
 }
 
 .post-content p{
-  max-width: 38rem;
+  max-width: 40rem;
 	@apply mx-auto;
 }
 
@@ -352,22 +352,26 @@ body.bg-black .switcher:after {
 }
 
 .work-list li:first-of-type a{
-  background: linear-gradient(112deg, #255FEE 0%, #1041BA 100%);
+  background: linear-gradient(315deg, #415CEC 0%, #4894E1 51.04%, #499DD1 100%);
 }
 
 .work-list li:nth-of-type(2) a{
-  background: linear-gradient(112deg, #F25C7C 0%, #E53157 100%);
+  background: linear-gradient(337.42deg, #E7578B 0%, #ED8970 100%);
 }
 
 .work-list li:nth-of-type(3) a{
-  background: linear-gradient(112deg, #F6AD55 0%, #E1820E 100%);
+  background: linear-gradient(135deg, #40B396 1.19%, #30AEB6 52.6%, #2986BA 100%);
 }
 
 .work-list li:nth-of-type(4) a{
-  background: linear-gradient(112deg, #768CA8 0%, #54657D 100%);
+  background: linear-gradient(112deg, #F6AD55 0%, #E1820E 100%);
 }
 
 .work-list li:nth-of-type(5) a{
+  background: linear-gradient(112deg, #768CA8 0%, #54657D 100%);
+}
+
+.work-list li:nth-of-type(6) a{
   background: linear-gradient(112deg, #505050 0%, #303030 100%);
 }
 
@@ -422,7 +426,7 @@ body.bg-black .switcher:after {
 .post-content a {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 38rem;
+	max-width: 40rem;
 }
 
 .under-line {
@@ -490,7 +494,7 @@ body.bg-black .switcher:after {
   font-size: 1.5rem;
   color: #c2c2c2;
   position: relative;
-  max-width: 38rem;
+  max-width: 40rem;
 	@apply mx-auto;
 }
 
@@ -529,7 +533,8 @@ blockquote:after {
 }
 
 .full-image {
-	height: 500px;
+  height: 500px;
+  object-position: center 20%;
 }
 
 div:focus {
@@ -616,14 +621,37 @@ color: #161819;
 
 #content-nav {
   top: 56px;
+  margin-top: 190px;
   float: left;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.2s ease;
-
+  display: flex;
 }
 
-#content-nav.show {
+#content-nav.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#content-nav .active{
+  border-left: 2px solid rgba(251, 129, 128, 1);
+}
+
+#content-nav .active a{
+  font-weight: 700;
+}
+
+.nested{
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.active-parent .nested{
+  height: auto;
   opacity: 1;
+  pointer-events: all;
 }
 
 @media (min-width: 48rem) {
@@ -653,6 +681,9 @@ color: #161819;
   }
 
   blockquote:before, blockquote:after {
+    display: none;
+  }
+  #content-nav{
     display: none;
   }
 }

@@ -102,55 +102,82 @@
       <section>
         <img src="https://res.cloudinary.com/doms4gu6e/image/upload/v1568351142/air-cover_epjczj.jpg"
           class="w-full h-64 object-cover full-image" />
+          <ul class="sticky flex-col z-50 lg:flex" id="content-nav">
+            <li class="inline-block py-2">
+              <a href="#overview" class="nested-parent text-base py-2 px-4">Overview</a>
+              <ul class="flex flex-col nested pl-4">
+                <li class="inline-block py-1 pl-4"><a href="#problem" class="text-base">The Problem</a></li>
+                <li class="inline-block py-1 pl-4"><a href="#solution" class="text-base">The solution</a></li>
+                <li class="inline-block py-1 pl-4"><a href="#impact" class="text-base">Impact & Results</a></li>
+                <li class="inline-block py-1 pl-4"><a href="#role" class="text-base">My role</a></li>
+                <li class="inline-block py-1 pl-4"><a href="#tools" class="text-base">Tools Used</a></li>
+              </ul>
+            </li>
+            <li class="inline-block py-2">
+              <a href="#process" class="nested-parent text-base py-2 px-4">My Process</a>
+              <ul class="flex flex-col nested pl-4">
+                <li class="inline-block py-1 pl-4"><a href="#design" class="text-base">Design/Build</a></li>
+                <li class="inline-block py-1 pl-4"><a href="#test" class="text-base">Test</a></li>
+              </ul>
+            </li>
+            <li class="inline-block py-2 px-4"><a href="#challenges" class="text-base">Challenges & Learnings</a></li>
+          </ul>
         <h1 class="md:text-5xl sm:text-4xl mt-8 leading-none mb-4">Air</h1>
         <h3 class="text-2xl leading-tight mb-6">A minimal weather app</h3>
         <p class="mb-4">Download: <a href="https://apps.apple.com/ca/app/air-氣-minimal-weather/id1326695354"
             class="under-line" target="_blank">Download on App Store</a></p>
-        <p class="mb-4">Air is a minimal weather app that uses the oracle bone script and ancient Chinese scroll-like
+        <p class="mb-4" id="overview">Air is a minimal weather app that uses the oracle bone script and ancient Chinese scroll-like
           design. The functionality is simple. You can view the current weather, temperature, and six days’ forecast.
         </p>
-        <h2 class="text-3xl mb-2 mt-12">
+        <h2 class="text-3xl mb-2 mt-12" id="problem">
           The Problem
         </h2>
         <p>
           I was following a tutorial to learn Swift programming. It went well, but I felt I needed to do a real project
           to reinforce my knowledge. Following the tutorial wasn’t enough for me.
         </p>
-        <h2 class="text-3xl mb-2 mt-12">
+        <h2 class="text-3xl mb-2 mt-12" id="solution">
           The Solution
         </h2>
         <p>
           I decided to create a weather app because it’s simple to build. I can also get creative with the design. I
           always wanted to bring traditional Chinese elements to my digital design.
         </p>
-        <h2 class="text-3xl mb-2 mt-12">
+        <h2 class="text-3xl mb-2 mt-12" id="impact">
           Impact and Results
         </h2>
         <p>
           Over 1000 organic downloads, despite the simple functionality.
         </p>
-        <h2 class="text-3xl mb-2 mt-12">
+        <h2 class="text-3xl mb-2 mt-12" id="role">
           My role and who I worked with
         </h2>
         <p>
           I designed and developed the app all by myself.
         </p>
-        <h2 class="text-3xl mb-2 mt-12">
+        <h2 class="text-3xl mb-2 mt-12" id="tools">
           Tools Used
         </h2>
         <p>
           Sketch and Xcode.
         </p>
-        <h2 class="text-3xl mb-2 mt-12">
+        <h2 class="text-3xl mb-2 mt-12" id="process">
           My Process
         </h2>
         <p>
-          Design/Build - Test
+         Design/Build - Test
         </p>
-        <div id="dashboard" class="mt-16">
-          <h3 class="text-2xl mb-6 mt-16">
-            Sketch
+          <h3 class="text-2xl mb-6 pt-16" id="design">
+            Design/Build
           </h3>
+          <p>
+            This was an unusual process for me. I was designing and building at the same time in Xcode. Because I knew
+            it would be a simple design, and I needed to make sure I could build anything I designed. So, I designed the
+            app in Xcode storyboard.</p>
+          <p class="mt-6 mb-8">
+            The first version had the essential elements I wanted to have, but that was not enough for me. As a weather
+            app, it was also too simple. For this reason, I added the oracle bone script to show the current weather
+            condition and six days of forecasted weather.</p>
           <div class="image-container">
             <figure class="w-full md:w-1/3">
               <a href="https://res.cloudinary.com/doms4gu6e/image/upload/v1568352352/iPhone-8-Plus-Copy_ijgrgg.jpg"
@@ -158,15 +185,6 @@
                   src="https://res.cloudinary.com/doms4gu6e/image/upload/v1568352352/iPhone-8-Plus-Copy_ijgrgg.jpg" /></a>
             </figure>
           </div>
-
-          <p>
-            This was an unusual process for me. I was designing and building at the same time in Xcode. Because I knew
-            it would be a simple design, and I needed to make sure I could build anything I designed. So, I designed the
-            app in Xcode storyboard.</p>
-          <p class="mt-6 mb-6">
-            The first version had the essential elements I wanted to have, but that was not enough for me. As a weather
-            app, it was also too simple. For this reason, I added the oracle bone script to show the current weather
-            condition and six days of forecasted weather.</p>
           <div class="image-container">
             <figure class="w-full md:w-1/5">
               <a href="https://res.cloudinary.com/doms4gu6e/image/upload/v1568352109/first_nra5tp.png"
@@ -186,7 +204,13 @@
             thing I learned is to take a break when you are hitting a roadblock. When I ran into a problem and spent
             hours trying to figure it out, it always helped to leave it there, go to sleep, and go back to it the next
             day. My mind is much clearer, and it becomes a lot easier to solve the problem.</p>
-          <h3 class="text-2xl mt-16 mb-6">Test</h3>
+          <h3 class="text-2xl mt-16 mb-6" id="test">Test</h3>
+          <p class="mb-8">
+            I used TestFlight for public testing. Thanks to many awesome people, they helped me to catch some critical
+            bugs. For example, the app won’t update the weather when the user changed from one location to another. I
+            improved the usability based on their suggestions. In a later update, I also added theme support because
+            many people suggested it.
+          </p>
           <div class="image-container">
             <figure class="w-full md:w-1/5">
               <a href="https://res.cloudinary.com/doms4gu6e/image/upload/v1568352109/fourth_pb3sha.png"
@@ -207,12 +231,6 @@
               </figcaption>
             </figure>
           </div>
-          <p class="mb-6">
-            I used TestFlight for public testing. Thanks to many awesome people, they helped me to catch some critical
-            bugs. For example, the app won’t update the weather when the user changed from one location to another. I
-            improved the usability based on their suggestions. In a later update, I also added theme support because
-            many people suggested it.
-          </p>
           <h2 class="text-3xl mt-16 mb-6">Challenges & Key Learnings</h2>
           <p class="mb-6">
             I experienced the whole process from designing and developing an app to beta testing and submitted it to the

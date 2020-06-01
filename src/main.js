@@ -24,8 +24,6 @@ $(document).ready(function () {
     var max
     var value
 
-    console.log(docHeight)
-
     /* Set the max scrollable area */
     max = docHeight - winHeight
     progressBar.attr('max', max)
@@ -145,6 +143,7 @@ $(document).ready(function () {
 
   Barba.Dispatcher.on('transitionCompleted', function () {
     initProgress()
+    spy.setup()
   })
 
   $('p a[href*="#"]')
@@ -189,12 +188,45 @@ $(document).ready(function () {
         }
       }
     })
+
+  function collision ($nav) {
+    var x1 = $nav.offset().left
+    var y1 = $nav.offset().top
+    var h1 = $nav.outerHeight(true) - 300
+    var w1 = $nav.outerWidth(true)
+    var b1 = y1 + h1
+    var r1 = x1 + w1
+    var hide = false
+
+    $('.image-container').each(function () {
+      var x2 = $(this).offset().left
+      var y2 = $(this).offset().top
+      var h2 = $(this).outerHeight(true)
+      var w2 = $(this).outerWidth(true)
+      var b2 = y2 + h2
+      var r2 = x2 + w2
+
+      if (!(b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2)) {
+        hide = true
+      }
+    })
+    if (!hide) {
+      $nav.removeClass('hide')
+    } else {
+      $nav.addClass('hide')
+    }
+  }
+
+  window.setInterval(function () {
+    collision($('#content-nav'))
+  }, 100)
 })
 
 var spy = new Gumshoe('#content-nav a', {
   reflow: true,
   nested: true,
-  nestedClass: 'active-parent'
+  nestedClass: 'active-parent',
+  offset: 32
 })
 
 var scroll = new SmoothScroll('a[href*="#"]', {
@@ -203,31 +235,6 @@ var scroll = new SmoothScroll('a[href*="#"]', {
   easing: 'easeInCubic',
   offset: 32
 })
-
-function collision ($div1, $div2) {
-  var x1 = $div1.offset().left
-  var y1 = $div1.offset().top
-  var h1 = $div1.outerHeight(true)
-  var w1 = $div1.outerWidth(true)
-  var b1 = y1 + h1
-  var r1 = x1 + w1
-  var x2 = $div2.offset().left
-  var y2 = $div2.offset().top
-  var h2 = $div2.outerHeight(true)
-  var w2 = $div2.outerWidth(true)
-  var b2 = y2 + h2
-  var r2 = x2 + w2
-
-  if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) {
-    $div1.addClass('show')
-  } else {
-    $div1.removeClass('show')
-  }
-}
-
-window.setInterval(function () {
-  collision($('#content-nav'), $('.image-container'))
-}, 100)
 
 // function gaTracker (id) {
 //   $.getScript('//www.google-analytics.com/analytics.js') // jQuery shortcut
