@@ -300,7 +300,7 @@ body.bg-black .switcher:after {
   border-radius: 4px;
   /* !importanté */
   top: 0;
-  transition: top 0.4s ease-in-out;
+  transition: all 0.4s ease-out;
 }
 
 .home .image-list {
@@ -345,7 +345,7 @@ body.bg-black .switcher:after {
 }
 
 .animsition-link:hover .image-list {
-  top: -10px;
+  top: -12px;
 }
 
 .home .animsition-link:hover .image-list{
