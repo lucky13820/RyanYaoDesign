@@ -40,7 +40,8 @@ a {
 }
 
 body.bg-white .image-container,
-body.bg-white .quote-container {
+body.bg-white .quote-container,
+body.bg-white .overview-container {
   @apply bg-gray-100;
 }
 
