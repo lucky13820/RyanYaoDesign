@@ -681,6 +681,11 @@ body.bg-white .bestfolios a {
   pointer-events: all;
 }
 
+.overview-container{
+  background: #292b2c;
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
 @media (min-width: 48rem) {
   body::after {
     border-bottom-width: 8px;
