@@ -44,6 +44,7 @@ $(document).ready(function () {
       .addClass('bg-black text-gray-300 border-white')
     localStorage.setItem('mode', 'dark')
     $('#themeSwitch').prop('checked', true)
+    sa_event('dark-mode')
   }
 
   function activateLightMode () {
@@ -52,6 +53,7 @@ $(document).ready(function () {
       .removeClass('bg-black text-gray-300 border-white')
     localStorage.setItem('mode', 'light')
     $('#themeSwitch').prop('checked', false)
+    sa_event('light-mode')
   }
 
   function initTheme () {
