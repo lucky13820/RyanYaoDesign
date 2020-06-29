@@ -503,7 +503,8 @@ body.bg-black .switcher:after {
   max-width: 1000%;
   padding: 40px 0px;
   margin-bottom: 24px;
-  background: #292b2c;
+  background-color: hsla(200deg, 4%, 17%, 0.85);
+  backdrop-filter: blur(6px);
   transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -652,8 +653,10 @@ body.bg-white .bestfolios a {
   margin-top: 190px;
   float: left;
   opacity: 1;
+  z-index: -1;
   transition: opacity 0.2s ease;
   display: flex;
+  text-rendering: optimizeLegibility;
 }
 
 #content-nav.hide {

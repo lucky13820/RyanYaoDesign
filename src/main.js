@@ -191,37 +191,37 @@ $(document).ready(function () {
       }
     })
 
-  function collision ($nav) {
-    var x1 = $nav.offset().left
-    var y1 = $nav.offset().top
-    var h1 = $nav.outerHeight(true) - 300
-    var w1 = $nav.outerWidth(true)
-    var b1 = y1 + h1
-    var r1 = x1 + w1
-    var hide = false
+  // function collision ($nav) {
+  //   var x1 = $nav.offset().left
+  //   var y1 = $nav.offset().top
+  //   var h1 = $nav.outerHeight(true) - 300
+  //   var w1 = $nav.outerWidth(true)
+  //   var b1 = y1 + h1
+  //   var r1 = x1 + w1
+  //   var hide = false
 
-    $('.image-container').each(function () {
-      var x2 = $(this).offset().left
-      var y2 = $(this).offset().top
-      var h2 = $(this).outerHeight(true)
-      var w2 = $(this).outerWidth(true)
-      var b2 = y2 + h2
-      var r2 = x2 + w2
+  //   $('.image-container').each(function () {
+  //     var x2 = $(this).offset().left
+  //     var y2 = $(this).offset().top
+  //     var h2 = $(this).outerHeight(true)
+  //     var w2 = $(this).outerWidth(true)
+  //     var b2 = y2 + h2
+  //     var r2 = x2 + w2
 
-      if (!(b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2)) {
-        hide = true
-      }
-    })
-    if (!hide) {
-      $nav.removeClass('hide')
-    } else {
-      $nav.addClass('hide')
-    }
-  }
+  //     if (!(b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2)) {
+  //       hide = true
+  //     }
+  //   })
+  //   if (!hide) {
+  //     $nav.removeClass('hide')
+  //   } else {
+  //     $nav.addClass('hide')
+  //   }
+  // }
 
-  window.setInterval(function () {
-    collision($('#content-nav'))
-  }, 100)
+  // window.setInterval(function () {
+  //   collision($('#content-nav'))
+  // }, 100)
 })
 
 var spy = new Gumshoe('#content-nav a', {
