@@ -498,8 +498,8 @@ body.bg-black .switcher:after {
 .quote-container {
   width: auto;
   position: relative;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw + 10px);
+  margin-right: calc(50% - 50vw + 10px);
   max-width: 1000%;
   padding: 40px 0px;
   margin-bottom: 24px;
