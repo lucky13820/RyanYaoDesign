@@ -42,7 +42,7 @@ a {
 body.bg-white .image-container,
 body.bg-white .quote-container,
 body.bg-white .overview-container {
-  @apply bg-gray-100;
+  background-color: hsla(240deg, 6%, 95%, 0.85);
 }
 
 body.bg-white blockquote {
