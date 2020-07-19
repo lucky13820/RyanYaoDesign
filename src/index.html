@@ -9,7 +9,7 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta name="viewport"
     content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
-    <link rel="preload"
+  <link rel="preload"
     href="https://d33wubrfki0l68.cloudfront.net/678ab0f61e2d23f61216da817eb72c3e160abcbd/0c605/src/assets/fonts/rubik-light-kern-latin.woff2"
     as="font" type="font/woff2" crossorigin />
   <link rel="preload"
@@ -23,15 +23,16 @@
   <meta name="msapplication-TileColor" content="#1e2022" />
   <meta name="msapplication-config" content="${require(`./assets/image/browserconfig.xml`)}" />
   <meta name="theme-color" content="#1e2022" />
-  <meta name="thumbnail" content="https://res.cloudinary.com/doms4gu6e/image/upload/v1584403884/ryanyao-design_rv1jfh.jpg">
+  <meta name="thumbnail"
+    content="https://res.cloudinary.com/doms4gu6e/image/upload/v1584403884/ryanyao-design_rv1jfh.jpg">
   <meta name="description"
-    content="Ryan Yao is a product designer who specializes in prototyping and UI design. His experience in front end development allows him to communicate my design with developers from their perspective."/>
+    content="Ryan Yao is a product designer who specializes in prototyping and UI design. His experience in front end development allows him to communicate my design with developers from their perspective." />
   <meta property="og:title" content="Ryan Yao Design" />
   <meta property="og:type" content="website" />
   <meta property="og:image"
     content="https://res.cloudinary.com/doms4gu6e/image/upload/v1584403884/ryanyao-design_rv1jfh.jpg" />
   <meta property="og:description"
-    content="Ryan Yao is a product designer who specializes in prototyping and UI design. His experience in front end development allows him to communicate my design with developers from their perspective."/>
+    content="Ryan Yao is a product designer who specializes in prototyping and UI design. His experience in front end development allows him to communicate my design with developers from their perspective." />
   <meta name="twitter:image"
     content="https://res.cloudinary.com/doms4gu6e/image/upload/v1584403884/ryanyao-design_rv1jfh.jpg" />
   <meta name="twitter:site" content="@ryanyaodesign" />
@@ -94,18 +95,28 @@
       </ul>
     </nav>
   </header>
-  <main id="#main" class="barba-container c-container home">
-    <div class="titleAnimation relative">
+  <main id="#main" class="barba-container c-container home md:mt-0 sm:mt-24">
+    <section class="titleAnimation relative block">
       <h1 class="md:text-5xl sm:text-4xl leading-none mb-6 md:mt-0 sm:mt-16">
         Hey, I'm Ryan.
       </h1>
       <p class="md:text-xl sm:text-lg leading-normal md:w-2/3 sm:w-full">
         I’m a product designer who specializes in prototyping and UI design. My experience in front end development
         allows me to communicate my design with developers from their perspective. I’m looking for
-        a new opportunity in a cross-functional product team where the user’s perspective is valued and the design process is a trusted tool to deliver exceptional products. 
+        a new opportunity in a cross-functional product team where the user’s perspective is valued and the design
+        process is a trusted tool to deliver exceptional products.
       </p>
+      <div class="md:text-xl sm:text-lg leading-normal md:w-2/3 sm:w-full mt-10 font-body">Reach out at <a
+          href="mailto:hello@ryanyao.design" class="under-line" id="myEmail">hello@ryanyao.design</a>
+        <div class="tooltip text-sm">
+          <button id="copyEmail" class="px-2 py-1 bg-gray-700 rounded-lg">
+            <span class="tooltiptext" id="myTooltip" >Copy email to clipboard</span>
+            Copy Email
+          </button>
+        </div>
+      </div>
       <ul
-        class="list-none flex flex-row flex-wrap float-right md:w-1/3 sm:w-full lg:absolute md:ralative top-0 right-0 mt-4 md:justify-end sm:justify-start ">
+        class="list-none flex flex-row flex-wrap float-right md:w-1/3 sm:w-full md:absolute sm:relative top-0 right-0 md:mt-4 sm:mt-12 md:justify-end sm:justify-start ">
         <li class="mr-6">
           <a href="https://www.linkedin.com/in/ryanqyao/" target="_blank"><span class="icon icon-linked"></span></a>
         </li>
@@ -116,7 +127,7 @@
           <a href="https://twitter.com/ryanqyao/" target="_blank"><span class="icon icon-twit"></span></a>
         </li>
       </ul>
-    </div>
+    </section>
     <section class="work-list animsition">
       <h2 class="text-4xl mb-12 mt-48">
         Here is my work
@@ -129,7 +140,8 @@
               <div>
                 <h3 class="font-display md:text-5xl sm:text-4xl leading-none mb-8">Planning<br>ClassTopBase</h3>
                 <p class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full">
-                  ClassTopBase is a school management software for after-schools. For this project, I designed a feature to help school owners to plan their students' academic plans efficiently.      
+                  ClassTopBase is a school management software for after-schools. For this project, I designed a feature
+                  to help school owners to plan their students' academic plans efficiently.
                 </p>
                 <ul class=" flex-row mt-16 md:flex sm:hidden text-base">
                   <li class="py-1 px-6 rounded-lg mr-8">SaaS</li>
@@ -141,8 +153,7 @@
             </div>
             <div class="flex-1 mb-10"><img
                 src="https://res.cloudinary.com/doms4gu6e/image/upload/v1583351313/design-final_erkjlp.jpg"
-                class="image-list mx-auto sm:max-w-full"
-                alt="ClassTopBase planning screenshot">
+                class="image-list mx-auto sm:max-w-full" alt="ClassTopBase planning screenshot">
             </div>
             </div>
 
@@ -155,7 +166,8 @@
               <div>
                 <h3 class="font-display md:text-5xl sm:text-4xl leading-none mb-8">Website<br>ClassTopBase</h3>
                 <p class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full">
-                  To better position ClassTopBase and reflect on the new features and new brand, I redesigned the marketing website for ClassTopBase to prepare for upcoming online campaigns. 
+                  To better position ClassTopBase and reflect on the new features and new brand, I redesigned the
+                  marketing website for ClassTopBase to prepare for upcoming online campaigns.
                 </p>
                 <ul class="flex-row mt-16 md:flex sm:hidden text-base">
                   <li class="py-1 px-6 rounded-lg mr-8">SaaS</li>
@@ -167,8 +179,7 @@
             </div>
             <div class="flex-1 mb-10"><img
                 src="https://res.cloudinary.com/doms4gu6e/image/upload/v1580846120/classtopbase-website_ndtlip.jpg"
-                class="image-list mx-auto"
-                alt="ClassTopBase marketing website homepage screenshot"></div>
+                class="image-list mx-auto" alt="ClassTopBase marketing website homepage screenshot"></div>
             </div>
 
           </a>
@@ -180,7 +191,8 @@
               <div>
                 <h3 class="font-display md:text-5xl sm:text-4xl leading-none mb-8">Dashboard<br>ClassTopBase</h3>
                 <p class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full">
-                  ClassTopBase is a school management software for after-schools. I designed the dashboard to eliminate the guesswork of school owners that they were surmising how their schools are performing.    
+                  ClassTopBase is a school management software for after-schools. I designed the dashboard to eliminate
+                  the guesswork of school owners that they were surmising how their schools are performing.
                 </p>
                 <ul class=" flex-row mt-16 md:flex sm:hidden text-base">
                   <li class="py-1 px-6 rounded-lg mr-8">SaaS</li>
@@ -192,8 +204,7 @@
             </div>
             <div class="flex-1 mb-10"><img
                 src="https://res.cloudinary.com/doms4gu6e/image/upload/v1590988437/design-dashboard_cnymhy.jpg"
-                class="image-list mx-auto sm:max-w-full"
-                alt="ClassTopBase dashboard screenshot">
+                class="image-list mx-auto sm:max-w-full" alt="ClassTopBase dashboard screenshot">
             </div>
             </div>
 
@@ -207,7 +218,8 @@
               <div>
                 <h3 class="font-display md:text-5xl sm:text-4xl leading-none mb-8">Designer Slack <br>Communities</h3>
                 <p class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full">
-                  I designed and developed a website with a curated collection of Slack communities for designers around the world.
+                  I designed and developed a website with a curated collection of Slack communities for designers around
+                  the world.
                 </p>
                 <ul class=" flex-row mt-16 md:flex sm:hidden text-base">
                   <li class="py-1 px-6 rounded-lg mr-8">Communities</li>
@@ -217,9 +229,9 @@
               </div>
 
             </div>
-            <div class="flex-1 mb-10"><img src="https://res.cloudinary.com/doms4gu6e/image/upload/v1588660903/dsc-big_aym2gs.jpg"
-                class="image-list mx-auto"
-                alt="Designer Slack Communities website homepage screenshot"></div>
+            <div class="flex-1 mb-10"><img
+                src="https://res.cloudinary.com/doms4gu6e/image/upload/v1588660903/dsc-big_aym2gs.jpg"
+                class="image-list mx-auto" alt="Designer Slack Communities website homepage screenshot"></div>
             </div>
 
           </a>
@@ -242,14 +254,14 @@
               </div>
 
             </div>
-            <div class="flex-1 mb-10"><img src="https://res.cloudinary.com/doms4gu6e/image/upload/v1586411956/covid-19_kcsap9.jpg"
-                class="image-list mx-auto"
-                alt="COVID-19 updates website homepage screenshot">
-              </div>
+            <div class="flex-1 mb-10"><img
+                src="https://res.cloudinary.com/doms4gu6e/image/upload/v1586411956/covid-19_kcsap9.jpg"
+                class="image-list mx-auto" alt="COVID-19 updates website homepage screenshot">
+            </div>
             </div>
 
           </a>
-        </li>        
+        </li>
         <li class="py-4 mb-6 w-full">
           <a href="air-app.html"
             class="animsition-link flex md:flex-row sm:flex-col-reverse md:pt-16 md:pb-6 md:px-12 sm:py-10 sm:px-8 rounded-lg">
@@ -267,9 +279,9 @@
               </div>
 
             </div>
-            <div class="flex-1 mb-10"><img src="https://res.cloudinary.com/doms4gu6e/image/upload/v1580847471/air_qxdh9t.png"
-                class="image-list mx-auto no-shadow" 
-                alt="Air app screenshot"></div>
+            <div class="flex-1 mb-10"><img
+                src="https://res.cloudinary.com/doms4gu6e/image/upload/v1580847471/air_qxdh9t.png"
+                class="image-list mx-auto no-shadow" alt="Air app screenshot"></div>
             </div>
 
           </a>
@@ -278,15 +290,18 @@
     </section>
     <footer class="py-16">
       <h5 class="text-base font-body text-gray-300 text-left w-full mt-12 mb-8">
-        ©2020 Designed and Developed by Ryan Yao with <a href="https://tailwindcss.com" target="_blank" class="text-base under-line">Tailwind CSS</a>
-     </h5>
-     <h5 class="text-base font-body text-gray-300 text-left w-full leading-none">
-      I collect totally anonymous basic analytics using Simple Analytics. View live analytics at <br><a href="https://simpleanalytics.com/ryanyao.design" target="_blank" class="text-base under-line">simpleanalytics.com/ryanyao.design.</a>
-     </h5>
+        ©2020 Designed and Developed by Ryan Yao with <a href="https://tailwindcss.com" target="_blank"
+          class="text-base under-line">Tailwind CSS</a>
+      </h5>
+      <h5 class="text-base font-body text-gray-300 text-left w-full leading-none">
+        I collect totally anonymous basic analytics using Simple Analytics. View live analytics at <br><a
+          href="https://simpleanalytics.com/ryanyao.design" target="_blank"
+          class="text-base under-line">simpleanalytics.com/ryanyao.design.</a>
+      </h5>
     </footer>
   </main>
-  <script>window.sa_event=window.sa_event||function(){a=[].slice.call(arguments);sa_event.q?sa_event.q.push(a):sa_event.q=[a]};</script>
-  <script async defer src="https://api.ryanyao.design/latest.js"></script> 
+  <script>window.sa_event = window.sa_event || function () { a = [].slice.call(arguments); sa_event.q ? sa_event.q.push(a) : sa_event.q = [a] };</script>
+  <script async defer src="https://api.ryanyao.design/latest.js"></script>
   <noscript><img src="https://api.ryanyao.design/noscript.gif" alt=""></noscript>
 </body>
 

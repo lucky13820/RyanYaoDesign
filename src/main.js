@@ -12,9 +12,6 @@ $(document).ready(function () {
   // ga('send', 'pageview')
   // ga('set', 'anonymizeIp', true)
 
-  $('h1').widowFix()
-  $('p').widowFix()
-
   initProgress()
 
   function initProgress () {
@@ -32,6 +29,9 @@ $(document).ready(function () {
       value = $(window).scrollTop()
       progressBar.attr('value', value)
     })
+
+    $('h1').widowFix()
+    $('p').widowFix()
   }
 
   var themeSwitch = document.getElementById('themeSwitch')
@@ -66,26 +66,24 @@ $(document).ready(function () {
 
     window
       .matchMedia('(prefers-color-scheme: dark)')
-      .addListener(e => e.matches && activateDarkMode())
+      .addListener((e) => e.matches && activateDarkMode())
     window
       .matchMedia('(prefers-color-scheme: light)')
-      .addListener(e => e.matches && activateLightMode())
+      .addListener((e) => e.matches && activateLightMode())
 
-    if (window.matchMedia('(prefers-color-scheme: dark)')
-      .matches) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       isDarkMode = true
     }
-    if (window.matchMedia('(prefers-color-scheme: light)')
-      .matches) {
+    if (window.matchMedia('(prefers-color-scheme: light)').matches) {
       isDarkMode = false
     }
     if (localStorage.getItem('mode') === 'dark') {
       isDarkMode = true
-    };
+    }
 
     if (localStorage.getItem('mode') === 'light') {
       isDarkMode = false
-    };
+    }
 
     if (isDarkMode == true) activateDarkMode()
     if (isDarkMode == false) activateLightMode()
@@ -112,7 +110,7 @@ $(document).ready(function () {
 
   var transEffect = Barba.BaseTransition.extend({
     start: function () {
-      this.newContainerLoading.then(val =>
+      this.newContainerLoading.then((val) =>
         this.fadeInNewcontent($(this.newContainer))
       )
     },
@@ -238,6 +236,35 @@ var scroll = new SmoothScroll('a[href*="#"]', {
   offset: 32
 })
 
+const copyEmail = document.getElementById('copyEmail')
+copyEmail.addEventListener(
+  'click',
+  function (event) {
+    /* Get the text field */
+    var copyText = document.getElementById('myEmail').innerText
+
+    var range = document.createRange()
+    range.selectNode(document.getElementById('myEmail'))
+    window.getSelection().removeAllRanges() // clear current selection
+    window.getSelection().addRange(range) // to select text
+    document.execCommand('copy')
+    window.getSelection().removeAllRanges() // to deselect
+
+    var tooltip = document.getElementById('myTooltip')
+    tooltip.innerHTML = 'Copied: ' + copyText
+  },
+  false
+)
+
+copyEmail.addEventListener(
+  'mouseout',
+  function (event) {
+    var tooltip = document.getElementById('myTooltip')
+    tooltip.innerHTML = 'Copy email to clipboard'
+  },
+  false
+)
+
 // function gaTracker (id) {
 //   $.getScript('//www.google-analytics.com/analytics.js') // jQuery shortcut
 //   window.ga =
@@ -321,7 +348,8 @@ function animateDiv (myclass) {
 
           $.each(dashes, function (index, dash) {
             if (lastWord.indexOf(dash) > 0) {
-              lastWord = '<span style="white-space:nowrap;">' + lastWord + '</span>'
+              lastWord =
+                '<span style="white-space:nowrap;">' + lastWord + '</span>'
               return false // break out early
             }
           })
@@ -332,8 +360,9 @@ function animateDiv (myclass) {
         // if linkFix is on, check for the letter limit
         if (wfOptions.linkFix) {
           // if the last word is longer than the limit, stop the script
-          if (wfOptions.letterLimit !== null &&
-						linkFixLastWord.length >= wfOptions.letterLimit
+          if (
+            wfOptions.letterLimit !== null &&
+            linkFixLastWord.length >= wfOptions.letterLimit
           ) {
             $this.find('var').each(function () {
               $(this).contents().replaceWith($lastLink)
@@ -342,9 +371,10 @@ function animateDiv (myclass) {
             return
 
             // or if the prev word is longer than the limit
-          } else if (wfOptions.prevLimit !== null &&
-							   prevWord.length >= wfOptions.prevLimit
-							   ) {
+          } else if (
+            wfOptions.prevLimit !== null &&
+            prevWord.length >= wfOptions.prevLimit
+          ) {
             $this.find('var').each(function () {
               $(this).contents().replaceWith($lastLink)
               $(this).contents().unwrap()
@@ -353,12 +383,14 @@ function animateDiv (myclass) {
           }
         } else {
           // if the last word is longer than the limit, stop the script
-          if (wfOptions.letterLimit !== null &&
-						lastWord.length >= wfOptions.letterLimit
+          if (
+            wfOptions.letterLimit !== null &&
+            lastWord.length >= wfOptions.letterLimit
           ) {
             return
-          } else if (wfOptions.prevLimit !== null &&
-						prevWord.length >= wfOptions.prevLimit
+          } else if (
+            wfOptions.prevLimit !== null &&
+            prevWord.length >= wfOptions.prevLimit
           ) {
             return
           }
