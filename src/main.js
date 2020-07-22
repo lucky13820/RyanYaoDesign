@@ -29,8 +29,6 @@ $(document).ready(function () {
       value = $(window).scrollTop()
       progressBar.attr('value', value)
     })
-
-    $('h1').widowFix()
     $('p').widowFix()
   }
 

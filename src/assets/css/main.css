@@ -439,7 +439,7 @@ body.bg-black .switcher:after {
   );
   z-index: -1;
   background: linear-gradient(30deg, #fb6d6c, #ffc683);
-  background-size: 400% 400%;
+  background-size: 600% 600%;
   -webkit-animation: flow 7s ease infinite;
   -moz-animation: flow 7s ease infinite;
   -o-animation: flow 7s ease infinite;
@@ -526,6 +526,17 @@ blockquote:after {
 
 div:focus {
   outline: none;
+}
+
+.text-animate{
+  color: #fb6d6c;
+	background-image: -webkit-linear-gradient(92deg, #fb6d6c, #ffc683);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: textShine 7s ease-in-out infinite alternate;
 }
 
 progress {
@@ -738,6 +749,12 @@ body.bg-white .bestfolios a {
   0%{background-position:23% 0%}
   50%{background-position:78% 100%}
   100%{background-position:23% 0%}
+}
+
+@keyframes textShine {
+  to {
+    background-position: 200%;
+  }
 }
 
 /*! purgecss end ignore */
