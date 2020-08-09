@@ -6,13 +6,16 @@ import jQuery from 'jquery'
 import Barba from 'barba.js'
 import Gumshoe from 'gumshoejs'
 import SmoothScroll from 'smooth-scroll'
+import LazyLoad from 'vanilla-lazyload'
 
+var myLazyLoad = new LazyLoad()
 $(document).ready(function () {
   // gaTracker('UA-145302459-1')
   // ga('send', 'pageview')
   // ga('set', 'anonymizeIp', true)
 
   initProgress()
+  myLazyLoad.update()
 
   function initProgress () {
     var winHeight = $(window).height()
@@ -29,7 +32,6 @@ $(document).ready(function () {
       value = $(window).scrollTop()
       progressBar.attr('value', value)
     })
-    $('p').widowFix()
   }
 
   var themeSwitch = document.getElementById('themeSwitch')
@@ -96,16 +98,6 @@ $(document).ready(function () {
     }
   }
 
-  // function initilizePlugins() {
-  //   $(window).scroll(function() {
-  //     if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-  //       $("#bottomR, #bottomY").addClass("bottomLetter");
-  //     } else {
-  //       $("#bottomR, #bottomY").removeClass("bottomLetter");
-  //     }
-  //   });
-  // }
-
   var transEffect = Barba.BaseTransition.extend({
     start: function () {
       this.newContainerLoading.then((val) =>
@@ -141,6 +133,8 @@ $(document).ready(function () {
 
   Barba.Dispatcher.on('transitionCompleted', function () {
     initProgress()
+    myLazyLoad.update()
+    cl.responsive()
     spy.setup()
   })
 
@@ -186,38 +180,6 @@ $(document).ready(function () {
         }
       }
     })
-
-  // function collision ($nav) {
-  //   var x1 = $nav.offset().left
-  //   var y1 = $nav.offset().top
-  //   var h1 = $nav.outerHeight(true) - 300
-  //   var w1 = $nav.outerWidth(true)
-  //   var b1 = y1 + h1
-  //   var r1 = x1 + w1
-  //   var hide = false
-
-  //   $('.image-container').each(function () {
-  //     var x2 = $(this).offset().left
-  //     var y2 = $(this).offset().top
-  //     var h2 = $(this).outerHeight(true)
-  //     var w2 = $(this).outerWidth(true)
-  //     var b2 = y2 + h2
-  //     var r2 = x2 + w2
-
-  //     if (!(b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2)) {
-  //       hide = true
-  //     }
-  //   })
-  //   if (!hide) {
-  //     $nav.removeClass('hide')
-  //   } else {
-  //     $nav.addClass('hide')
-  //   }
-  // }
-
-  // window.setInterval(function () {
-  //   collision($('#content-nav'))
-  // }, 100)
 })
 
 var spy = new Gumshoe('#content-nav a', {
@@ -262,149 +224,3 @@ copyEmail.addEventListener(
   },
   false
 )
-
-// function gaTracker (id) {
-//   $.getScript('//www.google-analytics.com/analytics.js') // jQuery shortcut
-//   window.ga =
-//         window.ga ||
-//         function () {
-//           (ga.q = ga.q || []).push(arguments)
-//         }
-//   ga.l = +new Date()
-//   ga('create', id, 'auto')
-//   ga('send', 'pageview')
-//   ga('set', 'anonymizeIp', true)
-// }
-
-function makeNewPosition () {
-  // Get viewport dimensions (remove the dimension of the div)
-  var h = $(window).height() - 80
-  var w = $(window).width() - 80
-
-  var nh = Math.floor(Math.random() * h)
-  var nw = Math.floor(Math.random() * w)
-
-  return [nh, nw]
-}
-
-function animateDiv (myclass) {
-  var newq = makeNewPosition()
-  $(myclass).animate({ top: newq[0], left: newq[1] }, 20000, function () {
-    animateDiv(myclass)
-  })
-}
-
-(function ($) {
-  jQuery.fn.widowFix = function (userOptions) {
-    var defaults = {
-      letterLimit: null,
-      prevLimit: null,
-      linkFix: false,
-      dashes: false
-    }
-
-    var wfOptions = $.extend(defaults, userOptions)
-
-    if (this.length) {
-      return this.each(function () {
-        var $this = $(this)
-        var linkFixLastWord
-
-        if (wfOptions.linkFix) {
-          var $linkHolder = $this.find('a:last')
-          // find the anchors and wrap them up with a <var> tag to find it later
-          $linkHolder.wrap('<var>')
-          // store the anchor inside
-          var $lastLink = $('var').html()
-          // get the real length of the last word
-          linkFixLastWord = $linkHolder.contents()[0]
-          // remove the anchor
-          $linkHolder.contents().unwrap()
-        }
-
-        var contentArray = $(this).html().split(' ')
-        var lastWord = contentArray.pop()
-
-        if (contentArray.length <= 1) {
-          // it's a one word element, abort!
-          return
-        }
-
-        function checkSpace () {
-          if (lastWord === '') {
-            // trailing space found, pop it off and check again
-            lastWord = contentArray.pop()
-            checkSpace()
-          }
-        }
-        checkSpace()
-
-        // if contains a dash, use white-space nowrap to stop breaking
-        if (wfOptions.dashes) {
-          // all 3 dash types: regular, en, em
-          var dashes = ['-', '–', '—']
-
-          $.each(dashes, function (index, dash) {
-            if (lastWord.indexOf(dash) > 0) {
-              lastWord =
-                '<span style="white-space:nowrap;">' + lastWord + '</span>'
-              return false // break out early
-            }
-          })
-        }
-
-        var prevWord = contentArray[contentArray.length - 1]
-
-        // if linkFix is on, check for the letter limit
-        if (wfOptions.linkFix) {
-          // if the last word is longer than the limit, stop the script
-          if (
-            wfOptions.letterLimit !== null &&
-            linkFixLastWord.length >= wfOptions.letterLimit
-          ) {
-            $this.find('var').each(function () {
-              $(this).contents().replaceWith($lastLink)
-              $(this).contents().unwrap()
-            })
-            return
-
-            // or if the prev word is longer than the limit
-          } else if (
-            wfOptions.prevLimit !== null &&
-            prevWord.length >= wfOptions.prevLimit
-          ) {
-            $this.find('var').each(function () {
-              $(this).contents().replaceWith($lastLink)
-              $(this).contents().unwrap()
-            })
-            return
-          }
-        } else {
-          // if the last word is longer than the limit, stop the script
-          if (
-            wfOptions.letterLimit !== null &&
-            lastWord.length >= wfOptions.letterLimit
-          ) {
-            return
-          } else if (
-            wfOptions.prevLimit !== null &&
-            prevWord.length >= wfOptions.prevLimit
-          ) {
-            return
-          }
-        }
-
-        var content = contentArray.join(' ') + '&nbsp;' + lastWord
-        $this.html(content)
-
-        if (wfOptions.linkFix) {
-          // find the var and put the anchor back in, then unwrap the <var>
-          $this.find('var').each(function () {
-            $(this).contents().replaceWith($lastLink)
-            $(this).contents().unwrap()
-          })
-        }
-      })
-    }
-  }
-})(jQuery)

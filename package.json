@@ -18,7 +18,8 @@
     "eslint-utils": "^2.0.0",
     "normalize.css": "^8.0.1",
     "serialize-javascript": "^2.1.2",
-    "tailwindcss-fluid-container": "^2.1.0"
+    "tailwindcss-fluid-container": "^2.1.0",
+    "vanilla-lazyload": "^17.1.0"
   },
   "keywords": [
     "webpack",

@@ -539,6 +539,12 @@ div:focus {
   animation: textShine 7s ease-in-out infinite alternate;
 }
 
+canvas{
+  /* position: absolute;
+  top: -100px;
+  right: -20vw; */
+}
+
 progress {
   /* Positioning */
   position: fixed;
