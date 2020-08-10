@@ -422,6 +422,10 @@ body.bg-black .switcher:after {
   white-space: nowrap;
 }
 
+h3.under-line.table{
+  white-space: normal;
+}
+
 .under-line:hover {
   color: white;
 }
