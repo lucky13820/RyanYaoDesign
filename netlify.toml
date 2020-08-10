@@ -16,6 +16,10 @@
   [headers.values]
     Cache-Control = "max-age=3153600"
 
+    for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "max-age=3153600"
+
 
     for = "/*.html"
   [headers.values]
