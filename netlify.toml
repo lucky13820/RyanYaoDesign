@@ -7,20 +7,23 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "no-referrer"
     Feature-Policy = "microphone 'none'; geolocation 'none'"
-  
+
+[[headers]]
   for = "/*.js"
   [headers.values]
     Cache-Control = "max-age=3153600"
 
+[[headers]]
   for = "/*.css"
   [headers.values]
     Cache-Control = "max-age=3153600"
-
+    
+[[headers]]
     for = "/*.woff2"
   [headers.values]
     Cache-Control = "max-age=3153600"
 
-
+[[headers]]
     for = "/*.html"
   [headers.values]
     Cache-Control = '''
