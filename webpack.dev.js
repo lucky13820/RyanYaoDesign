@@ -37,7 +37,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(gif|png|jpe?g|svg|ico)$/,
+        test: /\.(png|jpg|gif|svg|ico|woff(2)?)$/,
         use: [
           {
             loader: 'file-loader',
@@ -45,20 +45,6 @@ module.exports = {
               publicPath: '/',
               name: '[path][name].[ext]',
               context: 'src'
-            }
-          }
-        ]
-      },
-      {
-        test: /\.woff(2)?$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 10000,
-              publicPath: '/',
-              name: './fonts/[path][name].[ext]',
-              mimetype: 'application/font-woff'
             }
           }
         ]

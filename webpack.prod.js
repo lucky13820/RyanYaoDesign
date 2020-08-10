@@ -47,7 +47,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|gif|svg|ico)$/,
+        test: /\.(png|jpg|gif|svg|ico|woff(2)?)$/,
         use: [
           {
             loader: 'file-loader',
@@ -62,19 +62,6 @@ module.exports = {
       { test: /\.xml$/, loader: 'xml-loader' },
       {
         test: /\.toml$/, loader: '@lcdev/toml-loader'
-      },
-      {
-        test: /\.woff(2)?$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 10000,
-              name: '[path][name].[ext]',
-              mimetype: 'application/font-woff'
-            }
-          }
-        ]
       }
     ]
   },
