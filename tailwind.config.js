@@ -22,7 +22,7 @@ module.exports = {
       black: '#1e2022'
     },
     fontFamily: {
-      display: ['Texta Heavy', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto,tahoma', 'Verdana,arial', 'PingFang SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'STXihei', '华文细黑', 'Microsoft Yahei', '微软雅黑', 'sans-serif'],
+      display: ['YoungSerif', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto,tahoma', 'Verdana,arial', 'PingFang SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'STXihei', '华文细黑', 'Microsoft Yahei', '微软雅黑', 'sans-serif'],
       body: ['Rubik Light', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto,tahoma', 'Verdana,arial', 'PingFang SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'STXihei', '华文细黑', 'Microsoft Yahei', '微软雅黑', 'sans-serif']
     },
     fontSize: {

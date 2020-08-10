@@ -98,45 +98,45 @@ $(document).ready(function () {
     }
   }
 
-  var transEffect = Barba.BaseTransition.extend({
-    start: function () {
-      this.newContainerLoading.then((val) =>
-        this.fadeInNewcontent($(this.newContainer))
-      )
-    },
-    fadeInNewcontent: function (nc) {
-      nc.hide()
-      var _this = this
-      $(this.oldContainer)
-        .fadeOut(800)
-        .promise()
-        .done(() => {
-          nc.css('visibility', 'visible')
-          nc.fadeIn(800, function () {
-            _this.done()
-          })
-        })
-    }
-  })
+  // var transEffect = Barba.BaseTransition.extend({
+  //   start: function () {
+  //     this.newContainerLoading.then((val) =>
+  //       this.fadeInNewcontent($(this.newContainer))
+  //     )
+  //   },
+  //   fadeInNewcontent: function (nc) {
+  //     nc.hide()
+  //     var _this = this
+  //     $(this.oldContainer)
+  //       .fadeOut(800)
+  //       .promise()
+  //       .done(() => {
+  //         nc.css('visibility', 'visible')
+  //         nc.fadeIn(800, function () {
+  //           _this.done()
+  //         })
+  //       })
+  //   }
+  // })
 
-  Barba.Pjax.getTransition = function () {
-    return transEffect
-  }
-  Barba.Pjax.start()
+  // Barba.Pjax.getTransition = function () {
+  //   return transEffect
+  // }
+  // Barba.Pjax.start()
 
-  Barba.Dispatcher.on('initStateChange', function () {
-    // gaTracker('UA-145302459-1')
-    // ga('send', 'pageview')
-    // ga('set', 'anonymizeIp', true)
-    $('html, body').animate({ scrollTop: 0 }, 800)
-  })
+  // Barba.Dispatcher.on('initStateChange', function () {
+  //   // gaTracker('UA-145302459-1')
+  //   // ga('send', 'pageview')
+  //   // ga('set', 'anonymizeIp', true)
+  //   $('html, body').animate({ scrollTop: 0 }, 800)
+  // })
 
-  Barba.Dispatcher.on('transitionCompleted', function () {
-    initProgress()
-    myLazyLoad.update()
-    cl.responsive()
-    spy.setup()
-  })
+  // Barba.Dispatcher.on('transitionCompleted', function () {
+  //   initProgress()
+  //   myLazyLoad.update()
+  //   cl.responsive()
+  //   spy.setup()
+  // })
 
   $('p a[href*="#"]')
     // Remove links that don't actually link to anything
