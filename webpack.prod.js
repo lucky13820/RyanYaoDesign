@@ -61,8 +61,7 @@ module.exports = {
       },
       { test: /\.xml$/, loader: 'xml-loader' },
       {
-        test: /\.toml$/,
-        use: { loader: '@lcdev/toml-loader' }
+        test: /\.toml$/, loader: '@lcdev/toml-loader'
       },
       {
         test: /\.woff(2)?$/,

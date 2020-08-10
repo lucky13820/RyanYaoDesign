@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <title>Ryan Yao Design</title>
@@ -9,32 +9,36 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta name="viewport"
     content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
-  <link rel="preload" href="src/assets/fonts/visby-cf-bold-kern-latin.woff2" as="font" type="font/woff2"
-    crossorigin />
-  <link rel="preload" href="src/assets/fonts/rubik-light-kern-latin.woff2" as="font" type="font/woff2"
-    crossorigin />
+  <link rel="preload"
+    href="https://d33wubrfki0l68.cloudfront.net/678ab0f61e2d23f61216da817eb72c3e160abcbd/0c605/src/assets/fonts/rubik-light-kern-latin.woff2"
+    as="font" type="font/woff2" crossorigin />
+  <link rel="preload"
+    href="https://d33wubrfki0l68.cloudfront.net/023d86f9b4b58208ceb05012a12c8180f58e1b26/04ae8/src/assets/fonts/texta-heavy-kern-latin.woff2"
+    as="font" type="font/woff2" crossorigin />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/image/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/image/favicon-16x16.png" />
   <link rel="mask-icon" href="/assets/image/safari-pinned-tab.svg" color="#1e2022" />
   <link rel="shortcut icon" href="/assets/image/favicon.ico" />
+  <link rel="shortcut icon" type="image/svg+xml" href="/assets/image/favicon.svg" />
   <meta name="msapplication-TileColor" content="#1e2022" />
-  <meta name="msapplication-config" content="[object Object]" />
   <meta name="theme-color" content="#1e2022" />
+  <meta name="thumbnail"
+    content="https://res.cloudinary.com/doms4gu6e/image/upload/v1584403884/ryanyao-design_rv1jfh.jpg">
   <meta name="description"
-    content="Portfolio site for Ryan Yao. He is product designer. His focus is on UX/UI design, product design, business design, HTML/CSS." />
+    content="Ryan Yao is a product designer who specializes in prototyping and UI design. His experience in front end development allows him to communicate my design with developers from their perspective." />
   <meta property="og:title" content="Ryan Yao Design" />
   <meta property="og:type" content="website" />
   <meta property="og:image"
-    content="https://res.cloudinary.com/doms4gu6e/image/upload/v1568000573/meta-image_lgdshu.jpg" />
+    content="https://res.cloudinary.com/doms4gu6e/image/upload/v1584403884/ryanyao-design_rv1jfh.jpg" />
   <meta property="og:description"
-    content="Portfolio site for Ryan Yao. He is product designer. His focus is on UX/UI design, product design, business design, HTML/CSS." />
-  <meta name="twitter:image:src"
-    content="https://res.cloudinary.com/doms4gu6e/image/upload/v1568000573/meta-image_lgdshu.jpg" />
+    content="Ryan Yao is a product designer who specializes in prototyping and UI design. His experience in front end development allows him to communicate my design with developers from their perspective." />
+  <meta name="twitter:image"
+    content="https://res.cloudinary.com/doms4gu6e/image/upload/v1584403884/ryanyao-design_rv1jfh.jpg" />
   <meta name="twitter:site" content="@ryanyaodesign" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ryan Yao Design" />
   <meta name="twitter:description"
-    content="Portfolio site for Ryan Yao. He is product designer. His focus is on UX/UI design, product design, business design, HTML/CSS." />
+    content="Ryan Yao is a product designer who specializes in prototyping and UI design. His experience in front end development allows him to communicate my design with developers from their perspective." />
   <style type="text/css">
     @font-face {
       font-family: "Rubik Light";
@@ -81,7 +85,7 @@
           <a href="about.html" class="text-base leading-snug">About</a>
         </li>
         <li class="mr-10">
-          <a href="https://res.cloudinary.com/doms4gu6e/image/upload/v1580708100/RyanYao_Resume_ProductDesigner_oshdir.pdf"
+          <a href="https://res.cloudinary.com/doms4gu6e/image/upload/v1590644878/Resume-RyanYao-ProductDesigner_yzfnmm.pdf"
             target="_blank" class="text-base leading-snug">Resume</a>
         </li>
         <li>
@@ -90,20 +94,28 @@
       </ul>
     </nav>
   </header>
-  <main id="#main" class="barba-container c-container home">
-    <div class="titleAnimation relative">
+  <main id="#main" class="barba-container c-container home md:mt-0 sm:mt-24">
+    <section class="titleAnimation relative block">
       <h1 class="md:text-5xl sm:text-4xl leading-none mb-6 md:mt-0 sm:mt-16">
-        Hey, I'm Ryan.
+      Hey, I'm Ryan<span class="text-animate">.</span>
       </h1>
       <p class="md:text-xl sm:text-lg leading-normal md:w-2/3 sm:w-full">
-        I’m a <span class="under-line">product designer</span> who specializes
-        in prototyping and UI design. My experience in front end development
+        I’m a product designer who specializes in prototyping and UI design. My experience in front end development
         allows me to communicate my design with developers from their perspective. I’m looking for
-        a new opportunity in a
-        <span class="under-line">cross-functional</span> product team where values the design and user’s perspective.
+        a new opportunity in a cross-functional product team where the user’s perspective is valued and the design
+        process is a trusted tool to deliver exceptional products.
       </p>
+      <div class="md:text-xl sm:text-lg leading-normal md:w-2/3 sm:w-full mt-10 font-body">Reach out at <a
+          href="mailto:hello@ryanyao.design" class="under-line" id="myEmail">hello@ryanyao.design</a>
+        <div class="tooltip text-sm">
+          <button id="copyEmail" class="px-2 py-1 bg-gray-700 rounded-lg">
+            <span class="tooltiptext" id="myTooltip" >Copy email to clipboard</span>
+            Copy Email
+          </button>
+        </div>
+      </div>
       <ul
-        class="list-none flex flex-row flex-wrap float-right md:w-1/3 sm:w-full lg:absolute md:ralative top-0 right-0 mt-4 md:justify-end sm:justify-start ">
+        class="list-none flex flex-row flex-wrap float-right md:w-1/3 sm:w-full md:absolute sm:relative top-0 right-0 md:mt-4 sm:mt-12 md:justify-end sm:justify-start" id="blob">
         <li class="mr-6">
           <a href="https://www.linkedin.com/in/ryanqyao/" target="_blank"><span class="icon icon-linked"></span></a>
         </li>
@@ -111,94 +123,197 @@
           <a href="https://dribbble.com/ryanqyao" target="_blank"><span class="icon icon-dribbble"></span></a>
         </li>
         <li>
-          <a href="https://www.instagram.com/ryanqyao/" target="_blank"><span class="icon icon-inst"></span></a>
+          <a href="https://twitter.com/ryanqyao/" target="_blank"><span class="icon icon-twit"></span></a>
         </li>
       </ul>
-    </div>
+    </section>
     <section class="work-list animsition">
       <h2 class="text-4xl mb-12 mt-48">
         Here is my work
       </h2>
       <ul class="flex flex-row flex-wrap">
-        <li class="w-2/4 p-4 mb-6 w-full">
+        <li class="py-4 mb-6 w-full">
           <a href="classtopbase.html"
-            class="animsition-link flex md:flex-row sm:flex-col-reverse md:py-20 md:px-12 sm:py-8 sm:px-8 rounded-lg">
-            <div class="flex-1 my-auto sm:mt-8">
+            class="animsition-link flex md:flex-row sm:flex-col-reverse md:py-20 md:px-12 sm:py-10 sm:px-8 rounded-lg">
+            <div class="flex-1 my-auto ">
               <div>
-                <h3 class="font-display md:text-5xl sm:text-4xl leading-none mb-4">ClassTopBase<br>Web App</h3>
-                <p class="font-body text-gray-300 md:w-9/12 sm:w-full">
-                  A school management software aiming for after-schools
+                <h3 class="font-display md:text-5xl sm:text-4xl leading-none mb-8">Planning<br>ClassTopBase</h3>
+                <p class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full">
+                  ClassTopBase is a school management software for after-schools. For this project, I designed a feature
+                  to help school owners to plan their students' academic plans efficiently.
                 </p>
-                <ul class=" flex-row mt-10 md:flex sm:hidden">
-                  <li class="py-2 px-6 rounded-lg mr-8">SaaS</li>
-                  <li class="py-2 px-6 rounded-lg mr-8">Product</li>
-                  <li class="py-2 px-6 rounded-lg mr-8">HTML/CSS</li>
+                <ul class=" flex-row mt-16 md:flex sm:hidden text-base">
+                  <li class="py-1 px-6 rounded-lg mr-8">SaaS</li>
+                  <li class="py-1 px-6 rounded-lg mr-8">Product</li>
+                  <li class="py-1 px-6 rounded-lg mr-8">HTML/CSS</li>
                 </ul>
               </div>
 
             </div>
-            <div class="flex-1"><img
-                src="https://res.cloudinary.com/doms4gu6e/image/upload/v1580845058/classtopbase_qja1q3.jpg"
-                class="image-list mx-auto sm:max-w-full"></div>
+            <div class="flex-1 mb-10"><img
+                src="https://res.cloudinary.com/doms4gu6e/image/upload/v1597012081/380_bn19jk.jpg"
+                data-src="https://res.cloudinary.com/doms4gu6e/image/upload/w_auto,dpr_auto,c_scale/design-final_erkjlp.jpg"
+                class="image-list mx-auto sm:max-w-full cld-responsive lazy" alt="ClassTopBase planning screenshot">
+            </div>
             </div>
 
           </a>
         </li>
-        <li class="w-2/4 p-4 mb-6 w-full">
-          <a href="classtopbase.html"
-            class="animsition-link flex md:flex-row sm:flex-col-reverse md:py-20 md:px-12 sm:py-8 sm:px-8 rounded-lg">
-            <div class="flex-1 my-auto sm:mt-8">
+        <li class="py-4 mb-6 w-full">
+          <a href="classtopbase-website.html"
+            class="animsition-link flex md:flex-row sm:flex-col-reverse md:py-20 md:px-12 sm:py-10 sm:px-8 rounded-lg">
+            <div class="flex-1 my-auto">
               <div>
-                <h3 class="font-display md:text-5xl sm:text-4xl leading-none mb-4">ClassTopBase<br>Website</h3>
-                <p class="font-body text-gray-300">
-                  A marketing website redesign for ClassTopBase
+                <h3 class="font-display md:text-5xl sm:text-4xl leading-none mb-8">Website<br>ClassTopBase</h3>
+                <p class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full">
+                  To better position ClassTopBase and reflect on the new features and new brand, I redesigned the
+                  marketing website for ClassTopBase to prepare for upcoming online campaigns.
                 </p>
-                <ul class="flex-row mt-10 md:flex sm:hidden">
-                  <li class="py-2 px-6 rounded-lg mr-8">SaaS</li>
-                  <li class="py-2 px-6 rounded-lg mr-8">Marketing</li>
-                  <li class="py-2 px-6 rounded-lg mr-8">Website</li>
+                <ul class="flex-row mt-16 md:flex sm:hidden text-base">
+                  <li class="py-1 px-6 rounded-lg mr-8">SaaS</li>
+                  <li class="py-1 px-6 rounded-lg mr-8">Marketing</li>
+                  <li class="py-1 px-6 rounded-lg mr-8">Website</li>
                 </ul>
               </div>
 
             </div>
-            <div class="flex-1"><img
-                src="https://res.cloudinary.com/doms4gu6e/image/upload/v1580846120/classtopbase-website_ndtlip.jpg"
-                class="image-list mx-auto"></div>
+            <div class="flex-1 mb-10"><img
+              src="https://res.cloudinary.com/doms4gu6e/image/upload/v1597012081/380_bn19jk.jpg"
+              data-src="https://res.cloudinary.com/doms4gu6e/image/upload/w_auto,dpr_auto,c_scale/v1580846120/classtopbase-website_ndtlip.jpg"
+                class="image-list mx-auto cld-responsive lazy" alt="ClassTopBase marketing website homepage screenshot"></div>
             </div>
 
           </a>
         </li>
-        <li class="w-2/4 p-4 mb-6 w-full">
-          <a href="classtopbase.html"
-            class="animsition-link flex md:flex-row sm:flex-col-reverse md:py-20 md:px-12 sm:py-8 sm:px-8 rounded-lg">
-            <div class="flex-1 my-auto sm:mt-8">
+        <li class="py-4 mb-6 w-full">
+          <a href="classtopbase-dashboard.html"
+            class="animsition-link flex md:flex-row sm:flex-col-reverse md:py-20 md:px-12 sm:py-10 sm:px-8 rounded-lg">
+            <div class="flex-1 my-auto">
               <div>
-                <h3 class="font-display md:text-5xl sm:text-4xl leading-none mb-4">Air<br>Minimal Weather App</h3>
-                <p class="font-body text-gray-300 md:w-9/12 sm:w-full">
-                  A minimal weather app with tranditional Chinese elements.
+                <h3 class="font-display md:text-5xl sm:text-4xl leading-none mb-8">Dashboard<br>ClassTopBase</h3>
+                <p class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full">
+                  ClassTopBase is a school management software for after-schools. I designed the dashboard to eliminate
+                  the guesswork of school owners that they were surmising how their schools are performing.
                 </p>
-                <ul class=" flex-row mt-10 md:flex sm:hidden">
-                  <li class="py-2 px-6 rounded-lg mr-8">iOS App</li>
-                  <li class="py-2 px-6 rounded-lg mr-8">Swift</li>
-                  <li class="py-2 px-6 rounded-lg mr-8">Website</li>
+                <ul class=" flex-row mt-16 md:flex sm:hidden text-base">
+                  <li class="py-1 px-6 rounded-lg mr-8">SaaS</li>
+                  <li class="py-1 px-6 rounded-lg mr-8">Product</li>
+                  <li class="py-1 px-6 rounded-lg mr-8">HTML/CSS</li>
                 </ul>
               </div>
 
             </div>
-            <div class="flex-1"><img src="https://res.cloudinary.com/doms4gu6e/image/upload/v1580847471/air_qxdh9t.png"
-                class="image-list mx-auto"></div>
+            <div class="flex-1 mb-10"><img
+              src="https://res.cloudinary.com/doms4gu6e/image/upload/v1597012081/380_bn19jk.jpg"
+              data-src="https://res.cloudinary.com/doms4gu6e/image/upload/w_auto,dpr_auto,c_scale/v1590988437/design-dashboard_cnymhy.jpg"
+                class="image-list mx-auto sm:max-w-full cld-responsive lazy" alt="ClassTopBase dashboard screenshot">
+            </div>
+            </div>
+
+          </a>
+        </li>
+        <li class="py-4 mb-6 w-full">
+          <a href="https://designerslack.community"
+            class="animsition-link flex md:flex-row sm:flex-col-reverse md:py-20 md:px-12 sm:py-10 sm:px-8 rounded-lg"
+            target="_blank">
+            <div class="flex-1 my-auto">
+              <div>
+                <h3 class="font-display md:text-5xl sm:text-4xl leading-none mb-8">Designer Slack <br>Communities</h3>
+                <p class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full">
+                  I designed and developed a website with a curated collection of Slack communities for designers around
+                  the world.
+                </p>
+                <ul class=" flex-row mt-16 md:flex sm:hidden text-base">
+                  <li class="py-1 px-6 rounded-lg mr-8">Communities</li>
+                  <li class="py-1 px-6 rounded-lg mr-8">Webflow</li>
+                  <li class="py-1 px-6 rounded-lg mr-8">Website</li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="flex-1 mb-10"><img
+              src="https://res.cloudinary.com/doms4gu6e/image/upload/v1597012081/380_bn19jk.jpg"
+              data-src="https://res.cloudinary.com/doms4gu6e/image/upload/w_auto,dpr_auto,c_scale/v1588660903/dsc-big_aym2gs.jpg"
+                class="image-list mx-auto cld-responsive lazy" alt="Designer Slack Communities website homepage screenshot"></div>
+            </div>
+
+          </a>
+        </li>
+        <li class="py-4 mb-6 w-full">
+          <a href="https://covidupdate.world"
+            class="animsition-link flex md:flex-row sm:flex-col-reverse md:py-20 md:px-12 sm:py-10 sm:px-8 rounded-lg"
+            target="_blank">
+            <div class="flex-1 my-auto">
+              <div>
+                <h3 class="font-display md:text-5xl sm:text-4xl leading-none mb-8">COVID-19 Updates</h3>
+                <p class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full">
+                  I designed and developed a dashboard for tracking current status of COVID-19 around the globe.
+                </p>
+                <ul class=" flex-row mt-16 md:flex sm:hidden text-base">
+                  <li class="py-1 px-6 rounded-lg mr-8">Dashboard</li>
+                  <li class="py-1 px-6 rounded-lg mr-8">TailWindCSS</li>
+                  <li class="py-1 px-6 rounded-lg mr-8">HTML/CSS/JS</li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="flex-1 mb-10"><img
+              src="https://res.cloudinary.com/doms4gu6e/image/upload/v1597012081/380_bn19jk.jpg"
+              data-src="https://res.cloudinary.com/doms4gu6e/image/upload/w_auto,dpr_auto,c_scale/v1586411956/covid-19_kcsap9.jpg"
+                class="image-list mx-auto cld-responsive lazy" alt="COVID-19 updates website homepage screenshot">
+            </div>
+            </div>
+
+          </a>
+        </li>
+        <li class="py-4 mb-6 w-full">
+          <a href="air-app.html"
+            class="animsition-link flex md:flex-row sm:flex-col-reverse md:pt-16 md:pb-6 md:px-12 sm:py-10 sm:px-8 rounded-lg">
+            <div class="flex-1 my-auto">
+              <div>
+                <h3 class="font-display md:text-5xl sm:text-4xl leading-none mb-8">Air<br>Minimal Weather App</h3>
+                <p class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full">
+                  I designed and developed an iOS weather app with minimal design and traditional Chinese elements.
+                </p>
+                <ul class=" flex-row mt-10 md:flex sm:hidden text-base">
+                  <li class="py-1 px-6 rounded-lg mr-8">iOS App</li>
+                  <li class="py-1 px-6 rounded-lg mr-8">Swift</li>
+                  <li class="py-1 px-6 rounded-lg mr-8">Website</li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="flex-1 mb-10"><img
+              src="https://res.cloudinary.com/doms4gu6e/image/upload/v1597012081/380_bn19jk.jpg"
+              data-src="https://res.cloudinary.com/doms4gu6e/image/upload/w_auto,dpr_auto,c_scale/v1580847471/air_qxdh9t.png"
+                class="image-list mx-auto no-shadow cld-responsive lazy" alt="Air app screenshot"></div>
             </div>
 
           </a>
         </li>
       </ul>
     </section>
-    <footer>
-      <h5 class="text-sm text-gray-300 text-center w-full py-12 m-0">
-        ©2020 Designed and Developed by Ryan Yao
+    <footer class="py-16">
+      <h5 class="text-base font-body text-gray-300 text-left w-full mt-12 mb-8">
+        ©2020 Designed and Developed by Ryan Yao with <a href="https://tailwindcss.com" target="_blank"
+          class="text-base under-line">Tailwind CSS</a>
+      </h5>
+      <h5 class="text-base font-body text-gray-300 text-left w-full leading-none">
+        I collect totally anonymous basic analytics using Simple Analytics. View live analytics at <br><a
+          href="https://simpleanalytics.com/ryanyao.design" target="_blank"
+          class="text-base under-line">simpleanalytics.com/ryanyao.design.</a>
       </h5>
     </footer>
   </main>
-<script type="text/javascript" src="main.f43a71f566049b07c231.js"></script></body>
+  <script>window.sa_event = window.sa_event || function () { a = [].slice.call(arguments); sa_event.q ? sa_event.q.push(a) : sa_event.q = [a] };</script>
+  <script async defer src="https://api.ryanyao.design/latest.js"></script>
+  <noscript><img src="https://api.ryanyao.design/noscript.gif" alt=""></noscript>
+  <script async src="https://ackee.ryanyao.xyz/api.js" data-ackee-server="https://ackee.ryanyao.xyz" data-ackee-domain-id="d8e04669-ccb3-4c06-9f3f-7ce3ab483e53" data-ackee-opts='{ "ignoreLocalhost": true, "detailed": true }'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.11.1/cloudinary-core-shrinkwrap.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var cl = cloudinary.Cloudinary.new({cloud_name: "doms4gu6e"});  
+    cl.responsive();
+  </script>
+<script type="text/javascript" src="main.df07bdfff40628b6132e.js"></script></body>
 
 </html>

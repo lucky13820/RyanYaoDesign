@@ -63,7 +63,10 @@ module.exports = {
           }
         ]
       },
-      { test: /\.xml$/, loader: 'xml-loader' }
+      { test: /\.xml$/, loader: 'xml-loader' },
+      {
+        test: /\.toml$/, loader: '@lcdev/toml-loader'
+      }
     ]
   },
 
