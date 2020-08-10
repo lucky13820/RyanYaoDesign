@@ -17,3 +17,13 @@
   for = "/*.gif"
   [headers.values]
     Cache-Control = "max-age=3153600"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "max-age=3153600"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "max-age=3153600"
