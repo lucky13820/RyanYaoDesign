@@ -27,3 +27,10 @@
   for = "/*.css"
   [headers.values]
     Cache-Control = "max-age=3153600"
+
+
+[[redirects]]
+  from = "/resources"
+  to = "https://www.notion.so/UX-UI-Resources-728ab5f44f9d4f0db964de93e0cdf90b"
+  status = 200
+  force = false
