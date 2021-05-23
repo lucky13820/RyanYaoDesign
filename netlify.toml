@@ -32,5 +32,5 @@
 [[redirects]]
   from = "/resources"
   to = "https://www.notion.so/UX-UI-Resources-728ab5f44f9d4f0db964de93e0cdf90b"
-  status = 200
+  status = 301
   force = false
