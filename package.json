@@ -18,7 +18,7 @@
     "@lcdev/toml-loader": "^1.1.0",
     "eslint-utils": "^2.1.0",
     "normalize.css": "^8.0.1",
-    "serialize-javascript": "^2.1.2",
+    "serialize-javascript": "^3.1.0",
     "tailwindcss-fluid-container": "^2.1.0",
     "vanilla-lazyload": "^17.4.0"
   },
