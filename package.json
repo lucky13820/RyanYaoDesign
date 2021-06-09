@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/lucky13820/RyanYaoDesign#readme",
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
+    "@babel/cli": "^7.14.3",
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
     "@barba/core": "^2.9.7",
