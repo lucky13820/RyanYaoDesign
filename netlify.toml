@@ -7,7 +7,6 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "no-referrer"
     Feature-Policy = "microphone 'none'; geolocation 'none'"
-    Access-Control-Allow-Origin = "https://writes.ryanyao.design"
 
 [[headers]]
   for = "/*.png"
