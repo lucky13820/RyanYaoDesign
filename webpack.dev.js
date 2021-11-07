@@ -15,7 +15,8 @@ module.exports = {
     port: 7077,
     writeToDisk: false,
     headers: {
-      'Access-Control-Allow-Origin': '*',
+      Vary: 'Origin',
+      'Access-Control-Allow-Origin': 'https://write.ryanyao.design',
       'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
       'Access-Control-Allow-Headers':
         'X-Requested-With, content-type, Authorization',
