@@ -1,4 +1,4 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   // This option controls if and how source maps are generated.
@@ -7,13 +7,20 @@ module.exports = {
 
   // https://webpack.js.org/concepts/entry-points/#multi-page-application
   entry: {
-    main: './src/main.js'
+    main: './src/main.js',
   },
 
   // https://webpack.js.org/configuration/dev-server/
   devServer: {
     port: 7077,
-    writeToDisk: false // https://webpack.js.org/configuration/dev-server/#devserverwritetodisk-
+    writeToDisk: false,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+      'Access-Control-Allow-Headers':
+        'X-Requested-With, content-type, Authorization',
+    },
+    allowedHosts: ['ryanyao.design'], // https://webpack.js.org/configuration/dev-server/#devserverwritetodisk-
   },
 
   // https://webpack.js.org/concepts/loaders/
@@ -24,17 +31,17 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/preset-env']
-        }
+          presets: ['@babel/preset-env'],
+        },
       },
       {
         test: /\.css$/i,
         use: [
           'style-loader',
           'css-loader',
-          'postcss-loader'
+          'postcss-loader',
           // Please note we are not running postcss here
-        ]
+        ],
       },
       {
         test: /\.(png|jpg|gif|svg|ico|woff(2)?)$/,
@@ -44,16 +51,17 @@ module.exports = {
             options: {
               publicPath: '/',
               name: '[path][name].[ext]',
-              context: 'src'
-            }
-          }
-        ]
+              context: 'src',
+            },
+          },
+        ],
       },
       { test: /\.xml$/, loader: 'xml-loader' },
       {
-        test: /\.toml$/, loader: '@lcdev/toml-loader'
-      }
-    ]
+        test: /\.toml$/,
+        loader: '@lcdev/toml-loader',
+      },
+    ],
   },
 
   // https://webpack.js.org/concepts/plugins/
@@ -62,37 +70,37 @@ module.exports = {
       template: './src/index.html',
       inject: 'body',
       chunks: ['main', 'index'],
-      filename: 'index.html'
+      filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
       template: './src/classtopbase.html',
       inject: 'body',
       chunks: ['main', 'classtopbase'],
-      filename: 'classtopbase.html'
+      filename: 'classtopbase.html',
     }),
     new HtmlWebpackPlugin({
       template: './src/classtopbase-dashboard.html',
       inject: 'body',
       chunks: ['main', 'classtopbase-dashboard'],
-      filename: 'classtopbase-dashboard.html'
+      filename: 'classtopbase-dashboard.html',
     }),
     new HtmlWebpackPlugin({
       template: './src/classtopbase-website.html',
       inject: 'body',
       chunks: ['main', 'classtopbase-website'],
-      filename: 'classtopbase-website.html'
+      filename: 'classtopbase-website.html',
     }),
     new HtmlWebpackPlugin({
       template: './src/air-app.html',
       inject: 'body',
       chunks: ['main', 'air-app'],
-      filename: 'air-app.html'
+      filename: 'air-app.html',
     }),
     new HtmlWebpackPlugin({
       template: './src/about.html',
       inject: 'body',
       chunks: ['main', 'about'],
-      filename: 'about.html'
-    })
-  ]
-}
+      filename: 'about.html',
+    }),
+  ],
+};
