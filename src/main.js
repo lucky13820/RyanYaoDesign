@@ -1,12 +1,12 @@
-import './assets/css/main.css';
-import './assets/css/lightbox.css';
-import './assets/vendor/lightbox.js';
-import $ from 'jquery';
-import Barba from 'barba.js';
-import Gumshoe from 'gumshoejs';
-import SmoothScroll from 'smooth-scroll';
-import LazyLoad from 'vanilla-lazyload';
-import 'jquery-ui';
+import "./assets/css/main.css";
+import "./assets/css/lightbox.css";
+import "./assets/vendor/lightbox.js";
+import $ from "jquery";
+import Barba from "barba.js";
+import Gumshoe from "gumshoejs";
+import SmoothScroll from "smooth-scroll";
+import LazyLoad from "vanilla-lazyload";
+import "jquery-ui";
 
 var myLazyLoad = new LazyLoad();
 $(document).ready(function () {
@@ -20,68 +20,68 @@ $(document).ready(function () {
   function initProgress() {
     var winHeight = $(window).height();
     var docHeight = $(document).height();
-    var progressBar = $('progress');
+    var progressBar = $("progress");
     var max;
     var value;
 
     /* Set the max scrollable area */
     max = docHeight - winHeight;
-    progressBar.attr('max', max);
+    progressBar.attr("max", max);
 
-    $(document).on('scroll', function () {
+    $(document).on("scroll", function () {
       value = $(window).scrollTop();
-      progressBar.attr('value', value);
+      progressBar.attr("value", value);
     });
   }
 
-  var themeSwitch = document.getElementById('themeSwitch');
+  var themeSwitch = document.getElementById("themeSwitch");
   initTheme();
-  themeSwitch.addEventListener('change', resetTheme, function () {});
+  themeSwitch.addEventListener("change", resetTheme, function () {});
 
   function activateDarkMode() {
-    $('body')
-      .removeClass('bg-white text-black border-black')
-      .addClass('bg-black text-gray-300 border-white');
-    localStorage.setItem('mode', 'dark');
-    $('#themeSwitch').prop('checked', true);
-    sa_event('dark-mode');
+    $("body")
+      .removeClass("bg-white text-black border-black")
+      .addClass("bg-black text-gray-300 border-white");
+    localStorage.setItem("mode", "dark");
+    $("#themeSwitch").prop("checked", true);
+    sa_event("dark-mode");
   }
 
   function activateLightMode() {
-    $('body')
-      .addClass('bg-white text-black border-black')
-      .removeClass('bg-black text-gray-300 border-white');
-    localStorage.setItem('mode', 'light');
-    $('#themeSwitch').prop('checked', false);
-    sa_event('light-mode');
+    $("body")
+      .addClass("bg-white text-black border-black")
+      .removeClass("bg-black text-gray-300 border-white");
+    localStorage.setItem("mode", "light");
+    $("#themeSwitch").prop("checked", false);
+    sa_event("light-mode");
   }
 
   function initTheme() {
-    var isDarkMode = '';
-    var isLightMode = '';
+    var isDarkMode = "";
+    var isLightMode = "";
     const isNotSpecified = window.matchMedia(
-      '(prefers-color-scheme: no-preference)'
+      "(prefers-color-scheme: no-preference)"
     ).matches;
     const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified;
 
     window
-      .matchMedia('(prefers-color-scheme: dark)')
+      .matchMedia("(prefers-color-scheme: dark)")
       .addListener((e) => e.matches && activateDarkMode());
     window
-      .matchMedia('(prefers-color-scheme: light)')
+      .matchMedia("(prefers-color-scheme: light)")
       .addListener((e) => e.matches && activateLightMode());
 
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       isDarkMode = true;
     }
-    if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+    if (window.matchMedia("(prefers-color-scheme: light)").matches) {
       isDarkMode = false;
     }
-    if (localStorage.getItem('mode') === 'dark') {
+    if (localStorage.getItem("mode") === "dark") {
       isDarkMode = true;
     }
 
-    if (localStorage.getItem('mode') === 'light') {
+    if (localStorage.getItem("mode") === "light") {
       isDarkMode = false;
     }
 
@@ -111,7 +111,7 @@ $(document).ready(function () {
         .fadeOut(800)
         .promise()
         .done(() => {
-          nc.css('visibility', 'visible');
+          nc.css("visibility", "visible");
           nc.fadeIn(800, function () {
             _this.done();
           });
@@ -124,14 +124,14 @@ $(document).ready(function () {
   };
   Barba.Pjax.start();
 
-  Barba.Dispatcher.on('initStateChange', function () {
+  Barba.Dispatcher.on("initStateChange", function () {
     // gaTracker('UA-145302459-1')
     // ga('send', 'pageview')
     // ga('set', 'anonymizeIp', true)
-    $('html, body').animate({ scrollTop: 0 }, 800);
+    $("html, body").animate({ scrollTop: 0 }, 800);
   });
 
-  Barba.Dispatcher.on('transitionCompleted', function () {
+  Barba.Dispatcher.on("transitionCompleted", function () {
     initProgress();
     myLazyLoad.update();
     cl.responsive();
@@ -145,20 +145,20 @@ $(document).ready(function () {
     .click(function (event) {
       // On-page links
       if (
-        location.pathname.replace(/^\//, '') ==
-          this.pathname.replace(/^\//, '') &&
+        location.pathname.replace(/^\//, "") ==
+          this.pathname.replace(/^\//, "") &&
         location.hostname == this.hostname
       ) {
         // Figure out element to scroll to
         var target = $(this.hash);
         target = target.length
           ? target
-          : $('[name=' + this.hash.slice(1) + ']');
+          : $("[name=" + this.hash.slice(1) + "]");
         // Does a scroll target exist?
         if (target.length) {
           // Only prevent default if animation is actually gonna happen
           event.preventDefault();
-          $('html, body').animate(
+          $("html, body").animate(
             {
               scrollTop: target.offset().top,
             },
@@ -168,11 +168,11 @@ $(document).ready(function () {
               // Must change focus!
               var $target = $(target);
               $target.focus();
-              if ($target.is(':focus')) {
+              if ($target.is(":focus")) {
                 // Checking if the target was focused
                 return false;
               } else {
-                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
                 $target.focus(); // Set focus again
               }
             }
@@ -182,82 +182,45 @@ $(document).ready(function () {
     });
 });
 
-const RSS_URL = `https://write.ryanyao.design/rss/`;
-
-$.ajax(RSS_URL, {
-  accepts: {
-    xml: 'application/rss+xml',
-  },
-
-  dataType: 'xml',
-
-  success: function (data) {
-    $(data)
-      .find('item')
-      .each(function () {
-        const el = $(this);
-
-        const template = `
-        <li class="my-6">
-          <article>
-            <h3 class="text-xl under-line inline-block">
-              <a href="${el
-                .find('link')
-                .text()}" target="_blank" rel="noopener">
-                ${el.find('title').text()}
-              </a>
-            </h3>
-            <p class="mt-2">${el
-              .find('pubDate')
-              .formatDate('dd M yy', new Date())}</p>
-          </article>
-          </li>
-        `;
-
-        $('#write-list').insertAdjacentHTML('beforeend', template);
-      });
-  },
-});
-
-var spy = new Gumshoe('#content-nav a', {
+var spy = new Gumshoe("#content-nav a", {
   reflow: true,
   nested: true,
-  nestedClass: 'active-parent',
+  nestedClass: "active-parent",
   offset: 32,
 });
 
 var scroll = new SmoothScroll('a[href*="#"]', {
   speed: 500,
   speedAsDuration: true,
-  easing: 'easeInCubic',
+  easing: "easeInCubic",
   offset: 32,
 });
 
-const copyEmail = document.getElementById('copyEmail');
+const copyEmail = document.getElementById("copyEmail");
 copyEmail.addEventListener(
-  'click',
+  "click",
   function (event) {
     /* Get the text field */
-    var copyText = document.getElementById('myEmail').innerText;
+    var copyText = document.getElementById("myEmail").innerText;
 
     var range = document.createRange();
-    range.selectNode(document.getElementById('myEmail'));
+    range.selectNode(document.getElementById("myEmail"));
     window.getSelection().removeAllRanges(); // clear current selection
     window.getSelection().addRange(range); // to select text
-    document.execCommand('copy');
+    document.execCommand("copy");
     window.getSelection().removeAllRanges(); // to deselect
 
-    var tooltip = document.getElementById('myTooltip');
-    tooltip.innerHTML = 'Copied: ' + copyText;
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copied: " + copyText;
   },
   false
 );
 
 copyEmail.addEventListener(
-  'mouseout',
+  "mouseout",
   function (event) {
-    var tooltip = document.getElementById('myTooltip');
-    tooltip.innerHTML = 'Copy email to clipboard';
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copy email to clipboard";
   },
   false
 );
