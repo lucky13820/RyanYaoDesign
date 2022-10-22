@@ -87,21 +87,21 @@
     />
     <style type="text/css">
       @font-face {
-        font-family: 'Rubik Light';
-        src: url('${require(`./assets/fonts/rubik-light-kern-latin.woff2`)}')
-            format('woff2'),
-          url('${require(`./assets/fonts/rubik-light-kern-latin.woff`)}')
-            format('woff');
+        font-family: "Rubik Light";
+        src: url("${require(`./assets/fonts/rubik-light-kern-latin.woff2`)}")
+            format("woff2"),
+          url("${require(`./assets/fonts/rubik-light-kern-latin.woff`)}")
+            format("woff");
         font-weight: normal;
         font-style: normal;
         font-display: swap;
       }
 
       @font-face {
-        font-family: 'YoungSerif';
-        src: url('${require(`./assets/fonts/YoungSerif.woff2`)}')
-            format('woff2'),
-          url('${require(`./assets/fonts/YoungSerif.woff`)}') format('woff');
+        font-family: "YoungSerif";
+        src: url("${require(`./assets/fonts/YoungSerif.woff2`)}")
+            format("woff2"),
+          url("${require(`./assets/fonts/YoungSerif.woff`)}") format("woff");
         font-weight: normal;
         font-style: normal;
         font-display: swap;
@@ -161,15 +161,18 @@
       <nav class="md:float-right sm:float-none md:mt-16 sm:mt-2">
         <ul class="flex flex-row">
           <li class="mr-10">
-            <a href="/" class="text-base leading-snug font-display">Work</a>
+            <a href="/#work" class="text-base leading-snug font-display"
+              >Work</a
+            >
           </li>
           <li class="mr-10">
-            <a
-              href="https://write.ryanyao.design"
-              class="text-base leading-snug font-display"
-              title="Ryan Yao's Newsletter"
-              target="_blank"
-              >Write</a
+            <a href="/#events" class="text-base leading-snug font-display"
+              >Events</a
+            >
+          </li>
+          <li class="mr-10">
+            <a href="/#write" class="text-base leading-snug font-display"
+              >Writes</a
             >
           </li>
           <li class="mr-10">
@@ -428,13 +431,7 @@
           >
         </h5>
         <h5
-          class="
-            text-base
-            font-body
-            text-gray-300 text-left
-            w-full
-            leading-none
-          "
+          class="text-base font-body text-gray-300 text-left w-full leading-none"
         >
           I collect totally anonymous basic analytics using Plausible. View live
           analytics at <br /><a
@@ -459,7 +456,7 @@
       type="text/javascript"
     ></script>
     <script type="text/javascript">
-      var cl = cloudinary.Cloudinary.new({ cloud_name: 'doms4gu6e' });
+      var cl = cloudinary.Cloudinary.new({ cloud_name: "doms4gu6e" });
       cl.responsive();
     </script>
   </body>
