@@ -424,14 +424,6 @@ body.bg-black .switcher:after {
   z-index: 1;
   word-break: keep-all;
   display: inline;
-}
-
-.under-line:hover {
-  color: white;
-}
-
-.under-line {
-  display: inline;
   background-image: linear-gradient(
     30deg,
     rgba(253, 184, 109, 1) 0%,
@@ -445,6 +437,7 @@ body.bg-black .switcher:after {
 
 .under-line:hover {
   background-size: 100% 100%;
+  color: white;
 }
 
 .image-container,
