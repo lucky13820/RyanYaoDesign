@@ -26,7 +26,6 @@ module.exports = {
         "YoungSerif",
         "-apple-system",
         "BlinkMacSystemFont",
-        "Source Han Serif SC",
         "STXihei",
         "STFangsong",
         "FangSong",
