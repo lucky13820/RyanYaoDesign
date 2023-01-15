@@ -35,6 +35,24 @@
   status = 200
   force = false
 
+[[redirects]]
+  from = "/.well-known/host-meta*"
+  to = "https://social.ry.xxx/.well-known/host-meta:splat"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/.well-known/webfinger*"
+  to = "https://social.ry.xxx/.well-known/webfinger:splat"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/.well-known/nodeinfo*"
+  to = "https://social.ry.xxx/.well-known/nodeinfo:splat"
+  status = 301
+  force = false
+
 [[plugins]]
 package = "netlify-plugin-mastodon-alias"
 
