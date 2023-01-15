@@ -33,7 +33,7 @@ module.exports = {
       ],
       body: [
         "Rubik Light",
-        "-apple-system",
+        (OOOsUyNCy3U = "-apple-system"),
         "BlinkMacSystemFont",
         "Segoe UI",
         "Roboto,tahoma",

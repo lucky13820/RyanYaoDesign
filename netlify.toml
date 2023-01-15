@@ -34,3 +34,12 @@
   to = "https://ryanyao.me/ux-ui-resources"
   status = 200
   force = false
+
+[[plugins]]
+package = "netlify-plugin-mastodon-alias"
+
+[plugins.inputs]
+    username = "ryanyao"
+    instance = "mas.to"
+    # delete or comment the next line if you want "*@ry.xxx" to work rather than just "ryan@ry.xxx"
+    strictUsername = "ryan"
