@@ -1,460 +1,795 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Ryan Yao Design</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"
+    />
+    <link
+      rel="preload"
+      href="https://d33wubrfki0l68.cloudfront.net/678ab0f61e2d23f61216da817eb72c3e160abcbd/84826/assets/fonts/rubik-light-kern-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="https://d33wubrfki0l68.cloudfront.net/63a781474da5e1bbae670abc2e1bde79eb3507af/6ae56/assets/fonts/youngserif.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="${require(`./assets/image/favicon-32x32.png`)}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="${require(`./assets/image/favicon-16x16.png`)}"
+    />
+    <link
+      rel="mask-icon"
+      href="${require(`./assets/image/safari-pinned-tab.svg`)}"
+      color="#1e2022"
+    />
+    <link rel="shortcut icon" href="${require(`./assets/image/favicon.ico`)}" />
+    <link
+      rel="shortcut icon"
+      type="image/svg+xml"
+      href="${require(`./assets/image/favicon.svg`)}"
+    />
+    <meta name="msapplication-TileColor" content="#1e2022" />
+    <meta name="theme-color" content="#1e2022" />
+    <meta
+      name="thumbnail"
+      content="https://res.cloudinary.com/doms4gu6e/image/upload/v1584403884/ryanyao-design_rv1jfh.jpg"
+    />
+    <meta
+      name="description"
+      content="Ryan Yao is a product designer who specializes in prototyping and UI design. His experience in front end development allows him to communicate my design with developers from their perspective."
+    />
+    <meta property="og:title" content="Ryan Yao Design" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/doms4gu6e/image/upload/v1584403884/ryanyao-design_rv1jfh.jpg"
+    />
+    <meta
+      property="og:description"
+      content="Ryan Yao is a product designer who specializes in prototyping and UI design. His experience in front end development allows him to communicate my design with developers from their perspective."
+    />
+    <meta
+      name="twitter:image"
+      content="https://res.cloudinary.com/doms4gu6e/image/upload/v1584403884/ryanyao-design_rv1jfh.jpg"
+    />
+    <meta name="twitter:site" content="@ryanyaodesign" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ryan Yao Design" />
+    <meta
+      name="twitter:description"
+      content="Ryan Yao is a product designer who specializes in prototyping and UI design. His experience in front end development allows him to communicate my design with developers from their perspective."
+    />
+    <style type="text/css">
+      @font-face {
+        font-family: "Rubik Light";
+        src: url("${require(`./assets/fonts/rubik-light-kern-latin.woff2`)}")
+            format("woff2"),
+          url("${require(`./assets/fonts/rubik-light-kern-latin.woff`)}")
+            format("woff");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
 
-<head>
-  <title>Ryan Yao Design</title>
-  <meta charset="UTF-8" />
-  <meta http-equiv="cache-control" content="no-cache" />
-  <meta http-equiv="pragma" content="no-cache" />
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <meta name="viewport"
-    content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
-  <link rel="preload"
-    href="https://d33wubrfki0l68.cloudfront.net/678ab0f61e2d23f61216da817eb72c3e160abcbd/84826/assets/fonts/rubik-light-kern-latin.woff2"
-    as="font" type="font/woff2" crossorigin />
-  <link rel="preload"
-    href="https://d33wubrfki0l68.cloudfront.net/63a781474da5e1bbae670abc2e1bde79eb3507af/6ae56/assets/fonts/youngserif.woff2"
-    as="font" type="font/woff2" crossorigin />
-  <link rel="icon" type="image/png" sizes="32x32" href="${require(`./assets/image/favicon-32x32.png`)}" />
-  <link rel="icon" type="image/png" sizes="16x16" href="${require(`./assets/image/favicon-16x16.png`)}" />
-  <link rel="mask-icon" href="${require(`./assets/image/safari-pinned-tab.svg`)}" color="#1e2022" />
-  <link rel="shortcut icon" href="${require(`./assets/image/favicon.ico`)}" />
-  <link rel="shortcut icon" type="image/svg+xml" href="${require(`./assets/image/favicon.svg`)}" />
-  <meta name="msapplication-TileColor" content="#1e2022" />
-  <meta name="theme-color" content="#1e2022" />
-  <meta name="thumbnail"
-    content="https://res.cloudinary.com/doms4gu6e/image/upload/v1584403884/ryanyao-design_rv1jfh.jpg">
-  <meta name="description"
-    content="Ryan Yao is a product designer who specializes in prototyping and UI design. His experience in front end development allows him to communicate my design with developers from their perspective." />
-  <meta property="og:title" content="Ryan Yao Design" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image"
-    content="https://res.cloudinary.com/doms4gu6e/image/upload/v1584403884/ryanyao-design_rv1jfh.jpg" />
-  <meta property="og:description"
-    content="Ryan Yao is a product designer who specializes in prototyping and UI design. His experience in front end development allows him to communicate my design with developers from their perspective." />
-  <meta name="twitter:image"
-    content="https://res.cloudinary.com/doms4gu6e/image/upload/v1584403884/ryanyao-design_rv1jfh.jpg" />
-  <meta name="twitter:site" content="@ryanyaodesign" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ryan Yao Design" />
-  <meta name="twitter:description"
-    content="Ryan Yao is a product designer who specializes in prototyping and UI design. His experience in front end development allows him to communicate my design with developers from their perspective." />
-  <style type="text/css">
-    @font-face {
-      font-family: "Rubik Light";
-      src: url("${require(`./assets/fonts/rubik-light-kern-latin.woff2`)}") format("woff2"),
-      url("${require(`./assets/fonts/rubik-light-kern-latin.woff`)}") format("woff");
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
+      @font-face {
+        font-family: "YoungSerif";
+        src: url("${require(`./assets/fonts/YoungSerif.woff2`)}")
+            format("woff2"),
+          url("${require(`./assets/fonts/YoungSerif.woff`)}") format("woff");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+    <script
+      async
+      defer
+      data-domain="ryanyao.design"
+      src="https://api.ryanyao.design/js/index.js"
+    ></script>
+  </head>
 
-    @font-face {
-      font-family: "YoungSerif";
-      src: url("${require(`./assets/fonts/YoungSerif.woff2`)}") format("woff2"),
-      url("${require(`./assets/fonts/YoungSerif.woff`)}") format("woff");
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
-  </style>
-  <script async defer data-domain="ryanyao.design" src="https://api.ryanyao.design/js/index.js"></script>
-</head>
-
-
-
-<body class="bg-black text-gray-300" id="barba-wrapper">
-  <div class="theme-switch-wrapper">
-    <label class="theme-switch" for="themeSwitch">
-      <input type="checkbox" id="themeSwitch" />
-      <div class="switcher"></div>
-      <div class="light-sun"></div>
-    </label>
-  </div>
-  <header class="c-container">
-    <a href="/" class="inline-block">
-      <svg class="md:mb-32 mt-16 w-40 sm:mb-6" viewbox="0 0 240 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M134.64 23.9067C134.293 24.2267 134.133 24.5733 134.133 24.9467C134.133 25.2933 134.293 25.64 134.64 25.96L135.68 27C136.027 27.3467 136.373 27.5067 136.72 27.5067C137.067 27.5067 137.413 27.3467 137.76 27L138.8 25.96C139.147 25.64 139.307 25.2933 139.307 24.9467C139.307 24.5733 139.147 24.2267 138.8 23.9067L137.76 22.8667C137.413 22.52 137.067 22.36 136.72 22.36C136.373 22.36 136.027 22.52 135.68 22.84L134.64 23.9067Z" fill="url(#paint0_linear)"/>
-        <path class="logo" d="M20.5067 25.4C19.12 25.3467 18.5067 24.12 17.8667 22.8667L14.9333 17.4C17.2267 16.3067 18.1067 14.4667 18.1067 12.6533C18.1067 9.58666 15.3333 7 11.0133 7H1.2C0.933333 7 0.8 7.16 0.8 7.4V8.2C0.8 8.46666 0.933333 8.6 1.2 8.6H1.22667C2.69333 8.6 3.17333 9.69333 3.17333 11.16V22.8667C3.17333 24.28 2.72 25.3467 1.36 25.4H1.2C0.933333 25.4 0.8 25.56 0.8 25.8V26.6C0.8 26.8667 0.933333 27 1.2 27H9.38667C9.65333 27 9.78667 26.8667 9.78667 26.6V25.8C9.78667 25.56 9.65333 25.4 9.38667 25.4H9.22667C7.86667 25.3467 7.44 24.28 7.44 22.8667V18.44H9.41333C10.0267 18.44 10.6133 18.4133 11.1733 18.36L13.6 22.8667C13.8133 23.2933 13.9467 23.72 13.9467 24.0933C13.9467 24.8133 13.52 25.3733 12.64 25.4H12.4533C12.1867 25.4 12.0533 25.56 12.0533 25.8V26.6C12.0533 26.8667 12.1867 27 12.4533 27H20.6667C20.9067 27 21.0667 26.8667 21.0667 26.6V25.8C21.0667 25.56 20.9067 25.4 20.6667 25.4H20.5067ZM7.44 16.5467V8.6H9.84C12.5067 8.62667 14.1067 10.1733 14.1067 12.6533C14.1067 15.0533 12.5333 16.5467 8.98667 16.5467H7.44ZM31.9396 6.94666C31.6729 6.94666 31.5396 7.08 31.5396 7.34666V8.14667C31.5396 8.41333 31.6729 8.54666 31.9396 8.54666C32.7129 8.54666 33.1663 8.81333 33.1663 9.42666C33.1663 9.82666 32.9529 10.36 32.5529 11.08L29.6729 16.1733L26.5796 11.08C26.2596 10.5467 26.1263 10.12 26.1263 9.8C26.1263 8.89333 27.0329 8.54666 27.9663 8.54666C28.2329 8.54666 28.3663 8.41333 28.3663 8.14667V7.34666C28.3663 7.08 28.2329 6.94666 27.9663 6.94666H18.7396C18.4729 6.94666 18.3396 7.08 18.3396 7.34666V8.14667C18.3396 8.41333 18.4729 8.54666 18.7396 8.54666C19.8329 8.54666 20.5796 9.32 21.7529 11.08L26.5796 18.28C26.6863 18.44 26.7129 18.6 26.7129 18.7867V22.8667C26.7129 24.28 26.2863 25.3467 24.9263 25.4H24.7663C24.4996 25.4 24.3663 25.56 24.3663 25.8V26.6C24.3663 26.8667 24.4996 27 24.7663 27H32.9529C33.2196 27 33.3529 26.8667 33.3529 26.6V25.8C33.3529 25.56 33.2196 25.4 32.9529 25.4H32.7663C31.4329 25.3467 30.9796 24.28 30.9796 22.8667V18.6267C30.9796 18.44 31.0063 18.3067 31.1129 18.1467L35.2463 11.08C36.2596 9.32 37.4063 8.54666 38.5529 8.54666C38.8196 8.54666 38.9529 8.41333 38.9529 8.14667V7.34666C38.9529 7.08 38.8196 6.94666 38.5529 6.94666H31.9396ZM60.0981 5.72C60.0981 5.69333 60.0981 5.66667 60.0715 5.66667L60.0181 5.69333C59.9648 5.69333 59.9381 5.72 59.8848 5.74666C59.1648 6.25333 57.6981 7.26667 54.8715 8.2C54.6315 8.30666 54.4981 8.33333 54.4981 8.57333V9.48C54.4981 9.64 54.5515 9.77333 54.8181 9.8C56.2848 9.96 56.3915 11.4533 56.3915 12.8667V14.5733C55.4581 13.7733 54.2581 13.3467 52.9248 13.3467C49.6981 13.3467 46.7115 15.3733 46.7115 20.3333C46.7115 25.48 50.2048 27.3467 52.6048 27.3467C55.3515 27.3467 56.3915 25.6133 56.6848 24.8933L56.3648 27.2667C56.3648 27.32 56.3648 27.3467 56.4181 27.3467H56.4715C56.5515 27.3467 56.6581 27.32 56.7115 27.2933C57.8848 26.7867 58.9781 26.28 61.6181 26.28C61.8848 26.28 61.9915 26.1467 61.9915 25.9333V25.0267C61.9915 24.84 61.9381 24.7067 61.6715 24.68C60.3648 24.5467 60.1515 23.3467 60.0981 22.0667V5.72ZM56.3915 22.76C56.3915 22.76 55.8048 25 53.8048 25C51.6181 25 50.1248 22.8667 50.1248 19.4533C50.1248 17.2667 50.8181 15.3733 53.4048 15.3733C55.1915 15.3733 56.1781 16.7333 56.3915 18.3867V22.76ZM74.1969 18.8667C74.3569 18.7867 74.4102 18.68 74.4102 18.52C74.4102 16.52 72.4635 13.3733 68.9169 13.3733C65.7969 13.3733 62.5969 15.2667 62.5969 20.2267C62.5969 24.0933 65.3169 27.32 69.7435 27.32C72.4369 27.32 74.0902 26.0933 75.0769 24.2267C75.1569 24.0667 75.2635 23.9067 75.2635 23.7467C75.2635 23.6667 75.2102 23.5867 75.1302 23.56C74.2769 23.0533 74.2502 23.0267 74.0902 23.0267C74.0102 23.0267 73.9035 23.0533 73.8502 23.1333C72.9169 24.4933 71.5835 25.1067 70.4635 25.1067C68.3835 25.1067 67.0502 23.72 66.4635 22.2533L74.1969 18.8667ZM66.1435 20.5733C65.9035 19.96 65.8769 19.08 65.8769 18.5467C65.8769 16.8133 66.8102 15.48 68.2769 15.48C69.5035 15.48 70.4102 16.7333 70.4102 18.4133L66.1435 20.5733ZM87.8738 17.48C88.0338 17.4 88.0871 17.32 88.0871 17.2133C88.0871 17.1333 88.0604 17.0533 88.0338 16.9467L86.7004 13.56C86.6204 13.3467 86.4604 13.24 86.2471 13.24H85.5538C85.3138 13.24 85.2071 13.3467 85.2071 13.5333C85.2071 13.5867 85.2071 13.64 85.2338 13.6933C85.3138 13.9867 85.3404 14.2533 85.2071 14.2533C85.1538 14.2533 85.1271 14.2533 85.0738 14.2267C84.6204 13.96 83.2071 13.3467 81.5538 13.3467C78.7538 13.3467 76.9671 14.8933 76.9671 17C76.9671 18.76 77.7138 20.3333 82.0604 21.6133C83.8738 22.1467 86.1138 22.6533 86.1138 24.0133C86.1138 25.0267 85.1804 25.5333 83.5271 25.5333C81.3671 25.5333 79.2071 24.5733 77.5004 21.9333C77.4204 21.8 77.3138 21.72 77.1804 21.72C77.1004 21.72 77.0204 21.7467 76.9404 21.8L76.1404 22.28C75.9804 22.36 75.9271 22.4667 75.9271 22.6C75.9271 22.6533 75.9271 22.7333 75.9804 22.8133L78.2738 27.1333C78.3804 27.32 78.5404 27.4 78.7538 27.4H79.7138C79.9271 27.4 80.0071 27.32 80.0071 27.1867C80.0071 27.1333 80.0071 27.0533 79.9804 26.9733C79.9004 26.7333 79.9271 26.5733 80.1138 26.5733C80.1671 26.5733 80.2471 26.5733 80.3271 26.6267C81.2604 27.08 82.3271 27.32 83.4204 27.32C86.9138 27.32 89.0471 25.48 89.0471 23C89.0471 19.7467 85.5004 18.9733 83.0204 18.3333C81.5538 17.96 80.0604 17.5067 80.0604 16.3333C80.0604 15.32 80.9671 14.9733 81.9271 14.9733C83.2071 14.9733 85.0738 15.6933 86.7004 17.6933C86.8071 17.8267 86.9138 17.9067 87.0204 17.9067C87.1004 17.9067 87.1538 17.88 87.2338 17.8533L87.8738 17.48ZM94.2748 11.2933C94.7548 11.2933 95.1548 11.1067 95.6081 10.6267C96.0881 10.1467 96.2748 9.77333 96.2748 9.29333C96.2748 8.81333 96.0881 8.41333 95.6081 7.96C95.1548 7.48 94.7548 7.29333 94.2748 7.29333C93.7948 7.29333 93.4215 7.48 92.9415 7.96C92.4615 8.41333 92.2748 8.81333 92.2748 9.29333C92.2748 9.77333 92.4615 10.1467 92.9415 10.6267C93.4215 11.1067 93.7948 11.2933 94.2748 11.2933ZM98.1148 25.4C96.8081 25.4 96.1415 24.3333 96.1415 22.8667V12.8933C96.1148 12.84 96.1148 12.84 96.0881 12.84H96.0348C95.9815 12.84 95.9281 12.8667 95.9015 12.92C95.1815 13.6667 93.8215 14.68 90.9948 15.6133C90.7548 15.6933 90.6215 15.7467 90.6215 15.96V16.8667C90.6215 17.0533 90.6748 17.1867 90.9415 17.2133C92.4081 17.3733 92.5148 18.8667 92.5148 20.04V22.8667C92.5415 24.3333 91.8748 25.4 90.5681 25.4H90.5415C90.2748 25.4 90.1415 25.56 90.1415 25.8V26.6C90.1415 26.8667 90.3281 27 90.5948 27H98.1148C98.3815 27 98.5681 26.8667 98.5681 26.6V25.8C98.5681 25.56 98.4348 25.4 98.1681 25.4H98.1148ZM112.318 12.8667L110.478 13.32C110.265 13.3733 110.185 13.5067 110.185 13.72V13.8C110.238 14.3067 109.972 14.4667 109.732 14.4667C109.625 14.4667 109.545 14.44 109.465 14.4133L109.358 14.36C108.398 13.7467 107.145 13.3467 105.652 13.3467C102.025 13.3467 99.8117 15.64 99.8117 18.4667C99.8117 19.88 100.372 21.16 101.385 22.0667C100.425 22.4933 99.7317 23.3733 99.7317 24.5467C99.7317 25.56 100.158 26.3867 101.092 26.9733C100.158 27.5067 99.4917 28.3067 99.4917 29.48C99.4917 31.72 102.265 32.7333 105.518 32.7333C108.718 32.7333 112.185 31.6933 112.185 28.7867C112.185 25.6133 109.092 25 105.972 24.84C102.718 24.68 102.105 24.28 102.105 23.4533C102.105 23.1867 102.238 22.9733 102.425 22.8133C103.332 23.2933 104.398 23.56 105.652 23.56C109.332 23.56 111.545 21.2667 111.545 18.4667C111.545 17.56 111.305 16.7067 110.905 15.9867C112.078 15.9867 112.932 14.9733 112.798 13.24C112.772 13 112.638 12.8667 112.452 12.8667H112.318ZM105.652 14.92C107.705 14.92 108.078 16.92 108.078 18.4667C108.078 20.0133 107.705 21.9867 105.652 21.9867C103.652 21.9867 103.065 19.9867 103.065 18.4667C103.065 16.92 103.652 14.92 105.652 14.92ZM105.545 30.8933C102.878 30.8933 102.132 29.9333 102.132 29.1067C102.132 28.52 102.398 28.0667 102.878 27.6933C103.598 27.8533 104.425 27.9867 105.385 28.0133C108.052 28.1467 109.625 28.3867 109.625 29.5333C109.625 30.36 108.185 30.8933 105.545 30.8933ZM130.538 25.4C129.232 25.4 128.565 24.3333 128.565 22.8667V18.4667C128.565 15.9333 127.845 13.32 124.032 13.32C121.605 13.32 120.165 15.1867 119.418 16.3867L119.898 12.8933C119.898 12.84 119.898 12.84 119.872 12.84H119.792C119.765 12.84 119.712 12.8667 119.685 12.92C118.965 13.4267 116.938 14.4667 114.405 14.8667C114.138 14.8933 114.032 15 114.032 15.2133V16.12C114.005 16.3067 114.085 16.44 114.325 16.4667C115.818 16.6267 115.898 18.0933 115.898 19.5333V22.8667C115.898 24.3333 115.285 25.4 113.978 25.4H113.925C113.658 25.4 113.525 25.56 113.525 25.8V26.6C113.525 26.8667 113.658 27 113.925 27H121.658C121.925 27 122.058 26.8667 122.058 26.6V25.8C122.058 25.56 121.925 25.4267 121.685 25.4H121.632C120.325 25.4 119.658 24.3333 119.658 22.8667V17.96C120.112 16.84 121.578 15.6933 122.912 15.6933C124.938 15.6933 124.832 17.4 124.832 18.8667V22.8667C124.858 24.3333 124.432 25.4 123.418 25.4C123.152 25.4 123.018 25.56 123.018 25.8V26.6C123.018 26.8667 123.152 27 123.418 27H130.645C130.912 27 131.045 26.8667 131.045 26.6V25.8C131.045 25.56 130.912 25.4 130.645 25.4H130.538Z" fill="#F1F1F1"/>
-        <defs>
-        <linearGradient id="paint0_linear" x1="142.478" y1="12.6567" x2="131.86" y2="12.7631" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#FB6D6C"/>
-        <stop offset="1" stop-color="#FFC683"/>
-        </linearGradient>
-        </defs>              
-      </svg>  
-    </a>
-    <nav class="md:float-right sm:float-none md:mt-16 sm:mt-2">
-      <ul class="flex flex-row">
-        <li class="mr-10">
-          <a href="/#work" class="text-base leading-snug font-display">Work</a>
-        </li>
-        <li class="mr-10">
-          <a href="/#events" class="text-base leading-snug font-display">Events</a>
-        </li>
-         <li class="mr-10">
-          <a href="/#write" class="text-base leading-snug font-display">Writes</a>
-        </li>
-        <li class="mr-10">
-          <a href="https://res.cloudinary.com/doms4gu6e/image/upload/v1666475878/Resume-RyanYao_vtnhnw.pdf"
-            target="_blank" class="text-base leading-snug font-display" title="Ryan's Resume">Resume</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main id="#main" class="barba-container c-container home md:mt-0 sm:mt-24">
-    <section class="titleAnimation relative block">
-      <h1 class="md:text-5xl sm:text-4xl leading-none mb-6 md:mt-0 sm:mt-16">
-      Hey 你好, I'm Ryan<span class="text-animate">.</span>
-      </h1>
-      <p class="md:text-xl sm:text-lg leading-normal md:w-2/3 sm:w-full">
-        Currently, building <a class="under-line" title="UXJetpack landing page" href="https://uxjetpack.com" target="_blank">UXJetpack</a> to help designers landing their dream jobs, mentoring designers at <a class="under-line" title="Ryan's profile on ADPList" href="https://adplist.org/mentors/ryan-yao" target="_blank">ADPList</a>, and helping to build out <a class="under-line" title="Alumi design website" href="https://www.alumi.design" target="_blank">Alumi</a> for design students.  
-      </p>
-      <div class="md:text-xl sm:text-lg leading-normal md:w-2/3 sm:w-full mt-10 font-body">Reach out at <a
-          href="mailto:ryan@ry.xxx" class="under-line" id="myEmail">ryan@ry.xxx</a>
-        <div class="tooltip text-sm">
-          <button id="copyEmail" class="px-2 py-1 bg-gray-700 rounded-lg">
-            <span class="tooltiptext" id="myTooltip" >Copy email to clipboard</span>
-            Copy Email
-          </button>
+  <body class="bg-black text-gray-300" id="barba-wrapper">
+    <div class="theme-switch-wrapper">
+      <label class="theme-switch" for="themeSwitch">
+        <input type="checkbox" id="themeSwitch" />
+        <div class="switcher"></div>
+        <div class="light-sun"></div>
+      </label>
+    </div>
+    <header class="c-container">
+      <a href="/" class="inline-block">
+        <svg
+          class="md:mb-32 mt-16 w-40 sm:mb-6"
+          viewbox="0 0 240 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M134.64 23.9067C134.293 24.2267 134.133 24.5733 134.133 24.9467C134.133 25.2933 134.293 25.64 134.64 25.96L135.68 27C136.027 27.3467 136.373 27.5067 136.72 27.5067C137.067 27.5067 137.413 27.3467 137.76 27L138.8 25.96C139.147 25.64 139.307 25.2933 139.307 24.9467C139.307 24.5733 139.147 24.2267 138.8 23.9067L137.76 22.8667C137.413 22.52 137.067 22.36 136.72 22.36C136.373 22.36 136.027 22.52 135.68 22.84L134.64 23.9067Z"
+            fill="url(#paint0_linear)"
+          />
+          <path
+            class="logo"
+            d="M20.5067 25.4C19.12 25.3467 18.5067 24.12 17.8667 22.8667L14.9333 17.4C17.2267 16.3067 18.1067 14.4667 18.1067 12.6533C18.1067 9.58666 15.3333 7 11.0133 7H1.2C0.933333 7 0.8 7.16 0.8 7.4V8.2C0.8 8.46666 0.933333 8.6 1.2 8.6H1.22667C2.69333 8.6 3.17333 9.69333 3.17333 11.16V22.8667C3.17333 24.28 2.72 25.3467 1.36 25.4H1.2C0.933333 25.4 0.8 25.56 0.8 25.8V26.6C0.8 26.8667 0.933333 27 1.2 27H9.38667C9.65333 27 9.78667 26.8667 9.78667 26.6V25.8C9.78667 25.56 9.65333 25.4 9.38667 25.4H9.22667C7.86667 25.3467 7.44 24.28 7.44 22.8667V18.44H9.41333C10.0267 18.44 10.6133 18.4133 11.1733 18.36L13.6 22.8667C13.8133 23.2933 13.9467 23.72 13.9467 24.0933C13.9467 24.8133 13.52 25.3733 12.64 25.4H12.4533C12.1867 25.4 12.0533 25.56 12.0533 25.8V26.6C12.0533 26.8667 12.1867 27 12.4533 27H20.6667C20.9067 27 21.0667 26.8667 21.0667 26.6V25.8C21.0667 25.56 20.9067 25.4 20.6667 25.4H20.5067ZM7.44 16.5467V8.6H9.84C12.5067 8.62667 14.1067 10.1733 14.1067 12.6533C14.1067 15.0533 12.5333 16.5467 8.98667 16.5467H7.44ZM31.9396 6.94666C31.6729 6.94666 31.5396 7.08 31.5396 7.34666V8.14667C31.5396 8.41333 31.6729 8.54666 31.9396 8.54666C32.7129 8.54666 33.1663 8.81333 33.1663 9.42666C33.1663 9.82666 32.9529 10.36 32.5529 11.08L29.6729 16.1733L26.5796 11.08C26.2596 10.5467 26.1263 10.12 26.1263 9.8C26.1263 8.89333 27.0329 8.54666 27.9663 8.54666C28.2329 8.54666 28.3663 8.41333 28.3663 8.14667V7.34666C28.3663 7.08 28.2329 6.94666 27.9663 6.94666H18.7396C18.4729 6.94666 18.3396 7.08 18.3396 7.34666V8.14667C18.3396 8.41333 18.4729 8.54666 18.7396 8.54666C19.8329 8.54666 20.5796 9.32 21.7529 11.08L26.5796 18.28C26.6863 18.44 26.7129 18.6 26.7129 18.7867V22.8667C26.7129 24.28 26.2863 25.3467 24.9263 25.4H24.7663C24.4996 25.4 24.3663 25.56 24.3663 25.8V26.6C24.3663 26.8667 24.4996 27 24.7663 27H32.9529C33.2196 27 33.3529 26.8667 33.3529 26.6V25.8C33.3529 25.56 33.2196 25.4 32.9529 25.4H32.7663C31.4329 25.3467 30.9796 24.28 30.9796 22.8667V18.6267C30.9796 18.44 31.0063 18.3067 31.1129 18.1467L35.2463 11.08C36.2596 9.32 37.4063 8.54666 38.5529 8.54666C38.8196 8.54666 38.9529 8.41333 38.9529 8.14667V7.34666C38.9529 7.08 38.8196 6.94666 38.5529 6.94666H31.9396ZM60.0981 5.72C60.0981 5.69333 60.0981 5.66667 60.0715 5.66667L60.0181 5.69333C59.9648 5.69333 59.9381 5.72 59.8848 5.74666C59.1648 6.25333 57.6981 7.26667 54.8715 8.2C54.6315 8.30666 54.4981 8.33333 54.4981 8.57333V9.48C54.4981 9.64 54.5515 9.77333 54.8181 9.8C56.2848 9.96 56.3915 11.4533 56.3915 12.8667V14.5733C55.4581 13.7733 54.2581 13.3467 52.9248 13.3467C49.6981 13.3467 46.7115 15.3733 46.7115 20.3333C46.7115 25.48 50.2048 27.3467 52.6048 27.3467C55.3515 27.3467 56.3915 25.6133 56.6848 24.8933L56.3648 27.2667C56.3648 27.32 56.3648 27.3467 56.4181 27.3467H56.4715C56.5515 27.3467 56.6581 27.32 56.7115 27.2933C57.8848 26.7867 58.9781 26.28 61.6181 26.28C61.8848 26.28 61.9915 26.1467 61.9915 25.9333V25.0267C61.9915 24.84 61.9381 24.7067 61.6715 24.68C60.3648 24.5467 60.1515 23.3467 60.0981 22.0667V5.72ZM56.3915 22.76C56.3915 22.76 55.8048 25 53.8048 25C51.6181 25 50.1248 22.8667 50.1248 19.4533C50.1248 17.2667 50.8181 15.3733 53.4048 15.3733C55.1915 15.3733 56.1781 16.7333 56.3915 18.3867V22.76ZM74.1969 18.8667C74.3569 18.7867 74.4102 18.68 74.4102 18.52C74.4102 16.52 72.4635 13.3733 68.9169 13.3733C65.7969 13.3733 62.5969 15.2667 62.5969 20.2267C62.5969 24.0933 65.3169 27.32 69.7435 27.32C72.4369 27.32 74.0902 26.0933 75.0769 24.2267C75.1569 24.0667 75.2635 23.9067 75.2635 23.7467C75.2635 23.6667 75.2102 23.5867 75.1302 23.56C74.2769 23.0533 74.2502 23.0267 74.0902 23.0267C74.0102 23.0267 73.9035 23.0533 73.8502 23.1333C72.9169 24.4933 71.5835 25.1067 70.4635 25.1067C68.3835 25.1067 67.0502 23.72 66.4635 22.2533L74.1969 18.8667ZM66.1435 20.5733C65.9035 19.96 65.8769 19.08 65.8769 18.5467C65.8769 16.8133 66.8102 15.48 68.2769 15.48C69.5035 15.48 70.4102 16.7333 70.4102 18.4133L66.1435 20.5733ZM87.8738 17.48C88.0338 17.4 88.0871 17.32 88.0871 17.2133C88.0871 17.1333 88.0604 17.0533 88.0338 16.9467L86.7004 13.56C86.6204 13.3467 86.4604 13.24 86.2471 13.24H85.5538C85.3138 13.24 85.2071 13.3467 85.2071 13.5333C85.2071 13.5867 85.2071 13.64 85.2338 13.6933C85.3138 13.9867 85.3404 14.2533 85.2071 14.2533C85.1538 14.2533 85.1271 14.2533 85.0738 14.2267C84.6204 13.96 83.2071 13.3467 81.5538 13.3467C78.7538 13.3467 76.9671 14.8933 76.9671 17C76.9671 18.76 77.7138 20.3333 82.0604 21.6133C83.8738 22.1467 86.1138 22.6533 86.1138 24.0133C86.1138 25.0267 85.1804 25.5333 83.5271 25.5333C81.3671 25.5333 79.2071 24.5733 77.5004 21.9333C77.4204 21.8 77.3138 21.72 77.1804 21.72C77.1004 21.72 77.0204 21.7467 76.9404 21.8L76.1404 22.28C75.9804 22.36 75.9271 22.4667 75.9271 22.6C75.9271 22.6533 75.9271 22.7333 75.9804 22.8133L78.2738 27.1333C78.3804 27.32 78.5404 27.4 78.7538 27.4H79.7138C79.9271 27.4 80.0071 27.32 80.0071 27.1867C80.0071 27.1333 80.0071 27.0533 79.9804 26.9733C79.9004 26.7333 79.9271 26.5733 80.1138 26.5733C80.1671 26.5733 80.2471 26.5733 80.3271 26.6267C81.2604 27.08 82.3271 27.32 83.4204 27.32C86.9138 27.32 89.0471 25.48 89.0471 23C89.0471 19.7467 85.5004 18.9733 83.0204 18.3333C81.5538 17.96 80.0604 17.5067 80.0604 16.3333C80.0604 15.32 80.9671 14.9733 81.9271 14.9733C83.2071 14.9733 85.0738 15.6933 86.7004 17.6933C86.8071 17.8267 86.9138 17.9067 87.0204 17.9067C87.1004 17.9067 87.1538 17.88 87.2338 17.8533L87.8738 17.48ZM94.2748 11.2933C94.7548 11.2933 95.1548 11.1067 95.6081 10.6267C96.0881 10.1467 96.2748 9.77333 96.2748 9.29333C96.2748 8.81333 96.0881 8.41333 95.6081 7.96C95.1548 7.48 94.7548 7.29333 94.2748 7.29333C93.7948 7.29333 93.4215 7.48 92.9415 7.96C92.4615 8.41333 92.2748 8.81333 92.2748 9.29333C92.2748 9.77333 92.4615 10.1467 92.9415 10.6267C93.4215 11.1067 93.7948 11.2933 94.2748 11.2933ZM98.1148 25.4C96.8081 25.4 96.1415 24.3333 96.1415 22.8667V12.8933C96.1148 12.84 96.1148 12.84 96.0881 12.84H96.0348C95.9815 12.84 95.9281 12.8667 95.9015 12.92C95.1815 13.6667 93.8215 14.68 90.9948 15.6133C90.7548 15.6933 90.6215 15.7467 90.6215 15.96V16.8667C90.6215 17.0533 90.6748 17.1867 90.9415 17.2133C92.4081 17.3733 92.5148 18.8667 92.5148 20.04V22.8667C92.5415 24.3333 91.8748 25.4 90.5681 25.4H90.5415C90.2748 25.4 90.1415 25.56 90.1415 25.8V26.6C90.1415 26.8667 90.3281 27 90.5948 27H98.1148C98.3815 27 98.5681 26.8667 98.5681 26.6V25.8C98.5681 25.56 98.4348 25.4 98.1681 25.4H98.1148ZM112.318 12.8667L110.478 13.32C110.265 13.3733 110.185 13.5067 110.185 13.72V13.8C110.238 14.3067 109.972 14.4667 109.732 14.4667C109.625 14.4667 109.545 14.44 109.465 14.4133L109.358 14.36C108.398 13.7467 107.145 13.3467 105.652 13.3467C102.025 13.3467 99.8117 15.64 99.8117 18.4667C99.8117 19.88 100.372 21.16 101.385 22.0667C100.425 22.4933 99.7317 23.3733 99.7317 24.5467C99.7317 25.56 100.158 26.3867 101.092 26.9733C100.158 27.5067 99.4917 28.3067 99.4917 29.48C99.4917 31.72 102.265 32.7333 105.518 32.7333C108.718 32.7333 112.185 31.6933 112.185 28.7867C112.185 25.6133 109.092 25 105.972 24.84C102.718 24.68 102.105 24.28 102.105 23.4533C102.105 23.1867 102.238 22.9733 102.425 22.8133C103.332 23.2933 104.398 23.56 105.652 23.56C109.332 23.56 111.545 21.2667 111.545 18.4667C111.545 17.56 111.305 16.7067 110.905 15.9867C112.078 15.9867 112.932 14.9733 112.798 13.24C112.772 13 112.638 12.8667 112.452 12.8667H112.318ZM105.652 14.92C107.705 14.92 108.078 16.92 108.078 18.4667C108.078 20.0133 107.705 21.9867 105.652 21.9867C103.652 21.9867 103.065 19.9867 103.065 18.4667C103.065 16.92 103.652 14.92 105.652 14.92ZM105.545 30.8933C102.878 30.8933 102.132 29.9333 102.132 29.1067C102.132 28.52 102.398 28.0667 102.878 27.6933C103.598 27.8533 104.425 27.9867 105.385 28.0133C108.052 28.1467 109.625 28.3867 109.625 29.5333C109.625 30.36 108.185 30.8933 105.545 30.8933ZM130.538 25.4C129.232 25.4 128.565 24.3333 128.565 22.8667V18.4667C128.565 15.9333 127.845 13.32 124.032 13.32C121.605 13.32 120.165 15.1867 119.418 16.3867L119.898 12.8933C119.898 12.84 119.898 12.84 119.872 12.84H119.792C119.765 12.84 119.712 12.8667 119.685 12.92C118.965 13.4267 116.938 14.4667 114.405 14.8667C114.138 14.8933 114.032 15 114.032 15.2133V16.12C114.005 16.3067 114.085 16.44 114.325 16.4667C115.818 16.6267 115.898 18.0933 115.898 19.5333V22.8667C115.898 24.3333 115.285 25.4 113.978 25.4H113.925C113.658 25.4 113.525 25.56 113.525 25.8V26.6C113.525 26.8667 113.658 27 113.925 27H121.658C121.925 27 122.058 26.8667 122.058 26.6V25.8C122.058 25.56 121.925 25.4267 121.685 25.4H121.632C120.325 25.4 119.658 24.3333 119.658 22.8667V17.96C120.112 16.84 121.578 15.6933 122.912 15.6933C124.938 15.6933 124.832 17.4 124.832 18.8667V22.8667C124.858 24.3333 124.432 25.4 123.418 25.4C123.152 25.4 123.018 25.56 123.018 25.8V26.6C123.018 26.8667 123.152 27 123.418 27H130.645C130.912 27 131.045 26.8667 131.045 26.6V25.8C131.045 25.56 130.912 25.4 130.645 25.4H130.538Z"
+            fill="#F1F1F1"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear"
+              x1="142.478"
+              y1="12.6567"
+              x2="131.86"
+              y2="12.7631"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#FB6D6C" />
+              <stop offset="1" stop-color="#FFC683" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </a>
+      <nav class="md:float-right sm:float-none md:mt-16 sm:mt-2">
+        <ul class="flex flex-row">
+          <li class="mr-10">
+            <a href="/#work" class="text-base leading-snug font-display"
+              >Work</a
+            >
+          </li>
+          <li class="mr-10">
+            <a href="/#events" class="text-base leading-snug font-display"
+              >Events</a
+            >
+          </li>
+          <li class="mr-10">
+            <a href="/#write" class="text-base leading-snug font-display"
+              >Writes</a
+            >
+          </li>
+          <li class="mr-10">
+            <a
+              href="https://res.cloudinary.com/doms4gu6e/image/upload/v1666475878/Resume-RyanYao_vtnhnw.pdf"
+              target="_blank"
+              class="text-base leading-snug font-display"
+              title="Ryan's Resume"
+              >Resume</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="#main" class="barba-container c-container home md:mt-0 sm:mt-24">
+      <section class="titleAnimation relative block">
+        <h1 class="md:text-5xl sm:text-4xl leading-none mb-6 md:mt-0 sm:mt-16">
+          Hey 你好, I'm Ryan<span class="text-animate">.</span>
+        </h1>
+        <p class="md:text-xl sm:text-lg leading-normal md:w-2/3 sm:w-full">
+          Currently, building
+          <a
+            class="under-line"
+            title="UXJetpack landing page"
+            href="https://uxjetpack.com"
+            target="_blank"
+            >UXJetpack</a
+          >
+          to help designers land their dream jobs, mentoring designers at
+          <a
+            class="under-line"
+            title="Ryan's profile on ADPList"
+            href="https://adplist.org/mentors/ryan-yao"
+            target="_blank"
+            >ADPList</a
+          >, and helping to build out
+          <a
+            class="under-line"
+            title="Alumi design website"
+            href="https://www.alumi.design"
+            target="_blank"
+            >Alumi</a
+          >
+          for design students.
+        </p>
+        <div
+          class="md:text-xl sm:text-lg leading-normal md:w-2/3 sm:w-full mt-10 font-body"
+        >
+          Reach out at
+          <a href="mailto:ryan@ry.xxx" class="under-line" id="myEmail"
+            >ryan@ry.xxx</a
+          >
+          <div class="tooltip text-sm">
+            <button id="copyEmail" class="px-2 py-1 bg-gray-700 rounded-lg">
+              <span class="tooltiptext" id="myTooltip"
+                >Copy email to clipboard</span
+              >
+              Copy Email
+            </button>
+          </div>
         </div>
-      </div>
-      <ul
-        class="list-none flex flex-row flex-wrap float-right md:w-1/3 sm:w-full md:absolute sm:relative top-0 right-0 md:mt-4 sm:mt-12 md:justify-end sm:justify-start" id="blob">
-        <li class="mr-6">
-          <a href="https://www.linkedin.com/in/ryanqyao/" target="_blank" title="Ryan's LinkedIn Link"><span class="icon icon-linked"></span></a>
-        </li>
-        <li class="mr-6">
-          <a href="https://adplist.org/mentors/ryan-yao" target="_blank" title="Ryan's ADPList Link"><span class="icon icon-adplist"></span></a>
-        </li>
-        <li>
-          <a href="https://twitter.com/ryanqyao/" target="_blank" title="Ryan's Twitter Link"><span class="icon icon-twit"></span></a>
-        </li>
-      </ul>
-    </section>
-    <section class="work-list">
-      <h2 class="text-3xl mb-12 mt-48" id="work">
-        Work
-      </h2>
-      <ul class="flex flex-row flex-wrap">
-        <li class="py-4 mb-6 w-full">
-          <a href="classtopbase.html"
-            class="animsition-link flex md:flex-row sm:flex-col-reverse md:py-20 md:px-12 sm:py-10 sm:px-8 rounded-lg">
-            <div class="flex-1 my-auto ">
-              <div>
-                <h3 class="font-display md:text-4xl sm:text-3xl leading-tight mb-8">Planning<br>ClassTopBase</h3>
-                <p class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full">
-                  ClassTopBase is a school management software for after-schools. For this project, I designed a feature
-                  to help school owners to plan their students' academic plans efficiently.
-                </p>
-                <ul class=" flex-row mt-16 md:flex sm:hidden text-base">
-                  <li class="py-1 px-6 rounded-lg mr-8">SaaS</li>
-                  <li class="py-1 px-6 rounded-lg mr-8">Product</li>
-                  <li class="py-1 px-6 rounded-lg mr-8">HTML/CSS</li>
-                </ul>
+        <ul
+          class="list-none flex flex-row flex-wrap float-right md:w-1/3 sm:w-full md:absolute sm:relative top-0 right-0 md:mt-4 sm:mt-12 md:justify-end sm:justify-start"
+          id="blob"
+        >
+          <li class="mr-6">
+            <a
+              href="https://www.linkedin.com/in/ryanqyao/"
+              target="_blank"
+              title="Ryan's LinkedIn Link"
+              ><span class="icon icon-linked"></span
+            ></a>
+          </li>
+          <li class="mr-6">
+            <a
+              href="https://adplist.org/mentors/ryan-yao"
+              target="_blank"
+              title="Ryan's ADPList Link"
+              ><span class="icon icon-adplist"></span
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/ryanqyao/"
+              target="_blank"
+              title="Ryan's Twitter Link"
+              ><span class="icon icon-twit"></span
+            ></a>
+          </li>
+        </ul>
+      </section>
+      <section class="work-list">
+        <h2 class="text-3xl mb-12 mt-48" id="work">Work</h2>
+        <ul class="flex flex-row flex-wrap">
+          <li class="py-4 mb-6 w-full">
+            <a
+              href="classtopbase.html"
+              class="animsition-link flex md:flex-row sm:flex-col-reverse md:py-20 md:px-12 sm:py-10 sm:px-8 rounded-lg"
+            >
+              <div class="flex-1 my-auto">
+                <div>
+                  <h3
+                    class="font-display md:text-4xl sm:text-3xl leading-tight mb-8"
+                  >
+                    Planning<br />ClassTopBase
+                  </h3>
+                  <p
+                    class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full"
+                  >
+                    ClassTopBase is a school management software for
+                    after-schools. For this project, I designed a feature to
+                    help school owners to plan their students' academic plans
+                    efficiently.
+                  </p>
+                  <ul class="flex-row mt-16 md:flex sm:hidden text-base">
+                    <li class="py-1 px-6 rounded-lg mr-8">SaaS</li>
+                    <li class="py-1 px-6 rounded-lg mr-8">Product</li>
+                    <li class="py-1 px-6 rounded-lg mr-8">HTML/CSS</li>
+                  </ul>
+                </div>
               </div>
-
-            </div>
-            <div class="flex-1 mb-10"><img
-                src="https://res.cloudinary.com/doms4gu6e/image/upload/v1597012081/380_bn19jk.jpg"
-                data-src="https://res.cloudinary.com/doms4gu6e/image/upload/w_auto,dpr_auto,c_scale/design-final_erkjlp.webp"
-                class="image-list mx-auto sm:max-w-full cld-responsive lazy" alt="ClassTopBase planning screenshot">
-            </div>
-            </div>
-
-          </a>
-        </li>
-        <li class="py-4 mb-6 w-full">
-          <a href="classtopbase-website.html"
-            class="animsition-link flex md:flex-row sm:flex-col-reverse md:py-20 md:px-12 sm:py-10 sm:px-8 rounded-lg">
-            <div class="flex-1 my-auto">
-              <div>
-                <h3 class="font-display md:text-4xl sm:text-3xl leading-tight mb-8">Website<br>ClassTopBase</h3>
-                <p class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full">
-                  To better position ClassTopBase and reflect on the new features and new brand, I redesigned the
-                  marketing website for ClassTopBase to prepare for upcoming online campaigns.
-                </p>
-                <ul class="flex-row mt-16 md:flex sm:hidden text-base">
-                  <li class="py-1 px-6 rounded-lg mr-8">SaaS</li>
-                  <li class="py-1 px-6 rounded-lg mr-8">Marketing</li>
-                  <li class="py-1 px-6 rounded-lg mr-8">Website</li>
-                </ul>
+              <div class="flex-1 mb-10">
+                <img
+                  src="https://res.cloudinary.com/doms4gu6e/image/upload/v1597012081/380_bn19jk.jpg"
+                  data-src="https://res.cloudinary.com/doms4gu6e/image/upload/w_auto,dpr_auto,c_scale/design-final_erkjlp.webp"
+                  class="image-list mx-auto sm:max-w-full cld-responsive lazy"
+                  alt="ClassTopBase planning screenshot"
+                />
               </div>
-
-            </div>
-            <div class="flex-1 mb-10"><img
-              src="https://res.cloudinary.com/doms4gu6e/image/upload/v1597012081/380_bn19jk.jpg"
-              data-src="https://res.cloudinary.com/doms4gu6e/image/upload/w_auto,dpr_auto,c_scale/v1580846120/classtopbase-website_ndtlip.webp"
-                class="image-list mx-auto cld-responsive lazy" alt="ClassTopBase marketing website homepage screenshot"></div>
-            </div>
-
-          </a>
-        </li>
-        <li class="py-4 mb-6 w-full">
-          <a href="classtopbase-dashboard.html"
-            class="animsition-link flex md:flex-row sm:flex-col-reverse md:py-20 md:px-12 sm:py-10 sm:px-8 rounded-lg">
-            <div class="flex-1 my-auto">
-              <div>
-                <h3 class="font-display md:text-4xl sm:text-3xl leading-tight mb-8">Dashboard<br>ClassTopBase</h3>
-                <p class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full">
-                  ClassTopBase is a school management software for after-schools. I designed the dashboard to eliminate
-                  the guesswork of school owners that they were surmising how their schools are performing.
-                </p>
-                <ul class=" flex-row mt-16 md:flex sm:hidden text-base">
-                  <li class="py-1 px-6 rounded-lg mr-8">SaaS</li>
-                  <li class="py-1 px-6 rounded-lg mr-8">Product</li>
-                  <li class="py-1 px-6 rounded-lg mr-8">HTML/CSS</li>
-                </ul>
-              </div>
-
-            </div>
-            <div class="flex-1 mb-10"><img
-              src="https://res.cloudinary.com/doms4gu6e/image/upload/v1597012081/380_bn19jk.jpg"
-              data-src="https://res.cloudinary.com/doms4gu6e/image/upload/w_auto,dpr_auto,c_scale/v1590988437/design-dashboard_cnymhy.webp"
-                class="image-list mx-auto sm:max-w-full cld-responsive lazy" alt="ClassTopBase dashboard screenshot">
-            </div>
-            </div>
-
-          </a>
-        </li>
-        <li class="py-4 mb-6 w-full">
-          <a href="https://designerslack.community"
-            class="animsition-link flex md:flex-row sm:flex-col-reverse md:py-20 md:px-12 sm:py-10 sm:px-8 rounded-lg"
-            target="_blank">
-            <div class="flex-1 my-auto">
-              <div>
-                <h3 class="font-display md:text-4xl sm:text-3xl leading-tight mb-8">Designer Slack <br>Communities</h3>
-                <p class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full">
-                  I designed and developed a website with a curated collection of Slack communities for designers around
-                  the world.
-                </p>
-                <ul class=" flex-row mt-16 md:flex sm:hidden text-base">
-                  <li class="py-1 px-6 rounded-lg mr-8">Communities</li>
-                  <li class="py-1 px-6 rounded-lg mr-8">Webflow</li>
-                  <li class="py-1 px-6 rounded-lg mr-8">Website</li>
-                </ul>
-              </div>
-
-            </div>
-            <div class="flex-1 mb-10"><img
-              src="https://res.cloudinary.com/doms4gu6e/image/upload/v1597012081/380_bn19jk.jpg"
-              data-src="https://res.cloudinary.com/doms4gu6e/image/upload/w_auto,dpr_auto,c_scale/v1588660903/dsc-big_aym2gs.webp"
-                class="image-list mx-auto cld-responsive lazy" alt="Designer Slack Communities website homepage screenshot"></div>
-            </div>
-
-          </a>
-        </li>
-        <li class="py-4 mb-6 w-full">
-          <a href="https://covidupdate.world"
-            class="animsition-link flex md:flex-row sm:flex-col-reverse md:py-20 md:px-12 sm:py-10 sm:px-8 rounded-lg"
-            target="_blank">
-            <div class="flex-1 my-auto">
-              <div>
-                <h3 class="font-display md:text-4xl sm:text-3xl leading-tight mb-8">COVID-19 Updates</h3>
-                <p class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full">
-                  I designed and developed a dashboard for tracking current status of COVID-19 around the globe.
-                </p>
-                <ul class=" flex-row mt-16 md:flex sm:hidden text-base">
-                  <li class="py-1 px-6 rounded-lg mr-8">Dashboard</li>
-                  <li class="py-1 px-6 rounded-lg mr-8">TailWindCSS</li>
-                  <li class="py-1 px-6 rounded-lg mr-8">HTML/CSS/JS</li>
-                </ul>
-              </div>
-
-            </div>
-            <div class="flex-1 mb-10"><img
-              src="https://res.cloudinary.com/doms4gu6e/image/upload/v1597012081/380_bn19jk.jpg"
-              data-src="https://res.cloudinary.com/doms4gu6e/image/upload/w_auto,dpr_auto,c_scale/v1586411956/covid-19_kcsap9.webp"
-                class="image-list mx-auto cld-responsive lazy" alt="COVID-19 updates website homepage screenshot">
-            </div>
-            </div>
-
-          </a>
-        </li>
-        <li class="py-4 mb-6 w-full">
-          <a href="air-app.html"
-            class="animsition-link flex md:flex-row sm:flex-col-reverse md:pt-16 md:pb-6 md:px-12 sm:py-10 sm:px-8 rounded-lg">
-            <div class="flex-1 my-auto">
-              <div>
-                <h3 class="font-display md:text-4xl sm:text-3xl leading-tight mb-8">Air<br>Minimal Weather App</h3>
-                <p class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full">
-                  I designed and developed an iOS weather app with minimal design and traditional Chinese elements.
-                </p>
-                <ul class=" flex-row mt-10 md:flex sm:hidden text-base">
-                  <li class="py-1 px-6 rounded-lg mr-8">iOS App</li>
-                  <li class="py-1 px-6 rounded-lg mr-8">Swift</li>
-                  <li class="py-1 px-6 rounded-lg mr-8">Website</li>
-                </ul>
-              </div>
-
-            </div>
-            <div class="flex-1 mb-10"><img
-              src="https://res.cloudinary.com/doms4gu6e/image/upload/v1597012081/380_bn19jk.jpg"
-              data-src="https://res.cloudinary.com/doms4gu6e/image/upload/w_auto,dpr_auto,c_scale/v1580847471/air_qxdh9t.webp"
-                class="image-list mx-auto no-shadow cld-responsive lazy" alt="Air app screenshot"></div>
-            </div>
-
-          </a>
-        </li>
-      </ul>
-    </section>
-    <section>
-      <h2 class="text-3xl mb-12 mt-48" id="events">Events</h2>
-      <h3 class="text-2xl">Speaking</h3>
-      <ul>
-        <li class="mt-6">
-          <a href="https://www.linkedin.com/posts/gdgyvr_productdesign-uxui-uxdesigner-activity-6985632873412259841-cQs5?utm_source=share&utm_medium=member_desktop"
-            target="_black" title="UX Design Portfolio Best Practices: Do’s and Don’ts on devfest 2022">
-            <h4 class="text-xl under-line">UX Design Portfolio Best Practices: Do’s and Don’ts at devfest 2022</h4>
-          </a>
-          <p class="mt-1">Nov 2022</p>
-        </li>
-        <li class="my-10">
-          <a href="https://www.youtube.com/watch?v=dZSY7D2noVk"
-            target="_black" title="The Importance Of Diversity For The Design Community on BeMore">
-            <h4 class="text-xl under-line">The Importance Of Diversity For The Design Community at BeMore Festival</h4>
-          </a>
-          <p class="mt-1">Sept 2022</p>
-        </li>
-        <li class="my-10">
-          <a href="https://www.linkedin.com/video/event/urn:li:ugcPost:6959980621679013888/"
-            target="_black" title="I’m a Product Designer in the health care industry with Ryan Yao on UX Untamed Podcast">
-            <h4 class="text-xl under-line">I’m a Product Designer in the health care industry with Ryan Yao on UX Untamed Podcast</h4>
-          </a>
-          <p class="mt-1">Aug 2022</p>
-        </li>
-        <li class="my-10">
-          <a href="https://www.eventbrite.com/e/irl-summer-with-vdc-speaking-casual-networking-and-more-limited-spots-tickets-375533078547"
-            target="_black" title="IRL: Summer with VDC, Getting Into Design Panel">
-            <h4 class="text-xl under-line">IRL: Summer with VDC, Getting Into Design Panel</h4>
-          </a>
-          <p class="mt-1">July 2022</p>
-        </li>
-        <li class="my-10">
-          <a href="https://www.linkedin.com/video/event/urn:li:ugcPost:6941888818883031041/"
-            target="_black" title="From Mentee to Mentor on ADPlist">
-            <h4 class="text-xl under-line">From Mentee to Mentor on ADPlist</h4>
-          </a>
-          <p class="mt-1">Jun 2022</p>
-        </li>
-       <li class="my-10">
-          <a href="https://www.youtube.com/watch?v=3sYX9SFl7ZU"
-            target="_black" title="Breaking Barriers In Healthcare Product Design on ADPList">
-            <h4 class="text-xl under-line">Breaking Barriers In Healthcare Product Design on ADPList</h4>
-          </a>
-          <p class="mt-1">Mar 2022</p>
-        </li>
-        <li class="my-10">
-          <h4 class="text-xl">Mandarin-speaking panel talks on ADPList</h4>
-          <a href="https://www.youtube.com/watch?v=HTsL_Bs2zyA&list=PLNAsx7rqN0VL2nayxPQoaY9KU5itXPk0D" target="_black"
-              title="how entry level designer find a job session on adplist"><span class="text-lg font-display under-line mr-6">新手设计师入门与求职技巧</span>
             </a>
-            <a href="https://www.youtube.com/watch?v=QAqUrDWNmCw&list=PLNAsx7rqN0VL2nayxPQoaY9KU5itXPk0D" target="_black"
-              title="How to communicate with team members session on adplist"><span class="text-lg font-display under-line">UX设计师北美职场沟通与合作技巧</span>
-          </a>
-          <p class="mt-1">Nov/Dec 2021</p>
-
-        </li>
-        <li class="my-10">
-          <h4 class="text-xl">Land a job across the globe on ADPList</h4>
-          <a href="https://www.youtube.com/watch?v=HOwlpryTxk8" target="_black"
-            title="Land a job across the globe group part I session on adplist"><span class="text-lg font-display under-line mr-6">Part I</span>
-          </a>
-          <a href="https://www.youtube.com/watch?v=I-A4rBuAcYA" target="_black"
-            title="Land a job across the globe group part II session on adplist"><span class="text-lg font-display under-line">Part II</span>
-          </a>
-          <p class="mt-1">Oct/Nov 2021</p>
-        </li>
-        <li class="my-10">
-          <a href="https://www.youtube.com/watch?v=BSKvGy2o210&list=PLjGhTP7A2rEiC1QpFP_vpfmqNBmklcdtb&index=7&t=2330s"
-            target="_black" title="Design key panel on VXP">
-            <h4 class="text-xl under-line">Design Key Panel on VXP Protothon 2021</h4>
-          </a>
-          <p class="mt-1">Aug 2021</p>
-        </li>
-        <li class="my-10">
-          <a href="https://anchor.fm/uxuntamed/episodes/Episode-17----Ryan-Yao-working-at-startups-as-a-UX-Designer-eut6gr"
-            target="_black" title="UX Untamed podcast">
-            <h4 class="text-xl under-line">Working at startups as a UX Designer on UX Untamed Podcast</h4>
-          </a>
-          <p class="mt-1">Apr 2021</p>
-        </li>
-        <li class="my-10">
-          <a href="https://www.linkedin.com/posts/ecu-design-careers_vancouverdesigners-designeducation-earlycareer-activity-6746844686859816960-X1tC"
-            target="_black" title="panel talk on ECU Design Career">
-            <h4 class="text-xl under-line">Panel Talk Vol.1 on ECU Design Career</h4>
-          </a>
-          <p class="mt-1">Dec 2020</p>
-        </li>
-      </ul>
-      <h3 class="text-2xl mt-16">Hosting</h3>
-      <ul>
-        <li class="mt-6">
-          <h4 class="text-xl">Hosts regular events on <a href="https://alumi.design" target="_black"
-              title="Alumi Design website"><span class="text-lg font-display under-line mr-6">Alumi Design</span>
-            </a></h4>
-          <p class="mt-1">2021-2022</p>
-        </li>
-        <li class="my-10">
-          <h4 class="text-xl">Mandarin-speaking panel talks on ADPList</h4>
-          <a href="https://www.youtube.com/watch?v=LCK9MGz7BZM" target="_black"
-            title="UX设计师北美职场晋升经验 recording"><span class="text-lg font-display under-line mr-6">UX设计师北美职场晋升经验</span>
-          </a>
-          <a href="https://www.youtube.com/watch?v=PflQ-uM2-80" target="_black"
-            title="北美设计师人脉经营指南 recording"><span class="text-lg font-display under-line mr-6">北美设计师人脉经营指南</span>
-          </a>
-          <a href="https://www.youtube.com/watch?v=qKGzH3VTCMA" target="_black"
-            title="北美设计师面试指南 recording"><span class="text-lg font-display under-line">北美设计师面试指南</span>
-          </a>
-          <p class="mt-1">Dec 2021 / April 2022 / Oct 2022</p>
-        </li>
-      </ul>
-
-    </section>
-    <section>
-      <h2 class="text-3xl mb-12 mt-48" id="write">Write</h2>
-      <ul id="write-list">
-        <li class="my-10">
-          <a href="https://write.ryanyao.design/11-21-2021/" target="_black"
-            title="11/21/2021 A redesign launch failed?">
-            <h3 class="text-xl under-line">11/21/2021 A redesign launch failed?</h3>
-          </a>
-          <p class="mt-1">Nov 21, 2021</p>
-        </li>
-        <li class="my-10">
-          <a href="https://write.ryanyao.design/11-14-2021/" target="_black"
-            title="11/14/2021 Are You Feeling Burnout?">
-            <h3 class="text-xl under-line">11/14/2021 Are You Feeling Burnout?</h3>
-          </a>
-          <p class="mt-1">Nov 14, 2021</p>
-        </li>
-        <li class="my-10">
-          <a href="https://write.ryanyao.design/11-07-2021-the-work-required-to-have-an-opinion/" target="_black"
-            title="11/07/2021 The Work Required to Have an Opinion">
-            <h3 class="text-xl under-line">11/07/2021 The Work Required to Have an Opinion</h3>
-          </a>
-          <p class="mt-1">Nov 7, 2021</p>
-        </li>
-      </ul>
-    </section>
-    <footer class="pt-40 pb-16">
-      <h5 class="text-base font-body text-gray-300 text-left w-full mt-12 mb-8">
-        ©2021 Designed and Developed by Ryan Yao with <a href="https://tailwindcss.com" target="_blank"
-          class="text-base under-line">Tailwind CSS</a>
-      </h5>
-      <h5 class="text-base font-body text-gray-300 text-left w-full leading-none">
-        I collect totally anonymous basic analytics using Plausible. View live analytics at <br><a
-          href="https://plausible.io/ryanyao.design" target="_blank"
-          class="text-base under-line">plausible.io/ryanyao.design</a>
-      </h5>
-    </footer>
-  </main>
-  <script>window.sa_event = window.sa_event || function () { a = [].slice.call(arguments); sa_event.q ? sa_event.q.push(a) : sa_event.q = [a] };</script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.11.1/cloudinary-core-shrinkwrap.min.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    var cl = cloudinary.Cloudinary.new({cloud_name: "doms4gu6e"});  
-    cl.responsive();
-  </script>
-</body>
-
+          </li>
+          <li class="py-4 mb-6 w-full">
+            <a
+              href="classtopbase-website.html"
+              class="animsition-link flex md:flex-row sm:flex-col-reverse md:py-20 md:px-12 sm:py-10 sm:px-8 rounded-lg"
+            >
+              <div class="flex-1 my-auto">
+                <div>
+                  <h3
+                    class="font-display md:text-4xl sm:text-3xl leading-tight mb-8"
+                  >
+                    Website<br />ClassTopBase
+                  </h3>
+                  <p
+                    class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full"
+                  >
+                    To better position ClassTopBase and reflect on the new
+                    features and new brand, I redesigned the marketing website
+                    for ClassTopBase to prepare for upcoming online campaigns.
+                  </p>
+                  <ul class="flex-row mt-16 md:flex sm:hidden text-base">
+                    <li class="py-1 px-6 rounded-lg mr-8">SaaS</li>
+                    <li class="py-1 px-6 rounded-lg mr-8">Marketing</li>
+                    <li class="py-1 px-6 rounded-lg mr-8">Website</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="flex-1 mb-10">
+                <img
+                  src="https://res.cloudinary.com/doms4gu6e/image/upload/v1597012081/380_bn19jk.jpg"
+                  data-src="https://res.cloudinary.com/doms4gu6e/image/upload/w_auto,dpr_auto,c_scale/v1580846120/classtopbase-website_ndtlip.webp"
+                  class="image-list mx-auto cld-responsive lazy"
+                  alt="ClassTopBase marketing website homepage screenshot"
+                />
+              </div>
+            </a>
+          </li>
+          <li class="py-4 mb-6 w-full">
+            <a
+              href="classtopbase-dashboard.html"
+              class="animsition-link flex md:flex-row sm:flex-col-reverse md:py-20 md:px-12 sm:py-10 sm:px-8 rounded-lg"
+            >
+              <div class="flex-1 my-auto">
+                <div>
+                  <h3
+                    class="font-display md:text-4xl sm:text-3xl leading-tight mb-8"
+                  >
+                    Dashboard<br />ClassTopBase
+                  </h3>
+                  <p
+                    class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full"
+                  >
+                    ClassTopBase is a school management software for
+                    after-schools. I designed the dashboard to eliminate the
+                    guesswork of school owners that they were surmising how
+                    their schools are performing.
+                  </p>
+                  <ul class="flex-row mt-16 md:flex sm:hidden text-base">
+                    <li class="py-1 px-6 rounded-lg mr-8">SaaS</li>
+                    <li class="py-1 px-6 rounded-lg mr-8">Product</li>
+                    <li class="py-1 px-6 rounded-lg mr-8">HTML/CSS</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="flex-1 mb-10">
+                <img
+                  src="https://res.cloudinary.com/doms4gu6e/image/upload/v1597012081/380_bn19jk.jpg"
+                  data-src="https://res.cloudinary.com/doms4gu6e/image/upload/w_auto,dpr_auto,c_scale/v1590988437/design-dashboard_cnymhy.webp"
+                  class="image-list mx-auto sm:max-w-full cld-responsive lazy"
+                  alt="ClassTopBase dashboard screenshot"
+                />
+              </div>
+            </a>
+          </li>
+          <li class="py-4 mb-6 w-full">
+            <a
+              href="https://designerslack.community"
+              class="animsition-link flex md:flex-row sm:flex-col-reverse md:py-20 md:px-12 sm:py-10 sm:px-8 rounded-lg"
+              target="_blank"
+            >
+              <div class="flex-1 my-auto">
+                <div>
+                  <h3
+                    class="font-display md:text-4xl sm:text-3xl leading-tight mb-8"
+                  >
+                    Designer Slack <br />Communities
+                  </h3>
+                  <p
+                    class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full"
+                  >
+                    I designed and developed a website with a curated collection
+                    of Slack communities for designers around the world.
+                  </p>
+                  <ul class="flex-row mt-16 md:flex sm:hidden text-base">
+                    <li class="py-1 px-6 rounded-lg mr-8">Communities</li>
+                    <li class="py-1 px-6 rounded-lg mr-8">Webflow</li>
+                    <li class="py-1 px-6 rounded-lg mr-8">Website</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="flex-1 mb-10">
+                <img
+                  src="https://res.cloudinary.com/doms4gu6e/image/upload/v1597012081/380_bn19jk.jpg"
+                  data-src="https://res.cloudinary.com/doms4gu6e/image/upload/w_auto,dpr_auto,c_scale/v1588660903/dsc-big_aym2gs.webp"
+                  class="image-list mx-auto cld-responsive lazy"
+                  alt="Designer Slack Communities website homepage screenshot"
+                />
+              </div>
+            </a>
+          </li>
+          <li class="py-4 mb-6 w-full">
+            <a
+              href="https://covidupdate.world"
+              class="animsition-link flex md:flex-row sm:flex-col-reverse md:py-20 md:px-12 sm:py-10 sm:px-8 rounded-lg"
+              target="_blank"
+            >
+              <div class="flex-1 my-auto">
+                <div>
+                  <h3
+                    class="font-display md:text-4xl sm:text-3xl leading-tight mb-8"
+                  >
+                    COVID-19 Updates
+                  </h3>
+                  <p
+                    class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full"
+                  >
+                    I designed and developed a dashboard for tracking current
+                    status of COVID-19 around the globe.
+                  </p>
+                  <ul class="flex-row mt-16 md:flex sm:hidden text-base">
+                    <li class="py-1 px-6 rounded-lg mr-8">Dashboard</li>
+                    <li class="py-1 px-6 rounded-lg mr-8">TailWindCSS</li>
+                    <li class="py-1 px-6 rounded-lg mr-8">HTML/CSS/JS</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="flex-1 mb-10">
+                <img
+                  src="https://res.cloudinary.com/doms4gu6e/image/upload/v1597012081/380_bn19jk.jpg"
+                  data-src="https://res.cloudinary.com/doms4gu6e/image/upload/w_auto,dpr_auto,c_scale/v1586411956/covid-19_kcsap9.webp"
+                  class="image-list mx-auto cld-responsive lazy"
+                  alt="COVID-19 updates website homepage screenshot"
+                />
+              </div>
+            </a>
+          </li>
+          <li class="py-4 mb-6 w-full">
+            <a
+              href="air-app.html"
+              class="animsition-link flex md:flex-row sm:flex-col-reverse md:pt-16 md:pb-6 md:px-12 sm:py-10 sm:px-8 rounded-lg"
+            >
+              <div class="flex-1 my-auto">
+                <div>
+                  <h3
+                    class="font-display md:text-4xl sm:text-3xl leading-tight mb-8"
+                  >
+                    Air<br />Minimal Weather App
+                  </h3>
+                  <p
+                    class="font-body leading-normal text-gray-300 md:w-10/12 sm:w-full"
+                  >
+                    I designed and developed an iOS weather app with minimal
+                    design and traditional Chinese elements.
+                  </p>
+                  <ul class="flex-row mt-10 md:flex sm:hidden text-base">
+                    <li class="py-1 px-6 rounded-lg mr-8">iOS App</li>
+                    <li class="py-1 px-6 rounded-lg mr-8">Swift</li>
+                    <li class="py-1 px-6 rounded-lg mr-8">Website</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="flex-1 mb-10">
+                <img
+                  src="https://res.cloudinary.com/doms4gu6e/image/upload/v1597012081/380_bn19jk.jpg"
+                  data-src="https://res.cloudinary.com/doms4gu6e/image/upload/w_auto,dpr_auto,c_scale/v1580847471/air_qxdh9t.webp"
+                  class="image-list mx-auto no-shadow cld-responsive lazy"
+                  alt="Air app screenshot"
+                />
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="text-3xl mb-12 mt-48" id="events">Events</h2>
+        <h3 class="text-2xl">Speaking</h3>
+        <ul>
+          <li class="mt-6">
+            <a
+              href="https://www.linkedin.com/posts/gdgyvr_productdesign-uxui-uxdesigner-activity-6985632873412259841-cQs5?utm_source=share&utm_medium=member_desktop"
+              target="_black"
+              title="UX Design Portfolio Best Practices: Do’s and Don’ts on devfest 2022"
+            >
+              <h4 class="text-xl under-line">
+                UX Design Portfolio Best Practices: Do’s and Don’ts at devfest
+                2022
+              </h4>
+            </a>
+            <p class="mt-1">Nov 2022</p>
+          </li>
+          <li class="my-10">
+            <a
+              href="https://www.youtube.com/watch?v=dZSY7D2noVk"
+              target="_black"
+              title="The Importance Of Diversity For The Design Community on BeMore"
+            >
+              <h4 class="text-xl under-line">
+                The Importance Of Diversity For The Design Community at BeMore
+                Festival
+              </h4>
+            </a>
+            <p class="mt-1">Sept 2022</p>
+          </li>
+          <li class="my-10">
+            <a
+              href="https://www.linkedin.com/video/event/urn:li:ugcPost:6959980621679013888/"
+              target="_black"
+              title="I’m a Product Designer in the health care industry with Ryan Yao on UX Untamed Podcast"
+            >
+              <h4 class="text-xl under-line">
+                I’m a Product Designer in the health care industry with Ryan Yao
+                on UX Untamed Podcast
+              </h4>
+            </a>
+            <p class="mt-1">Aug 2022</p>
+          </li>
+          <li class="my-10">
+            <a
+              href="https://www.eventbrite.com/e/irl-summer-with-vdc-speaking-casual-networking-and-more-limited-spots-tickets-375533078547"
+              target="_black"
+              title="IRL: Summer with VDC, Getting Into Design Panel"
+            >
+              <h4 class="text-xl under-line">
+                IRL: Summer with VDC, Getting Into Design Panel
+              </h4>
+            </a>
+            <p class="mt-1">July 2022</p>
+          </li>
+          <li class="my-10">
+            <a
+              href="https://www.linkedin.com/video/event/urn:li:ugcPost:6941888818883031041/"
+              target="_black"
+              title="From Mentee to Mentor on ADPlist"
+            >
+              <h4 class="text-xl under-line">
+                From Mentee to Mentor on ADPlist
+              </h4>
+            </a>
+            <p class="mt-1">Jun 2022</p>
+          </li>
+          <li class="my-10">
+            <a
+              href="https://www.youtube.com/watch?v=3sYX9SFl7ZU"
+              target="_black"
+              title="Breaking Barriers In Healthcare Product Design on ADPList"
+            >
+              <h4 class="text-xl under-line">
+                Breaking Barriers In Healthcare Product Design on ADPList
+              </h4>
+            </a>
+            <p class="mt-1">Mar 2022</p>
+          </li>
+          <li class="my-10">
+            <h4 class="text-xl">Mandarin-speaking panel talks on ADPList</h4>
+            <a
+              href="https://www.youtube.com/watch?v=HTsL_Bs2zyA&list=PLNAsx7rqN0VL2nayxPQoaY9KU5itXPk0D"
+              target="_black"
+              title="how entry level designer find a job session on adplist"
+              ><span class="text-lg font-display under-line mr-6"
+                >新手设计师入门与求职技巧</span
+              >
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=QAqUrDWNmCw&list=PLNAsx7rqN0VL2nayxPQoaY9KU5itXPk0D"
+              target="_black"
+              title="How to communicate with team members session on adplist"
+              ><span class="text-lg font-display under-line"
+                >UX设计师北美职场沟通与合作技巧</span
+              >
+            </a>
+            <p class="mt-1">Nov/Dec 2021</p>
+          </li>
+          <li class="my-10">
+            <h4 class="text-xl">Land a job across the globe on ADPList</h4>
+            <a
+              href="https://www.youtube.com/watch?v=HOwlpryTxk8"
+              target="_black"
+              title="Land a job across the globe group part I session on adplist"
+              ><span class="text-lg font-display under-line mr-6">Part I</span>
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=I-A4rBuAcYA"
+              target="_black"
+              title="Land a job across the globe group part II session on adplist"
+              ><span class="text-lg font-display under-line">Part II</span>
+            </a>
+            <p class="mt-1">Oct/Nov 2021</p>
+          </li>
+          <li class="my-10">
+            <a
+              href="https://www.youtube.com/watch?v=BSKvGy2o210&list=PLjGhTP7A2rEiC1QpFP_vpfmqNBmklcdtb&index=7&t=2330s"
+              target="_black"
+              title="Design key panel on VXP"
+            >
+              <h4 class="text-xl under-line">
+                Design Key Panel on VXP Protothon 2021
+              </h4>
+            </a>
+            <p class="mt-1">Aug 2021</p>
+          </li>
+          <li class="my-10">
+            <a
+              href="https://anchor.fm/uxuntamed/episodes/Episode-17----Ryan-Yao-working-at-startups-as-a-UX-Designer-eut6gr"
+              target="_black"
+              title="UX Untamed podcast"
+            >
+              <h4 class="text-xl under-line">
+                Working at startups as a UX Designer on UX Untamed Podcast
+              </h4>
+            </a>
+            <p class="mt-1">Apr 2021</p>
+          </li>
+          <li class="my-10">
+            <a
+              href="https://www.linkedin.com/posts/ecu-design-careers_vancouverdesigners-designeducation-earlycareer-activity-6746844686859816960-X1tC"
+              target="_black"
+              title="panel talk on ECU Design Career"
+            >
+              <h4 class="text-xl under-line">
+                Panel Talk Vol.1 on ECU Design Career
+              </h4>
+            </a>
+            <p class="mt-1">Dec 2020</p>
+          </li>
+        </ul>
+        <h3 class="text-2xl mt-16">Hosting</h3>
+        <ul>
+          <li class="mt-6">
+            <h4 class="text-xl">
+              Hosts regular events on
+              <a
+                href="https://alumi.design"
+                target="_black"
+                title="Alumi Design website"
+                ><span class="text-lg font-display under-line mr-6"
+                  >Alumi Design</span
+                >
+              </a>
+            </h4>
+            <p class="mt-1">2021-2022</p>
+          </li>
+          <li class="my-10">
+            <h4 class="text-xl">Mandarin-speaking panel talks on ADPList</h4>
+            <a
+              href="https://www.youtube.com/watch?v=LCK9MGz7BZM"
+              target="_black"
+              title="UX设计师北美职场晋升经验 recording"
+              ><span class="text-lg font-display under-line mr-6"
+                >UX设计师北美职场晋升经验</span
+              >
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=PflQ-uM2-80"
+              target="_black"
+              title="北美设计师人脉经营指南 recording"
+              ><span class="text-lg font-display under-line mr-6"
+                >北美设计师人脉经营指南</span
+              >
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=qKGzH3VTCMA"
+              target="_black"
+              title="北美设计师面试指南 recording"
+              ><span class="text-lg font-display under-line"
+                >北美设计师面试指南</span
+              >
+            </a>
+            <p class="mt-1">Dec 2021 / April 2022 / Oct 2022</p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="text-3xl mb-12 mt-48" id="write">Write</h2>
+        <ul id="write-list">
+          <li class="my-10">
+            <a
+              href="https://write.ryanyao.design/11-21-2021/"
+              target="_black"
+              title="11/21/2021 A redesign launch failed?"
+            >
+              <h3 class="text-xl under-line">
+                11/21/2021 A redesign launch failed?
+              </h3>
+            </a>
+            <p class="mt-1">Nov 21, 2021</p>
+          </li>
+          <li class="my-10">
+            <a
+              href="https://write.ryanyao.design/11-14-2021/"
+              target="_black"
+              title="11/14/2021 Are You Feeling Burnout?"
+            >
+              <h3 class="text-xl under-line">
+                11/14/2021 Are You Feeling Burnout?
+              </h3>
+            </a>
+            <p class="mt-1">Nov 14, 2021</p>
+          </li>
+          <li class="my-10">
+            <a
+              href="https://write.ryanyao.design/11-07-2021-the-work-required-to-have-an-opinion/"
+              target="_black"
+              title="11/07/2021 The Work Required to Have an Opinion"
+            >
+              <h3 class="text-xl under-line">
+                11/07/2021 The Work Required to Have an Opinion
+              </h3>
+            </a>
+            <p class="mt-1">Nov 7, 2021</p>
+          </li>
+        </ul>
+      </section>
+      <footer class="pt-40 pb-16">
+        <h5
+          class="text-base font-body text-gray-300 text-left w-full mt-12 mb-8"
+        >
+          ©2021 Designed and Developed by Ryan Yao with
+          <a
+            href="https://tailwindcss.com"
+            target="_blank"
+            class="text-base under-line"
+            >Tailwind CSS</a
+          >
+        </h5>
+        <h5
+          class="text-base font-body text-gray-300 text-left w-full leading-none"
+        >
+          I collect totally anonymous basic analytics using Plausible. View live
+          analytics at <br /><a
+            href="https://plausible.io/ryanyao.design"
+            target="_blank"
+            class="text-base under-line"
+            >plausible.io/ryanyao.design</a
+          >
+        </h5>
+      </footer>
+    </main>
+    <script>
+      window.sa_event =
+        window.sa_event ||
+        function () {
+          a = [].slice.call(arguments);
+          sa_event.q ? sa_event.q.push(a) : (sa_event.q = [a]);
+        };
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.11.1/cloudinary-core-shrinkwrap.min.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      var cl = cloudinary.Cloudinary.new({ cloud_name: "doms4gu6e" });
+      cl.responsive();
+    </script>
+    <script>
+      window.addEventListener("load", function () {
+        var emailInput = document.querySelector(
+          ".hero-container .waitlist-email"
+        );
+        emailInput.addEventListener("blur", function () {
+          setTimeout(function () {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }, 150);
+        });
+      });
+    </script>
+    <script>
+      var options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 1.0,
+      };
+      let themeColor = document.querySelector("meta[name=theme-color]");
+      const heroSection = document.getElementById("hero");
+      let observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio === 1) {
+            // Default color when Hero section is at topthemeColor.setAttribute('content', "#FFFFFF");
+          } else {
+            // Change color as we move away from Hero section
+            themeColor.setAttribute("content", "#000000");
+          }
+        });
+      }, options);
+      observer.observe(heroSection);
+    </script>
+  </body>
 </html>
