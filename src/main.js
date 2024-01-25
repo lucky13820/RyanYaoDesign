@@ -224,4 +224,3 @@ copyEmail.addEventListener(
   },
   false
 );
-∫
